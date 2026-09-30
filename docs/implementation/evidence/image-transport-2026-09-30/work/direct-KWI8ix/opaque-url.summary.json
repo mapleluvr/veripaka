@@ -1,0 +1,10 @@
+{
+  "case": "opaque-url",
+  "status": 200,
+  "contentType": "text/event-stream",
+  "answer": "The image is centered on a set of train tracks that run straight into the distance, converging toward the horizon. To the left of the tracks, there is a steep, eroded cliff face with some vegetation, and at its base, a signal light structure with a small white sign reading \"2002\" and a wooden fence. To the right of the tracks, there is a rocky shoreline with large boulders, a sandy beach, and the ocean. Near the left side, a smaller object is the white sign attached to the pole. Near the right side, a smaller object is the light blue lifeguard tower standing on the beach.",
+  "responseModels": [
+    "deepseek-v4.1-flash"
+  ],
+  "serverError": false
+}

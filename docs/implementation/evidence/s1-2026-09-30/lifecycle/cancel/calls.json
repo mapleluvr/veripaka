@@ -1,0 +1,119 @@
+[
+  {
+    "entry": "D:\\Projects\\veripaka\\.temp\\s1-closure\\consumer\\node_modules\\veripaka\\dist\\src\\cli\\main.js",
+    "args": [
+      "apply",
+      "backend",
+      "--input",
+      "verification-input.json"
+    ],
+    "code": 0,
+    "stdout": "{\"schema\":\"veripaka.cli/v0\",\"ok\":true,\"command\":\"apply\",\"data\":{\"runId\":\"eb709d6c-276d-4bcf-88f2-9e32d5f2de72\",\"status\":\"prepared\",\"plan\":\".veripaka/runs/eb709d6c-276d-4bcf-88f2-9e32d5f2de72/plan.json\",\"nextAction\":\"run eb709d6c-276d-4bcf-88f2-9e32d5f2de72\"}}\n",
+    "stderr": ""
+  },
+  {
+    "entry": "D:\\Projects\\veripaka\\.temp\\s1-closure\\consumer\\node_modules\\veripaka\\dist\\src\\cli\\main.js",
+    "args": [
+      "apply",
+      "backend",
+      "--input",
+      "verification-input.json"
+    ],
+    "code": 0,
+    "stdout": "{\"schema\":\"veripaka.cli/v0\",\"ok\":true,\"command\":\"apply\",\"data\":{\"runId\":\"47b6b3b1-1287-4626-9aa0-1a1deabd4f61\",\"status\":\"prepared\",\"plan\":\".veripaka/runs/47b6b3b1-1287-4626-9aa0-1a1deabd4f61/plan.json\",\"nextAction\":\"run 47b6b3b1-1287-4626-9aa0-1a1deabd4f61\"}}\n",
+    "stderr": ""
+  },
+  {
+    "entry": "D:\\Projects\\veripaka\\.temp\\s1-closure\\consumer\\node_modules\\veripaka\\dist\\src\\cli\\main.js",
+    "args": [
+      "run",
+      "cancel",
+      "eb709d6c-276d-4bcf-88f2-9e32d5f2de72"
+    ],
+    "code": 3,
+    "stdout": "{\"schema\":\"veripaka.cli/v0\",\"ok\":false,\"command\":\"run\",\"error\":{\"code\":\"RUN_NOT_RUNNING\",\"message\":\"Only an active run can receive a cancellation request\",\"nextAction\":\"Resolve the reported prerequisite; do not invent a successful result.\"}}\n",
+    "stderr": ""
+  },
+  {
+    "entry": "D:\\Projects\\veripaka\\.temp\\s1-closure\\consumer\\node_modules\\veripaka\\dist\\src\\cli\\main.js",
+    "args": [
+      "run",
+      "47b6b3b1-1287-4626-9aa0-1a1deabd4f61"
+    ],
+    "code": 3,
+    "stdout": "{\"schema\":\"veripaka.cli/v0\",\"ok\":false,\"command\":\"run\",\"error\":{\"code\":\"PROJECT_BUSY\",\"message\":\"Project execution is locked. Do not steal a lock by age; inspect the owner and its process tree before manual recovery.\",\"nextAction\":\"Resolve the reported prerequisite; do not invent a successful result.\"}}\n",
+    "stderr": ""
+  },
+  {
+    "entry": "D:\\Projects\\veripaka\\.temp\\s1-closure\\consumer\\node_modules\\veripaka\\dist\\src\\cli\\main.js",
+    "args": [
+      "run",
+      "cancel",
+      "47b6b3b1-1287-4626-9aa0-1a1deabd4f61"
+    ],
+    "code": 3,
+    "stdout": "{\"schema\":\"veripaka.cli/v0\",\"ok\":false,\"command\":\"run\",\"error\":{\"code\":\"RUN_NOT_RUNNING\",\"message\":\"Only an active run can receive a cancellation request\",\"nextAction\":\"Resolve the reported prerequisite; do not invent a successful result.\"}}\n",
+    "stderr": ""
+  },
+  {
+    "entry": "D:\\Projects\\veripaka\\.temp\\s1-closure\\consumer\\node_modules\\veripaka\\dist\\src\\cli\\main.js",
+    "args": [
+      "run",
+      "cancel",
+      "eb709d6c-276d-4bcf-88f2-9e32d5f2de72"
+    ],
+    "code": 3,
+    "stdout": "{\"schema\":\"veripaka.cli/v0\",\"ok\":false,\"command\":\"run\",\"data\":{\"runId\":\"eb709d6c-276d-4bcf-88f2-9e32d5f2de72\",\"status\":\"cancellation-requested\",\"nextAction\":\"Wait for the original run to return its result; inspect execution.cleanup before recovering any retained lock.\"}}\n",
+    "stderr": ""
+  },
+  {
+    "entry": "D:\\Projects\\veripaka\\.temp\\s1-closure\\consumer\\node_modules\\veripaka\\skills\\_shared\\run-veripaka.mjs",
+    "args": [
+      "run",
+      "eb709d6c-276d-4bcf-88f2-9e32d5f2de72"
+    ],
+    "code": 3,
+    "stdout": "{\"schema\":\"veripaka.cli/v0\",\"ok\":false,\"command\":\"run\",\"data\":{\"schema\":\"veripaka.result/v0\",\"runId\":\"eb709d6c-276d-4bcf-88f2-9e32d5f2de72\",\"kind\":\"verification\",\"verdict\":\"inconclusive\",\"verdictBasis\":\"executable\",\"execution\":\"interrupted\",\"reason\":\"CANCELLED\",\"subject\":{\"kind\":\"checkout\",\"description\":\"Local reference HTTP service imported from this declared checkout by its native tests\",\"entrypoint\":\"src/server.mjs\",\"sourceRoots\":[\"src\",\"tests\",\"package.json\",\"docs/behavior.md\"]},\"checks\":[{\"key\":\"api-contract/reject-invalid-theme\",\"required\":true,\"expected\":\"Unsupported theme returns HTTP 400 and the stored theme remains light.\",\"observed\":\"No complete managed invocation\",\"status\":\"inconclusive\",\"evidence\":[]},{\"key\":\"settings-persistence/survives-restart\",\"required\":true,\"expected\":\"A successful dark-theme write is returned by GET after restarting the service with the same private data directory.\",\"observed\":\"No complete managed invocation\",\"status\":\"inconclusive\",\"evidence\":[]}],\"goals\":[{\"id\":\"boundary\",\"question\":\"Does the API reject unsupported themes without changing state?\",\"claims\":[\"api-contract/reject-invalid-theme\"]},{\"id\":\"persistence\",\"question\":\"Does a successful settings write survive service restart?\",\"claims\":[\"settings-persistence/survives-restart\"]},{\"id\":\"sync\",\"question\":\"Does the setting synchronize across devices?\",\"claims\":[],\"uncovered\":\"Not promised by the reference service and not verified by these methods.\"}],\"limits\":[\"Only the declared local source domain and mapped checks were assessed; coverage sufficiency is not mechanically proved.\",\"The reference tests establish their local source-to-service relationship; arbitrary existing endpoints are unsupported.\",\"Digests and managed capture are not protection against a malicious writer with the same OS permissions.\",\"Trial recipe maturity is not upgraded by this result.\"],\"provenance\":{\"producer\":\"node:test\",\"ingestion\":\"managed-command\",\"verification\":\"unknown\",\"judge\":\"executable\",\"invocationId\":\"e5e1ead2-4f4f-48bc-b289-982e78d06d7e\"},\"finalizedAt\":\"2026-09-29T17:27:00.799Z\"}}\n",
+    "stderr": ""
+  },
+  {
+    "entry": "D:\\Projects\\veripaka\\.temp\\s1-closure\\consumer\\node_modules\\veripaka\\dist\\src\\cli\\main.js",
+    "args": [
+      "run",
+      "finalize",
+      "eb709d6c-276d-4bcf-88f2-9e32d5f2de72"
+    ],
+    "code": 3,
+    "stdout": "{\"schema\":\"veripaka.cli/v0\",\"ok\":false,\"command\":\"run\",\"data\":{\"schema\":\"veripaka.result/v0\",\"runId\":\"eb709d6c-276d-4bcf-88f2-9e32d5f2de72\",\"kind\":\"verification\",\"verdict\":\"inconclusive\",\"verdictBasis\":\"executable\",\"execution\":\"interrupted\",\"reason\":\"CANCELLED\",\"subject\":{\"kind\":\"checkout\",\"description\":\"Local reference HTTP service imported from this declared checkout by its native tests\",\"entrypoint\":\"src/server.mjs\",\"sourceRoots\":[\"src\",\"tests\",\"package.json\",\"docs/behavior.md\"]},\"checks\":[{\"key\":\"api-contract/reject-invalid-theme\",\"required\":true,\"expected\":\"Unsupported theme returns HTTP 400 and the stored theme remains light.\",\"observed\":\"No complete managed invocation\",\"status\":\"inconclusive\",\"evidence\":[]},{\"key\":\"settings-persistence/survives-restart\",\"required\":true,\"expected\":\"A successful dark-theme write is returned by GET after restarting the service with the same private data directory.\",\"observed\":\"No complete managed invocation\",\"status\":\"inconclusive\",\"evidence\":[]}],\"goals\":[{\"id\":\"boundary\",\"question\":\"Does the API reject unsupported themes without changing state?\",\"claims\":[\"api-contract/reject-invalid-theme\"]},{\"id\":\"persistence\",\"question\":\"Does a successful settings write survive service restart?\",\"claims\":[\"settings-persistence/survives-restart\"]},{\"id\":\"sync\",\"question\":\"Does the setting synchronize across devices?\",\"claims\":[],\"uncovered\":\"Not promised by the reference service and not verified by these methods.\"}],\"limits\":[\"Only the declared local source domain and mapped checks were assessed; coverage sufficiency is not mechanically proved.\",\"The reference tests establish their local source-to-service relationship; arbitrary existing endpoints are unsupported.\",\"Digests and managed capture are not protection against a malicious writer with the same OS permissions.\",\"Trial recipe maturity is not upgraded by this result.\"],\"provenance\":{\"producer\":\"node:test\",\"ingestion\":\"managed-command\",\"verification\":\"unknown\",\"judge\":\"executable\",\"invocationId\":\"e5e1ead2-4f4f-48bc-b289-982e78d06d7e\"},\"finalizedAt\":\"2026-09-29T17:27:00.799Z\"}}\n",
+    "stderr": ""
+  },
+  {
+    "entry": "D:\\Projects\\veripaka\\.temp\\s1-closure\\consumer\\node_modules\\veripaka\\dist\\src\\cli\\main.js",
+    "args": [
+      "run",
+      "cancel",
+      "eb709d6c-276d-4bcf-88f2-9e32d5f2de72"
+    ],
+    "code": 3,
+    "stdout": "{\"schema\":\"veripaka.cli/v0\",\"ok\":false,\"command\":\"run\",\"error\":{\"code\":\"RUN_NOT_RUNNING\",\"message\":\"Only an active run can receive a cancellation request\",\"nextAction\":\"Resolve the reported prerequisite; do not invent a successful result.\"}}\n",
+    "stderr": ""
+  },
+  {
+    "observed": {
+      "grandchildAlive": false,
+      "runnerAlive": false,
+      "cleanup": "terminated"
+    }
+  },
+  {
+    "entry": "D:\\Projects\\veripaka\\.temp\\s1-closure\\consumer\\node_modules\\veripaka\\dist\\src\\cli\\main.js",
+    "args": [
+      "run",
+      "finalize",
+      "eb709d6c-276d-4bcf-88f2-9e32d5f2de72"
+    ],
+    "code": 3,
+    "stdout": "{\"schema\":\"veripaka.cli/v0\",\"ok\":false,\"command\":\"run\",\"error\":{\"code\":\"ENOENT\",\"message\":\"ENOENT: no such file or directory, lstat 'D:\\\\Projects\\\\veripaka\\\\.temp\\\\s1-closure\\\\installed-lifecycle\\\\veripaka-cancel-GA6cwz\\\\.veripaka\\\\runs\\\\eb709d6c-276d-4bcf-88f2-9e32d5f2de72\\\\attempts\\\\d1f59d1d-7897-49f7-a70a-17360defdda2\\\\stdout.log'\",\"nextAction\":\"Resolve the reported prerequisite; do not invent a successful result.\"}}\n",
+    "stderr": ""
+  }
+]

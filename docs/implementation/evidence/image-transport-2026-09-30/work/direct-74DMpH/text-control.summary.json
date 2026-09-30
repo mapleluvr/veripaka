@@ -1,0 +1,10 @@
+{
+  "case": "text-control",
+  "status": 200,
+  "contentType": "text/event-stream",
+  "answer": "TEXT_CONTROL_OK",
+  "responseModels": [
+    "deepseek-v4.1-flash"
+  ],
+  "serverError": false
+}

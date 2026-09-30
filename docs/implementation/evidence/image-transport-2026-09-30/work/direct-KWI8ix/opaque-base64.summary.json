@@ -1,0 +1,10 @@
+{
+  "case": "opaque-base64",
+  "status": 200,
+  "contentType": "text/event-stream",
+  "answer": "I'm not able to answer this one — the image didn't come through in a readable format, so I have no visual content to describe. I don't want to invent details about a center object, its left and right surroundings, or smaller objects on either side, since anything I said would be guesswork rather than observation.\n\nIf you re-upload the image (a common format like JPEG or PNG usually works), I'll describe exactly what's visible: what sits in the center, what appears to its left and right, and one smaller object on each side.",
+  "responseModels": [
+    "deepseek-v4.1-flash"
+  ],
+  "serverError": false
+}

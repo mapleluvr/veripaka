@@ -1,0 +1,62 @@
+Introducing Veripaka — aka pi rev(iew)
+Help your coding agent figure out how to test—not just what to run.
+
+Veripaka is an experimental testing toolkit for the Pi coding agent. It is being built to help agents explore real software, choose meaningful testing methods, and preserve those methods as reusable test recipes.
+
+Coding agents can write code quickly. Deciding whether their work is actually correct often still falls to you: choosing what to inspect, finding a revealing failure case, and explaining the next step when “the tests passed” doesn't answer your question. Fast, inexpensive models are less useful if you have to design every check yourself.
+
+Veripaka's goal is to help the agent take on more of that work—and keep the useful testing knowledge from disappearing when the conversation ends.
+
+
+The first decision is how to look
+
+Different properties of a system call for different ways of testing it. Even the same object can require several kinds of observation:
+
+- A webpage's DOM and accessibility tree can tell you that a button exists and has an accessible name. Its rendered appearance tells you whether the label is clipped or obscured. Neither, by itself, tells you whether clicking it actually saves anything.
+- A service may read back a setting from its own cache without ever storing it durably. Testing persistence means finding the relevant state boundary, then choosing an independent reader or a restart that actually crosses it.
+- A numerical routine may be difficult to check against exact expected values. Small cases with known answers, an independent implementation, or properties established by the domain can provide different ways to challenge its output.
+
+The important question is not simply “Which tool is used for this kind of project?” It is “What do we need to learn, and what observation would let us learn it?” The answer depends on the intended behavior, the system's properties, and what can be observed or controlled.
+
+
+Explore before prescribing
+
+Sometimes an existing test already answers the question. Sometimes the agent needs to inspect the application, consult its requirements, trace a state change, or try a small experiment before it knows what to test.
+
+Veripaka aims to support that judgment: finding a relevant method, understanding why it applies, and adapting the approach when observations contradict its assumptions. That can involve adding an observation point, building a fixture, choosing a different test boundary, or looking up a more suitable technique.
+
+Not every exploration starts with a known bug. Trying a workflow, mapping its states, or checking it against an applicable standard can reveal questions nobody thought to ask. The next step should follow from what was observed—not from mechanically completing a checklist.
+
+More activity is not automatically better testing. Reusing a sufficient method, asking a focused question about an unclear requirement, or recognizing that a check cannot be performed safely can be the right decision. The aim is useful initiative within the task's scope, not endless experimentation.
+
+
+Keep the strategy, not just the script
+
+A Recipe is a project-owned testing method. It explains what to check, when the method applies, which entry points to exercise, what to observe, how to interpret the result, and where its limits are.
+
+The reusable knowledge includes why the method works. “Restart the service” is an instruction; explaining which temporary state must be eliminated, and why the next read should be independent, makes it a strategy another session can adapt.
+
+Veripaka keeps Recipes in readable project files that agents can find and use. The broader goal is to connect existing methods with knowledge about how to develop them: when to use a technique, what could make it misleading, and when another approach would be better. A useful method should also be challenged against relevant failures—not accepted merely because it produces green output.
+
+Your existing tests and tools remain useful. Veripaka is not a replacement test runner, and a method does not have to be newly invented or end-to-end to be valuable. It has to reach the behavior being checked.
+
+
+A useful test still needs an honest result
+
+The CLI provides an execution foundation: a defined scope, required checks, captured evidence, and results that keep unanswered questions visible. Changing a test's criteria is not the same as fixing a failing implementation.
+
+That foundation supports the testing work; it cannot replace it. A faithfully recorded run of an irrelevant test is still an irrelevant test.
+
+
+What you can try today
+
+Veripaka is an early alpha and is not yet published as a public package. The current repository includes a Pi Skill and CLI, plus a runnable backend project with two experimental Recipes for API input validation and persistence. Its tests use real HTTP requests and file storage.
+
+The supported execution path currently covers local checkouts and uniquely named top-level Node tests. The reference methods have been checked against normal and deliberately faulty implementations, and reused in fresh Pi sessions on Windows with Node 24.
+
+The broader method-exploration workflow described above is a development goal, not an already demonstrated general capability. Guided visual testing and investigation support are not yet shipped. Whether the approach reduces human testing effort or total cost remains to be measured.
+
+See README.md for local setup and the reference-project walkthrough.
+
+
+Understand the system. Develop a useful method. Keep what you learn.

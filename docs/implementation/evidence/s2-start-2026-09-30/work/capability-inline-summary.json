@@ -1,0 +1,13 @@
+{
+  "directory": "D:\\Projects\\veripaka\\.temp\\s2-start\\inline-image-YStp1L",
+  "exitCode": 0,
+  "model": "deepseek-flash",
+  "responseModel": "deepseek-v4.1-flash",
+  "final": [
+    {
+      "type": "text",
+      "text": "```json\n{\n  \"supported\": false,\n  \"images\": [\n    {\n      \"file\": \"sample-a.png\",\n      \"code\": null,\n      \"cells\": []\n    },\n    {\n      \"file\": \"sample-b.png\",\n      \"code\": null,\n      \"cells\": []\n    }\n  ],\n  \"limitation\": \"Pixels for both attachments are unavailable (reported as invalid image format), so the label text and the six shapes/colors cannot be read. No guessing performed; shape and color values are omitted.\"\n}\n```"
+    }
+  ],
+  "last": "agent_settled"
+}

@@ -1,0 +1,90 @@
+{
+  "scriptSha256": "b103c73ca25a6c3fd32763610ca1a0f7beefdcdeb1f8ceebd9df34646fed956c",
+  "scriptLines": 801,
+  "cases": [
+    {
+      "case": "same-pixels.png",
+      "phase": "pre-registered",
+      "expectedExit": 0,
+      "actualExit": 0,
+      "expectedChangedPixels": 0,
+      "actualChangedPixels": 0,
+      "verdict": "PIXELS_IDENTICAL",
+      "warnings": [],
+      "crossCheck": {
+        "reference": {
+          "available": true,
+          "agreement": "yes",
+          "decoder": "Pillow 10.4.0",
+          "mismatchedPixels": 0,
+          "firstMismatch": null
+        },
+        "candidate": {
+          "available": true,
+          "agreement": "yes",
+          "decoder": "Pillow 10.4.0",
+          "mismatchedPixels": 0,
+          "firstMismatch": null
+        }
+      },
+      "accepted": true
+    },
+    {
+      "case": "one-pixel.png",
+      "phase": "pre-registered",
+      "expectedExit": 1,
+      "actualExit": 1,
+      "expectedChangedPixels": 1,
+      "actualChangedPixels": 1,
+      "verdict": "PIXELS_DIFFER",
+      "warnings": [],
+      "crossCheck": {
+        "reference": {
+          "available": true,
+          "agreement": "yes",
+          "decoder": "Pillow 10.4.0",
+          "mismatchedPixels": 0,
+          "firstMismatch": null
+        },
+        "candidate": {
+          "available": true,
+          "agreement": "yes",
+          "decoder": "Pillow 10.4.0",
+          "mismatchedPixels": 0,
+          "firstMismatch": null
+        }
+      },
+      "accepted": true
+    },
+    {
+      "case": "bad-ihdr-crc.png",
+      "phase": "posthoc-counterexample-not-independent-holdout",
+      "expectedExit": 2,
+      "actualExit": 0,
+      "expectedChangedPixels": null,
+      "actualChangedPixels": 0,
+      "verdict": "PIXELS_IDENTICAL",
+      "warnings": [
+        "CRC mismatch in D:\\Projects\\veripaka\\.temp\\s2-start\\pixel-private\\bad-ihdr-crc.png: ['IHDR']"
+      ],
+      "crossCheck": {
+        "reference": {
+          "available": true,
+          "agreement": "yes",
+          "decoder": "Pillow 10.4.0",
+          "mismatchedPixels": 0,
+          "firstMismatch": null
+        },
+        "candidate": {
+          "available": true,
+          "agreement": "unknown",
+          "error": "cannot identify image file 'D:\\\\Projects\\\\veripaka\\\\.temp\\\\s2-start\\\\pixel-private\\\\bad-ihdr-crc.png'"
+        }
+      },
+      "accepted": false
+    }
+  ],
+  "posthocBadCrcIndependentDecoder": "UnidentifiedImageError: cannot identify image file 'D:\\\\Projects\\\\veripaka\\\\.temp\\\\s2-start\\\\pixel-private\\\\bad-ihdr-crc.png'",
+  "candidateAccepted": false,
+  "reason": "Valid RGB controls work, but malformed critical-header CRC is still reported PIXELS_IDENTICAL/exit 0 despite independent decode failure. Keep as a rejected research candidate; not a shipped Recipe."
+}

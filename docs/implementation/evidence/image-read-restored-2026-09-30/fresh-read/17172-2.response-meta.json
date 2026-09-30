@@ -1,0 +1,10 @@
+{
+  "id": "17172-2",
+  "at": "2026-09-30T05:10:51.190Z",
+  "method": "POST",
+  "path": "/v1/chat/completions",
+  "bodySha256": "3347e492061cdfe40c3f95f1cc87a8cfa2c8a94227ca63aab233a49d379193e6",
+  "status": 200,
+  "contentType": "text/event-stream",
+  "requestId": null
+}

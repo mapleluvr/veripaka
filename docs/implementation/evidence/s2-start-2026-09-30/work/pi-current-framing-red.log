@@ -1,0 +1,84 @@
+✔ pi harness sends only the required model and records the same invocation (225.3734ms)
+✔ repeating a task label retains both attempts and their original raw events (414.3919ms)
+✔ an explicit exploration task reaches Pi unchanged and is frozen for review (229.3541ms)
+▶ exit zero is not a completed exploration without an intact successful Pi terminal event
+  ✔ provider-error (198.0601ms)
+  ✔ malformed (190.5062ms)
+  ✖ json-null (194.5311ms)
+  ✖ current-unsettled (202.4857ms)
+✖ exit zero is not a completed exploration without an intact successful Pi terminal event (807.966ms)
+✖ current Pi settled completion is recognized without erasing native transport retry errors (215.125ms)
+ℹ tests 9
+ℹ suites 0
+ℹ pass 5
+ℹ fail 4
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1996.3945
+
+✖ failing tests:
+
+test at dist\tests\pi-smoke.test.js:100:17
+✖ json-null (194.5311ms)
+  AssertionError [ERR_ASSERTION]: Harness must return metadata even for unusable Pi output: file:///D:/Projects/veripaka/scripts/pi-smoke.mjs:74
+  const messages = events.filter(e => e.type === 'message_end' && e.message?.role === 'assistant').map(e => e.message);
+                                        ^
+  
+  TypeError: Cannot read properties of null (reading 'type')
+      at file:///D:/Projects/veripaka/scripts/pi-smoke.mjs:74:39
+      at Array.filter (<anonymous>)
+      at file:///D:/Projects/veripaka/scripts/pi-smoke.mjs:74:25
+  
+  Node.js v24.15.0
+  
+      at Object.run (file:///D:/Projects/veripaka/dist/tests/pi-smoke.test.js:52:16)
+      at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+      at async TestContext.<anonymous> (file:///D:/Projects/veripaka/dist/tests/pi-smoke.test.js:102:23)
+      at async Test.run (node:internal/test_runner/test:1208:7)
+      at async TestContext.<anonymous> (file:///D:/Projects/veripaka/dist/tests/pi-smoke.test.js:100:9)
+      at async Test.run (node:internal/test_runner/test:1208:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:831:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: '',
+    expected: true,
+    operator: '==',
+    diff: 'simple'
+  }
+
+test at dist\tests\pi-smoke.test.js:100:17
+✖ current-unsettled (202.4857ms)
+  AssertionError [ERR_ASSERTION]: current-unsettled
+  
+  0 !== 1
+  
+      at TestContext.<anonymous> (file:///D:/Projects/veripaka/dist/tests/pi-smoke.test.js:103:20)
+      at async Test.run (node:internal/test_runner/test:1208:7)
+      at async TestContext.<anonymous> (file:///D:/Projects/veripaka/dist/tests/pi-smoke.test.js:100:9)
+      at async Test.run (node:internal/test_runner/test:1208:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:831:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: 0,
+    expected: 1,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at dist\tests\pi-smoke.test.js:109:1
+✖ current Pi settled completion is recognized without erasing native transport retry errors (215.125ms)
+  AssertionError [ERR_ASSERTION]: current-success
+  
+  1 !== 0
+  
+      at TestContext.<anonymous> (file:///D:/Projects/veripaka/dist/tests/pi-smoke.test.js:116:16)
+      at async Test.run (node:internal/test_runner/test:1208:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:831:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: 1,
+    expected: 0,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }

@@ -1,0 +1,11 @@
+✔ explicit cancellation owns cleanup and leaves the other prepared run untouched (3703.6511ms)
+✔ launcher SIGINT handler allows the CLI to finalize cancellation (1715.4812ms)
+✔ owned process tree times out and a second project invocation is busy (5610.4537ms)
+ℹ tests 3
+ℹ suites 0
+ℹ pass 3
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 11324.0613

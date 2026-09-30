@@ -1,0 +1,19 @@
+Project : Veripaka
+---
+a.k.a. pi rev(iew)
+paka stands for 'baka', veri for 'verify'
+one dev pack built on pi-coding-agent, for the occasions:
+- you are using weak, but cheap & fast models
+- tired of checking and draft feedback so accurate that the models gets you well
+- don't want to repeat the self-test methodology you have built in the project previously
+
+here's veripaka, coming for your needs. it provides:
+- Agent-native CLI for building, managing, searching, applying test methods per project, whose form vary from e2e, mock, code-level test, e.t.c..
+- general methodology & guidelines for building standardized test recipes.
+- multiple working default profiles that suits you well (for frontend, backend, debugging & fixing)
+
+i've been preparing this project long ago (starting from visual-primitives). few things you may need:
+- visual-primitives, made for delicate visual testing tasks.
+- cu, a CLI made for Windows User, offering basic abilities of computer-use, facing general testing recipe.
+- twcu, one tool kit made for batched tests on frontend visual tests, WIP.
+

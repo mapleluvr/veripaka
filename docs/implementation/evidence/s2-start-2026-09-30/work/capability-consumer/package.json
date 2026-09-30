@@ -1,0 +1,8 @@
+{
+  "name": "veripaka-s2-capability-consumer",
+  "private": true,
+  "type": "module",
+  "dependencies": {
+    "veripaka": "file:../veripaka-0.1.0-alpha.1.tgz"
+  }
+}

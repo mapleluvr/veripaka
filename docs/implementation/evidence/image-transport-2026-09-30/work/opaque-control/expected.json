@@ -1,0 +1,12 @@
+{
+  "registeredAt": "2026-09-30T04:29:37.086Z",
+  "source": "parent visual inspection before model call; not disclosed to model",
+  "features": [
+    "railway track centered, receding toward horizon",
+    "rock/cliff and fence to the left",
+    "beach and sea to the right",
+    "signal light beside track on left",
+    "small turquoise tower on right"
+  ],
+  "limit": "Operational visual confirmation, not comprehensive perception benchmark"
+}

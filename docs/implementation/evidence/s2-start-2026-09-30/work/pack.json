@@ -1,0 +1,186 @@
+[
+  {
+    "id": "veripaka@0.1.0-alpha.1",
+    "name": "veripaka",
+    "version": "0.1.0-alpha.1",
+    "size": 23480,
+    "unpackedSize": 79522,
+    "shasum": "a3580a4f75a45a863612ce5a012f44d162cadb50",
+    "integrity": "sha512-hYzd3xb1JyMHKfBPbPcQefb4HgmXeDSntlrYW9sheBlDAjFsMI3oudhBfEqODkedL3rByvHg0I/huipvLYmElg==",
+    "filename": "veripaka-0.1.0-alpha.1.tgz",
+    "files": [
+      {
+        "path": "README.md",
+        "size": 5334,
+        "mode": 420
+      },
+      {
+        "path": "dist/src/catalog/index.d.ts",
+        "size": 1625,
+        "mode": 420
+      },
+      {
+        "path": "dist/src/catalog/index.js",
+        "size": 6200,
+        "mode": 420
+      },
+      {
+        "path": "dist/src/cli/main.d.ts",
+        "size": 31,
+        "mode": 420
+      },
+      {
+        "path": "dist/src/cli/main.js",
+        "size": 5820,
+        "mode": 420
+      },
+      {
+        "path": "dist/src/contracts.d.ts",
+        "size": 5238,
+        "mode": 420
+      },
+      {
+        "path": "dist/src/contracts.js",
+        "size": 2515,
+        "mode": 420
+      },
+      {
+        "path": "dist/src/evidence/index.d.ts",
+        "size": 547,
+        "mode": 420
+      },
+      {
+        "path": "dist/src/evidence/index.js",
+        "size": 5295,
+        "mode": 420
+      },
+      {
+        "path": "dist/src/evidence/node-test.d.ts",
+        "size": 277,
+        "mode": 420
+      },
+      {
+        "path": "dist/src/evidence/node-test.js",
+        "size": 6914,
+        "mode": 420
+      },
+      {
+        "path": "dist/src/execution/index.d.ts",
+        "size": 352,
+        "mode": 420
+      },
+      {
+        "path": "dist/src/execution/index.js",
+        "size": 9404,
+        "mode": 420
+      },
+      {
+        "path": "dist/src/execution/lock.d.ts",
+        "size": 77,
+        "mode": 420
+      },
+      {
+        "path": "dist/src/execution/lock.js",
+        "size": 1271,
+        "mode": 420
+      },
+      {
+        "path": "dist/src/execution/node-test-reporter.d.ts",
+        "size": 146,
+        "mode": 420
+      },
+      {
+        "path": "dist/src/execution/node-test-reporter.js",
+        "size": 1273,
+        "mode": 420
+      },
+      {
+        "path": "dist/src/files.d.ts",
+        "size": 1031,
+        "mode": 420
+      },
+      {
+        "path": "dist/src/files.js",
+        "size": 3583,
+        "mode": 420
+      },
+      {
+        "path": "dist/src/planning/index.d.ts",
+        "size": 582,
+        "mode": 420
+      },
+      {
+        "path": "dist/src/planning/index.js",
+        "size": 7886,
+        "mode": 420
+      },
+      {
+        "path": "examples/backend/docs/behavior.md",
+        "size": 678,
+        "mode": 420
+      },
+      {
+        "path": "examples/backend/docs/verification/profiles/backend.yaml",
+        "size": 145,
+        "mode": 420
+      },
+      {
+        "path": "examples/backend/docs/verification/project.yaml",
+        "size": 446,
+        "mode": 420
+      },
+      {
+        "path": "examples/backend/docs/verification/README.md",
+        "size": 735,
+        "mode": 420
+      },
+      {
+        "path": "examples/backend/docs/verification/recipes/api-contract/RECIPE.md",
+        "size": 2044,
+        "mode": 420
+      },
+      {
+        "path": "examples/backend/docs/verification/recipes/settings-persistence/RECIPE.md",
+        "size": 1896,
+        "mode": 420
+      },
+      {
+        "path": "examples/backend/package.json",
+        "size": 146,
+        "mode": 420
+      },
+      {
+        "path": "examples/backend/src/server.mjs",
+        "size": 2237,
+        "mode": 420
+      },
+      {
+        "path": "examples/backend/tests/settings.test.mjs",
+        "size": 1323,
+        "mode": 420
+      },
+      {
+        "path": "examples/backend/verification-input.json",
+        "size": 539,
+        "mode": 420
+      },
+      {
+        "path": "package.json",
+        "size": 867,
+        "mode": 420
+      },
+      {
+        "path": "skills/_shared/run-veripaka.mjs",
+        "size": 247,
+        "mode": 420
+      },
+      {
+        "path": "skills/veripaka/SKILL.md",
+        "size": 2818,
+        "mode": 420
+      }
+    ],
+    "entryCount": 34,
+    "bundled": []
+  }
+]

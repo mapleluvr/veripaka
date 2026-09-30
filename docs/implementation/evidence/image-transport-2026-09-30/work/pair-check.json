@@ -1,0 +1,21 @@
+{
+  "at": "2026-09-30T04:35:25.348Z",
+  "pairs": [
+    {
+      "directory": "direct-xoGvHN",
+      "forms": {
+        "left": "data-uri",
+        "right": "https"
+      },
+      "bodyIdenticalExceptImageURL": true
+    },
+    {
+      "directory": "direct-KWI8ix",
+      "forms": {
+        "left": "data-uri",
+        "right": "https"
+      },
+      "bodyIdenticalExceptImageURL": true
+    }
+  ]
+}

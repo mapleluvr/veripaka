@@ -1,0 +1,6 @@
+{
+  "name": "veripaka-backend-reference",
+  "private": true,
+  "type": "module",
+  "scripts": { "test": "node --test tests/settings.test.mjs" }
+}

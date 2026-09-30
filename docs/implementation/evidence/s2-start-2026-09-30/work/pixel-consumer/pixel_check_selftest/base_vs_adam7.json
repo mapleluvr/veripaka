@@ -1,0 +1,120 @@
+{
+  "tool": "png_pixel_compare.py",
+  "toolVersion": "1.0.0",
+  "runAtUtc": "2026-09-29T20:18:20+00:00",
+  "command": "python.exe png_pixel_compare.py --selftest --dir pixel_check_selftest",
+  "inputs": {
+    "reference": {
+      "path": "D:\\Projects\\veripaka\\.temp\\s2-start\\pixel-consumer\\pixel_check_selftest\\base.png",
+      "fileBytes": 147,
+      "fileSha256": "d047d5370dc0fbd16b355d99ab189cbca923e71cdf7e7e52c1909cfbfba345ce",
+      "ihdr": {
+        "width": 37,
+        "height": 23,
+        "bitDepth": 8,
+        "colorType": 2,
+        "colorTypeName": "truecolor",
+        "interlace": 0,
+        "interlaceName": "none"
+      },
+      "chunkTypes": [
+        "IHDR",
+        "IDAT",
+        "IEND"
+      ],
+      "ancillaryChunkTypes": [],
+      "allChunkCrc32Valid": true,
+      "idatBytes": 90
+    },
+    "candidate": {
+      "path": "D:\\Projects\\veripaka\\.temp\\s2-start\\pixel-consumer\\pixel_check_selftest\\adam7.png",
+      "fileBytes": 133,
+      "fileSha256": "8b4c2ded9f8da3e7c65afca2d2c31d3500dd356b91e3f67ca3704ef323d2806b",
+      "ihdr": {
+        "width": 37,
+        "height": 23,
+        "bitDepth": 8,
+        "colorType": 2,
+        "colorTypeName": "truecolor",
+        "interlace": 1,
+        "interlaceName": "Adam7"
+      },
+      "chunkTypes": [
+        "IHDR",
+        "IDAT",
+        "IEND"
+      ],
+      "ancillaryChunkTypes": [],
+      "allChunkCrc32Valid": true,
+      "idatBytes": 76
+    }
+  },
+  "comparisonScope": "decoded pixel samples of the two files only",
+  "dimensionsMatch": true,
+  "identicalDimensionsOrResized": null,
+  "pixelsIdentical": true,
+  "stats": {
+    "totalPixels": 851,
+    "differingPixels": 0,
+    "identicalPixels": 851,
+    "identicalFraction": 1.0,
+    "rowsWithDifferences": 0,
+    "maxChannelDelta16": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "sumChannelDelta16": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "boundingBox": null,
+    "examples": []
+  },
+  "structuralNotes": [
+    "encoded form differs: interlace reference=0 candidate=1 (comparison uses decoded RGBA16 samples, so this alone is not a rendering difference)",
+    "IDAT byte streams differ (compression/filters/encoding differ)"
+  ],
+  "crossCheck": {
+    "reference": {
+      "available": true,
+      "agreement": "yes",
+      "decoder": "Pillow 10.4.0",
+      "mismatchedPixels": 0,
+      "firstMismatch": null
+    },
+    "candidate": {
+      "available": true,
+      "agreement": "yes",
+      "decoder": "Pillow 10.4.0",
+      "mismatchedPixels": 0,
+      "firstMismatch": null
+    }
+  },
+  "warnings": [],
+  "limitations": [
+    "Compares only the two supplied PNG files; it does not model browser layout, CSS, fonts, text shaping, antialiasing policy or device pixel ratio.",
+    "No color management: iCCP/gAMA/cHRM/sRGB chunks are recorded but never applied, so identical samples under different color profiles are reported as identical.",
+    "Only the default image of an APNG is compared; later frames are ignored.",
+    "Comparison is exact per sample value; there is no perceptual tolerance.",
+    "Equal pixels do not prove a product is correct or accepted, only that these two rendered files agree pixel-for-pixel."
+  ],
+  "diffImage": null,
+  "verdict": "PIXELS_IDENTICAL",
+  "summaryLines": [
+    "verdict: PIXELS_IDENTICAL",
+    "reference: base.png (37x23, truecolor, depth 8, none, 147 bytes)",
+    "candidate: adam7.png (37x23, truecolor, depth 8, Adam7, 133 bytes)",
+    "file sha256 differ: True",
+    "pixels: total=851 differing=0 identical=851 (1.000000000 identical) rows_with_diffs=0",
+    "max per-channel delta (16-bit units) RGBA = [0, 0, 0, 0]",
+    "difference bounding box = None",
+    "structural note: encoded form differs: interlace reference=0 candidate=1 (comparison uses decoded RGBA16 samples, so this alone is not a rendering difference)",
+    "structural note: IDAT byte streams differ (compression/filters/encoding differ)",
+    "cross-check reference: {'available': True, 'agreement': 'yes', 'decoder': 'Pillow 10.4.0', 'mismatchedPixels': 0, 'firstMismatch': None}",
+    "cross-check candidate: {'available': True, 'agreement': 'yes', 'decoder': 'Pillow 10.4.0', 'mismatchedPixels': 0, 'firstMismatch': None}"
+  ]
+}

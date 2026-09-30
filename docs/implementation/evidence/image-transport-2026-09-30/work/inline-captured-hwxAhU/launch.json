@@ -1,0 +1,28 @@
+{
+  "startedAt": "2026-09-30T04:09:53.614Z",
+  "purpose": "Prior task plus fetch observation; no model/format/config change",
+  "source": "docs/implementation/evidence/s2-start-2026-09-30/work/inline-image-YStp1L/metadata.json",
+  "args": [
+    "--import",
+    "file:///D:/Projects/veripaka/.temp/vision-diagnosis/fetch-tap.mjs",
+    "C:/Users/mapleland/AppData/Roaming/npm/node_modules/@earendil-works/pi-coding-agent/dist/bundle/cli.js",
+    "--model",
+    "Mapleluv-ChatCompletions/deepseek-flash:max",
+    "--no-extensions",
+    "--no-session",
+    "--no-context-files",
+    "--no-skills",
+    "--skill",
+    "D:\\Projects\\veripaka\\.temp\\s2-start\\capability-consumer\\node_modules\\veripaka\\skills\\veripaka\\SKILL.md",
+    "--no-prompt-templates",
+    "--no-themes",
+    "--no-tools",
+    "--mode",
+    "json",
+    "--print",
+    "@sample-a.png",
+    "@sample-b.png",
+    "This is input capability characterization, not product verification. Two PNG images are attached in order sample-a.png then sample-b.png. Without tools, read the CODE after the label and list six shapes top-to-bottom, left-to-right with shape circle/square/triangle and color red/blue/green/orange. If pixels are not available, say supported:false without guessing. Return JSON {supported:boolean,images:[{file,code,cells:[{shape,color}]}],limitation:string}. No other actions."
+  ],
+  "cwd": "D:\\Projects\\veripaka\\.temp\\s2-start\\capability-consumer"
+}

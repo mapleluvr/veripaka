@@ -1,0 +1,16 @@
+{
+  "provider": "Mapleluv-ChatCompletions",
+  "api": "openai-completions",
+  "models": [
+    {
+      "id": "deepseek-flash",
+      "input": [
+        "text",
+        "image"
+      ],
+      "reasoning": true,
+      "contextWindow": 1048000,
+      "maxTokens": 384000
+    }
+  ]
+}

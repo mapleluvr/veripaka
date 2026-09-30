@@ -1,0 +1,41 @@
+{
+  "checkedAt": "2026-09-29T20:40:32.541465+00:00",
+  "scriptSha256": "f651f6fc1a2e745d13060d7ed575df21eccce32b2e3d642b44230ca42fa02588",
+  "scriptLines": 264,
+  "cases": [
+    {
+      "case": "opaque-rgba.png",
+      "registeredExpectation": "equal",
+      "exitCode": 0,
+      "verdict": "identical",
+      "differingPixels": 0,
+      "reason": null
+    },
+    {
+      "case": "different-dimensions.png",
+      "registeredExpectation": "different",
+      "exitCode": 2,
+      "verdict": "incomparable",
+      "differingPixels": null,
+      "reason": "dimensions differ: [380, 250] vs [250, 380]"
+    },
+    {
+      "case": "missing-iend.png",
+      "registeredExpectation": "invalid",
+      "exitCode": 0,
+      "verdict": "identical",
+      "differingPixels": 0,
+      "reason": null
+    }
+  ],
+  "posthocInterlaceCheck": {
+    "PNG_IHDR_interlace_byte": 0,
+    "meaning": "The same Pillow option produced non-interlaced PNG, so it does not establish Adam7 coverage. Original generated controls were deleted by the model."
+  },
+  "interpretation": {
+    "opaqueRGBA": "decoded-pixel equality confirmed",
+    "dimensions": "explicit conservative incomparable; not a false pass, but no difference verdict",
+    "missingIEND": "strict container validity criterion not met: Pillow load tolerates missing end marker. Decoded samples may still match. This limits use in a strict reference-integrity workflow; it is not proof that the narrower decoded-sample comparison is wrong.",
+    "qualification": "Not adopted as a shipped Recipe. No CLI run, source acquisition linkage or full reference-validity gate."
+  }
+}

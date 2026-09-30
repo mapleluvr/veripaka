@@ -1,0 +1,22 @@
+{
+  "project": "D:\\Projects\\veripaka\\.temp\\vision-revalidation\\consumer",
+  "args": [
+    "C:/Users/mapleland/AppData/Roaming/npm/node_modules/@earendil-works/pi-coding-agent/dist/bundle/cli.js",
+    "--model",
+    "Mapleluv-ChatCompletions/deepseek-flash:max",
+    "--no-extensions",
+    "--no-session",
+    "--no-context-files",
+    "--no-skills",
+    "--skill",
+    "D:\\Projects\\veripaka\\.temp\\s2-start\\capability-consumer\\node_modules\\veripaka\\skills\\veripaka\\SKILL.md",
+    "--no-prompt-templates",
+    "--no-themes",
+    "--tools",
+    "read",
+    "--mode",
+    "json",
+    "--print",
+    "请只使用 read 工具读取当前目录中的 fresh-a.png 与 fresh-b.jpg。直接依据图片，分别给出 CODE 后的六个字符，以及六个图形从上到下、每行从左到右的 shape（circle/square/triangle）与 color（red/blue/green/orange）。不得读取其他文件，不调用其他工具、OCR、代码或外部服务，不修改文件。不能看见图片时如实说明，不猜测。最终只输出 JSON：{\"supported\":true或false,\"images\":[{\"file\":\"fresh-a.png\",\"code\":\"...\",\"cells\":[{\"shape\":\"...\",\"color\":\"...\"},...]},{\"file\":\"fresh-b.jpg\",\"code\":\"...\",\"cells\":[...]}],\"limitation\":\"...\"}。"
+  ]
+}

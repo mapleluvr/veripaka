@@ -1,0 +1,43 @@
+{
+  "node": "v24.15.0",
+  "playwright": "1.58.2",
+  "identity": "6a10c452-cddc-4784-8932-bb9076eee6ab",
+  "records": [
+    {
+      "name": "normal",
+      "browser": "153.0.8010.53",
+      "url": "http://127.0.0.1:6676/",
+      "identity": "6a10c452-cddc-4784-8932-bb9076eee6ab",
+      "visible": true,
+      "box": {
+        "x": 44,
+        "y": 108,
+        "width": 200,
+        "height": 48
+      },
+      "screenshot": "D:\\Projects\\veripaka\\.temp\\s2-start\\browser-capability\\normal.png",
+      "afterClick": "Saved"
+    },
+    {
+      "name": "covered",
+      "browser": "153.0.8010.53",
+      "url": "http://127.0.0.1:6676/covered",
+      "identity": "6a10c452-cddc-4784-8932-bb9076eee6ab",
+      "visible": true,
+      "box": {
+        "x": 44,
+        "y": 108,
+        "width": 200,
+        "height": 48
+      },
+      "screenshot": "D:\\Projects\\veripaka\\.temp\\s2-start\\browser-capability\\covered.png",
+      "afterClick": "Saved"
+    }
+  ],
+  "cleanup": {
+    "browserPid": 33536,
+    "browserAlive": false,
+    "serverListening": false
+  },
+  "limit": "Tool capability experiment only; parent-written controls, not autonomous recipe discovery."
+}

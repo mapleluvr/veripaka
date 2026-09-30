@@ -1,0 +1,53 @@
+{
+  "name": "fresh-png-jpeg",
+  "passed": true,
+  "toolCalls": [
+    {
+      "name": "read",
+      "args": {
+        "path": "fresh-a.png"
+      }
+    },
+    {
+      "name": "read",
+      "args": {
+        "path": "fresh-b.jpg"
+      }
+    }
+  ],
+  "perImage": [
+    {
+      "file": "fresh-a.png",
+      "code": "R3M66Y",
+      "orderedPairsCorrect": 6
+    },
+    {
+      "file": "fresh-b.jpg",
+      "code": "UCQLJT",
+      "orderedPairsCorrect": 6
+    }
+  ],
+  "wire": [
+    {
+      "request": "17172-1.request.json",
+      "status": 200,
+      "images": []
+    },
+    {
+      "request": "17172-2.request.json",
+      "status": 200,
+      "images": [
+        {
+          "format": "image/png",
+          "sha256": "a9af54284935a32b6dbf285823a88fb74318af683f5b6a78363e2c82c305e101"
+        },
+        {
+          "format": "image/jpeg",
+          "sha256": "b04f069e631f1f074a2cff3019fea75f6d41a8c2280af5076900726c07f7ac56"
+        }
+      ]
+    }
+  ],
+  "responseModel": "cb/deepseek-v4.1-flash",
+  "providerErrors": 0
+}

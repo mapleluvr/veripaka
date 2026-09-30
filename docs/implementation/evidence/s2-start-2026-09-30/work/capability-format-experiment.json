@@ -1,0 +1,22 @@
+{
+  "registeredAt": "2026-09-29T20:02:50.944Z",
+  "hypotheses": [
+    "H1: read image PNG encoding is rejected but equivalent JPEG is usable",
+    "H2: images from tool results are mishandled while initial-message PNG attachments work"
+  ],
+  "policy": "One attempt for each condition; same model, no repeat of wrong answers. This is a declared input-path experiment, not an independent method-quality holdout.",
+  "files": [
+    {
+      "path": ".temp/s2-start/capability-jpeg-task.txt",
+      "sha256": "f664b29ae66eb0a002888fb305ca683d85f2f054872537228cb0936f563984f0"
+    },
+    {
+      "path": ".temp/s2-start/capability-consumer/sample-a.jpg",
+      "sha256": "d24293f48d68e7f2083d54e3c171e99882972e24531a798534519fe9fac0c9f7"
+    },
+    {
+      "path": ".temp/s2-start/capability-consumer/sample-b.jpg",
+      "sha256": "927b533f659fa45b6022b76726e1360f3217885d10f10f2d913ba8fd2a8875b8"
+    }
+  ]
+}

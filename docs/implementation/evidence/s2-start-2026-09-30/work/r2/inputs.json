@@ -1,0 +1,27 @@
+{
+  "frozenAt": "2026-09-29T20:34:45.725Z",
+  "revision": "R2 - explicit Skill invocation; same R1 package",
+  "policy": "Invocation changed deliberately to test consumption. Not an isolated causal comparison with R0/R1. No failed sample removed.",
+  "files": [
+    {
+      "path": ".temp/s2-start/r2/task.txt",
+      "sha256": "21310ee17daf7310ed1002f048ba1fc58293faec73f5a23429f417ca76bd760c"
+    },
+    {
+      "path": ".temp/s2-start/r1/veripaka-0.1.0-alpha.1.tgz",
+      "sha256": "d48913411b399e81170387ebacf0143926689d559acf8e2b36ddc35c63d32e83"
+    },
+    {
+      "path": ".temp/s2-start/r2/registered-cases.json",
+      "sha256": "b1588157117dec3f1183addaf01a1dc924a89e2107fccab5abfe7669d7e20c98"
+    },
+    {
+      "path": ".temp/s2-start/r2/pixel-consumer/reference.png",
+      "sha256": "6de6d712a67eb2d10091d5e6b19a573070706d3300dd3b84d0313a14ab390409"
+    },
+    {
+      "path": ".temp/s2-start/r2/pixel-consumer/candidate.png",
+      "sha256": "a8f0e5b63aa072e34c8fc26914b500ccac70dc0ef0c5f2ff5596d3500d964f41"
+    }
+  ]
+}

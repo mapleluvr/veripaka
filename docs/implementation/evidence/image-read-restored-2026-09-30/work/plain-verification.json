@@ -1,0 +1,86 @@
+{
+  "passed": true,
+  "instrumented": false,
+  "directory": "D:\\Projects\\veripaka\\.temp\\pi-smoke\\read-restored-plain\\attempt-LjSjkp",
+  "model": "Mapleluv-ChatCompletions/deepseek-flash:max",
+  "responseModels": [
+    "cb/deepseek-v4.1-flash"
+  ],
+  "providerErrors": [],
+  "toolCalls": [
+    {
+      "name": "read",
+      "args": {
+        "path": "sample-a.png"
+      }
+    },
+    {
+      "name": "read",
+      "args": {
+        "path": "sample-b.png"
+      }
+    }
+  ],
+  "images": [
+    {
+      "file": "sample-a.png",
+      "code": "WYW5ND",
+      "cells": [
+        {
+          "shape": "triangle",
+          "color": "orange"
+        },
+        {
+          "shape": "triangle",
+          "color": "blue"
+        },
+        {
+          "shape": "triangle",
+          "color": "orange"
+        },
+        {
+          "shape": "triangle",
+          "color": "green"
+        },
+        {
+          "shape": "circle",
+          "color": "orange"
+        },
+        {
+          "shape": "triangle",
+          "color": "red"
+        }
+      ]
+    },
+    {
+      "file": "sample-b.png",
+      "code": "LGE2GY",
+      "cells": [
+        {
+          "shape": "triangle",
+          "color": "blue"
+        },
+        {
+          "shape": "square",
+          "color": "red"
+        },
+        {
+          "shape": "circle",
+          "color": "green"
+        },
+        {
+          "shape": "circle",
+          "color": "blue"
+        },
+        {
+          "shape": "circle",
+          "color": "orange"
+        },
+        {
+          "shape": "circle",
+          "color": "red"
+        }
+      ]
+    }
+  ]
+}

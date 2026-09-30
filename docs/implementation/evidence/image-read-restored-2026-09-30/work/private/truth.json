@@ -1,0 +1,64 @@
+[
+  {
+    "file": "fresh-a.png",
+    "code": "R3M66Y",
+    "cells": [
+      {
+        "shape": "square",
+        "color": "orange"
+      },
+      {
+        "shape": "triangle",
+        "color": "blue"
+      },
+      {
+        "shape": "square",
+        "color": "orange"
+      },
+      {
+        "shape": "circle",
+        "color": "red"
+      },
+      {
+        "shape": "circle",
+        "color": "green"
+      },
+      {
+        "shape": "triangle",
+        "color": "orange"
+      }
+    ],
+    "sha256": "a9af54284935a32b6dbf285823a88fb74318af683f5b6a78363e2c82c305e101"
+  },
+  {
+    "file": "fresh-b.jpg",
+    "code": "UCQLJT",
+    "cells": [
+      {
+        "shape": "triangle",
+        "color": "red"
+      },
+      {
+        "shape": "square",
+        "color": "red"
+      },
+      {
+        "shape": "circle",
+        "color": "blue"
+      },
+      {
+        "shape": "square",
+        "color": "orange"
+      },
+      {
+        "shape": "triangle",
+        "color": "orange"
+      },
+      {
+        "shape": "circle",
+        "color": "red"
+      }
+    ],
+    "sha256": "b04f069e631f1f074a2cff3019fea75f6d41a8c2280af5076900726c07f7ac56"
+  }
+]

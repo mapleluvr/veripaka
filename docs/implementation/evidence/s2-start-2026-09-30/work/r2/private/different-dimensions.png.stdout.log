@@ -1,0 +1,51 @@
+{
+  "check": "decoded-pixel-equality",
+  "checker": "check_pixels.py",
+  "tolerance": "none (exact per-sample)",
+  "limits": [
+    "Compares decoded pixel samples of the two given files only; it does not re-render any page, DOM, or application.",
+    "Byte-level differences (PNG compression, chunk order, metadata/tEXt/timestamps, EXIF) are deliberately ignored and are NOT rendering diffs.",
+    "A pass means the two files decode to the same pixel matrix. It is not evidence that either image is correct, current, or the intended output.",
+    "A pass does not establish that the real rendering pipeline is deterministic; it only characterizes these two artifacts.",
+    "Decoder-dependent behavior (color profiles, gamma chunks, 16-bit downconversion, palette/alpha normalization) can affect the comparison; HDR/ICC transforms and interlaced edge cases are not covered.",
+    "No tolerance is applied: any single differing channel sample fails the exact check (use the reported delta statistics to judge near-matches)."
+  ],
+  "environment": {
+    "pillow": "10.4.0",
+    "numpy": "2.2.6"
+  },
+  "reference": {
+    "path": "D:\\Projects\\veripaka\\.temp\\s2-start\\r2\\pixel-consumer\\reference.png",
+    "sha256": "6de6d712a67eb2d10091d5e6b19a573070706d3300dd3b84d0313a14ab390409",
+    "format": "PNG",
+    "mode": "RGB",
+    "size": [
+      380,
+      250
+    ],
+    "frames": 1,
+    "animation": false,
+    "png_info_keys": []
+  },
+  "candidate": {
+    "path": "D:\\Projects\\veripaka\\.temp\\s2-start\\r2\\private\\different-dimensions.png",
+    "sha256": "cade9a6cc37715af098dbc753b5576fd4f4cfd4ec7006f7320e682f2e3b27fed",
+    "format": "PNG",
+    "mode": "RGB",
+    "size": [
+      250,
+      380
+    ],
+    "frames": 1,
+    "animation": false,
+    "png_info_keys": []
+  },
+  "dimensionsMatch": false,
+  "modeMatch": true,
+  "bytesIdentical": false,
+  "frameCountMatch": true,
+  "comparable": false,
+  "reason": "dimensions differ: [380, 250] vs [250, 380]",
+  "verdict": "incomparable",
+  "identicalPixels": null
+}

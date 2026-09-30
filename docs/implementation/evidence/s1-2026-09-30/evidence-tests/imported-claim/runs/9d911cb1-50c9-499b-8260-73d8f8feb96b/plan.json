@@ -1,0 +1,223 @@
+{
+  "schema": "veripaka.plan/v0",
+  "runId": "9d911cb1-50c9-499b-8260-73d8f8feb96b",
+  "createdAt": "2026-09-29T17:26:30.756Z",
+  "projectRoot": "D:\\Projects\\veripaka\\.temp\\evidence-2026-09-29T17-26-22-712Z\\imported-claim",
+  "corpusRoot": "docs/verification",
+  "kind": "verification",
+  "input": {
+    "subject": "local-api",
+    "goals": [
+      {
+        "id": "boundary",
+        "question": "Does the API reject unsupported themes without changing state?",
+        "claims": [
+          "api-contract/reject-invalid-theme"
+        ]
+      },
+      {
+        "id": "persistence",
+        "question": "Does a successful settings write survive service restart?",
+        "claims": [
+          "settings-persistence/survives-restart"
+        ]
+      },
+      {
+        "id": "sync",
+        "question": "Does the setting synchronize across devices?",
+        "claims": [],
+        "uncovered": "Not promised by the reference service and not verified by these methods."
+      }
+    ]
+  },
+  "subject": {
+    "kind": "checkout",
+    "description": "Local reference HTTP service imported from this declared checkout by its native tests",
+    "entrypoint": "src/server.mjs",
+    "sourceRoots": [
+      "src",
+      "tests",
+      "package.json",
+      "docs/behavior.md"
+    ]
+  },
+  "binding": {
+    "runner": "node-test",
+    "enabled": true,
+    "subject": "local-api",
+    "testFiles": [
+      "tests/settings.test.mjs"
+    ],
+    "timeoutMs": 15000,
+    "maxOutputBytes": 2097152
+  },
+  "commandRef": "backend-tests",
+  "checks": [
+    {
+      "key": "api-contract/reject-invalid-theme",
+      "recipeId": "api-contract",
+      "id": "reject-invalid-theme",
+      "required": true,
+      "expected": "Unsupported theme returns HTTP 400 and the stored theme remains light.",
+      "source": "docs/behavior.md",
+      "file": "tests/settings.test.mjs",
+      "name": "api rejects unsupported theme without changing stored state"
+    },
+    {
+      "key": "settings-persistence/survives-restart",
+      "recipeId": "settings-persistence",
+      "id": "survives-restart",
+      "required": true,
+      "expected": "A successful dark-theme write is returned by GET after restarting the service with the same private data directory.",
+      "source": "docs/behavior.md",
+      "file": "tests/settings.test.mjs",
+      "name": "settings survive service restart"
+    }
+  ],
+  "recipes": [
+    {
+      "schema": "veripaka.recipe/v0",
+      "id": "api-contract",
+      "title": "Reject unsupported settings without writing state",
+      "summary": "Check the HTTP boundary rather than a mock of input validation",
+      "kind": "verification",
+      "status": "trial",
+      "tags": [
+        "backend",
+        "api",
+        "boundary",
+        "settings"
+      ],
+      "applies": "Use when the settings API or its input validation changes.",
+      "excludes": [
+        "Authentication",
+        "arbitrary request fuzzing",
+        "production deployment"
+      ],
+      "execution": {
+        "mode": "command",
+        "commandRef": "backend-tests"
+      },
+      "claims": [
+        {
+          "id": "reject-invalid-theme",
+          "required": true,
+          "expected": "Unsupported theme returns HTTP 400 and the stored theme remains light.",
+          "source": "docs/behavior.md",
+          "judge": "executable",
+          "check": {
+            "file": "tests/settings.test.mjs",
+            "name": "api rejects unsupported theme without changing stored state"
+          },
+          "evidence": [
+            "node-test-result"
+          ]
+        }
+      ]
+    },
+    {
+      "schema": "veripaka.recipe/v0",
+      "id": "settings-persistence",
+      "title": "Settings survive a real service restart",
+      "summary": "Detect successful write responses that do not persist the setting",
+      "kind": "verification",
+      "status": "trial",
+      "tags": [
+        "backend",
+        "persistence",
+        "settings",
+        "restart"
+      ],
+      "applies": "Use when the settings write path or persistent storage changes.",
+      "excludes": [
+        "Cross-device synchronization",
+        "crash consistency",
+        "distributed writes"
+      ],
+      "execution": {
+        "mode": "command",
+        "commandRef": "backend-tests"
+      },
+      "claims": [
+        {
+          "id": "survives-restart",
+          "required": true,
+          "expected": "A successful dark-theme write is returned by GET after restarting the service with the same private data directory.",
+          "source": "docs/behavior.md",
+          "judge": "executable",
+          "check": {
+            "file": "tests/settings.test.mjs",
+            "name": "settings survive service restart"
+          },
+          "evidence": [
+            "node-test-result"
+          ]
+        }
+      ]
+    }
+  ],
+  "snapshot": [
+    {
+      "path": "docs/behavior.md",
+      "digest": "60af7f813e7e48541d6eecd17adf078ecbe9fc66cffd09f551446a2f35cecb6a",
+      "size": 678
+    },
+    {
+      "path": "docs/verification/profiles/backend.yaml",
+      "digest": "a479b1a978b4f10bb3fcfe3db020fbf9d4d42a98fd1d1a5179bfce98d9bc4883",
+      "size": 145
+    },
+    {
+      "path": "docs/verification/project.yaml",
+      "digest": "cfdcd54da87618872c72e0c9506d5062c724d53755c1837304ef5832251ca196",
+      "size": 446
+    },
+    {
+      "path": "docs/verification/recipes/api-contract/RECIPE.md",
+      "digest": "57a591a2b2e22a5f55c783a837fc17eacd1c67a61e073bc3b2e6a1341df0340a",
+      "size": 2044
+    },
+    {
+      "path": "docs/verification/recipes/settings-persistence/RECIPE.md",
+      "digest": "e331cf9a05ebf05a5692a64daa7a769308e76b57a4a0ea20d29ec7bdb180b09f",
+      "size": 1896
+    },
+    {
+      "path": "package.json",
+      "digest": "ec47a93c7147ef81cc350acd3ec13ebbf96939f9345e3d4403ed174fd8e66ef7",
+      "size": 146
+    },
+    {
+      "path": "src/server.mjs",
+      "digest": "3d104917b8224c7712511594e6225d5a8e0fa2bec0665853c1ba9ccb67f38307",
+      "size": 2237
+    },
+    {
+      "path": "tests/settings.test.mjs",
+      "digest": "f1fc464e606177ad8a6b77480741da90c2e4010c29b283c1217e27f4c233835b",
+      "size": 1323
+    },
+    {
+      "path": "verification-input.json",
+      "digest": "ad87b1acfa493731547979f65670fee7290e0d683c53f40768b1dbf958e70d86",
+      "size": 539
+    }
+  ],
+  "snapshotRoots": [
+    "src",
+    "tests",
+    "package.json",
+    "docs/behavior.md",
+    "docs/verification/project.yaml",
+    "verification-input.json",
+    "docs/verification/recipes/api-contract",
+    "docs/verification/recipes/settings-persistence",
+    "docs/verification/profiles/backend.yaml"
+  ],
+  "runtime": {
+    "executable": "C:\\Program Files\\nodejs\\node.exe",
+    "nodeVersion": "v24.15.0",
+    "reporterPath": "D:\\Projects\\veripaka\\.temp\\s1-closure\\consumer\\node_modules\\veripaka\\dist\\src\\execution\\node-test-reporter.js",
+    "reporterDigest": "dcf8e3cb31db4dbdaeaceb78ade15ef7bbcbc0f6a7c536875e39820730e14d83"
+  }
+}

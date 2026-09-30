@@ -1,0 +1,5 @@
+# Keep normal source and documentation checkouts consistent across platforms.
+* text=auto eol=lf
+
+# Raw evidence is digest-bound; never normalize its existing line endings.
+docs/implementation/evidence/** -text

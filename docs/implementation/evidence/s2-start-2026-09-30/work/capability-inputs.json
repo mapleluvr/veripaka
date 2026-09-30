@@ -1,0 +1,35 @@
+{
+  "frozenAt": "2026-09-29T19:58:26.154Z",
+  "node": "v24.15.0",
+  "pi": "0.99.1",
+  "files": [
+    {
+      "path": "scripts/pi-smoke.mjs",
+      "sha256": "730a2f930e157be39cd5b82ab8229b1ff65a93ce8872ccea18557e86a2935174"
+    },
+    {
+      "path": ".temp/s2-start/capability-task.txt",
+      "sha256": "a87461f000f54b41798d31d5e89513eda819b64076f5d8e80aec8cc49f0cbcbd"
+    },
+    {
+      "path": ".temp/s2-start/CAPABILITY_PROTOCOL.md",
+      "sha256": "78a3b07011ca5ecc86369f47d2850afdb0b831f49953f1c114ef73fd243a86c1"
+    },
+    {
+      "path": ".temp/s2-start/veripaka-0.1.0-alpha.1.tgz",
+      "sha256": "c76bf6b4924c7d69369416552640a9d3aed08ec0526b7b26110a0829b2423034"
+    },
+    {
+      "path": ".temp/s2-start/capability-consumer/sample-a.png",
+      "sha256": "48ed0fdb162d954a7352c1c4a20f1414112d6509d869af7d0f82ad1ac59dd89a"
+    },
+    {
+      "path": ".temp/s2-start/capability-consumer/sample-b.png",
+      "sha256": "206691bc84e124a1468c6bfa28dd23bab8195ba43242a8d944942cd0d64a9807"
+    },
+    {
+      "path": ".temp/s2-start/capability-consumer/node_modules/veripaka/skills/veripaka/SKILL.md",
+      "sha256": "46ee6aa268b928c10377f09ee0dca930cf00d7fb44d89cd81bc47cd58ac00826"
+    }
+  ]
+}

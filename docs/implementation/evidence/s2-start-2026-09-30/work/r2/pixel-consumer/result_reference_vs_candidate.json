@@ -1,0 +1,78 @@
+{
+  "check": "decoded-pixel-equality",
+  "checker": "check_pixels.py",
+  "tolerance": "none (exact per-sample)",
+  "limits": [
+    "Compares decoded pixel samples of the two given files only; it does not re-render any page, DOM, or application.",
+    "Byte-level differences (PNG compression, chunk order, metadata/tEXt/timestamps, EXIF) are deliberately ignored and are NOT rendering diffs.",
+    "A pass means the two files decode to the same pixel matrix. It is not evidence that either image is correct, current, or the intended output.",
+    "A pass does not establish that the real rendering pipeline is deterministic; it only characterizes these two artifacts.",
+    "Decoder-dependent behavior (color profiles, gamma chunks, 16-bit downconversion, palette/alpha normalization) can affect the comparison; HDR/ICC transforms and interlaced edge cases are not covered.",
+    "No tolerance is applied: any single differing channel sample fails the exact check (use the reported delta statistics to judge near-matches)."
+  ],
+  "environment": {
+    "pillow": "10.4.0",
+    "numpy": "2.2.6"
+  },
+  "reference": {
+    "path": "reference.png",
+    "sha256": "6de6d712a67eb2d10091d5e6b19a573070706d3300dd3b84d0313a14ab390409",
+    "format": "PNG",
+    "mode": "RGB",
+    "size": [
+      380,
+      250
+    ],
+    "frames": 1,
+    "animation": false,
+    "png_info_keys": []
+  },
+  "candidate": {
+    "path": "candidate.png",
+    "sha256": "a8f0e5b63aa072e34c8fc26914b500ccac70dc0ef0c5f2ff5596d3500d964f41",
+    "format": "PNG",
+    "mode": "RGB",
+    "size": [
+      380,
+      250
+    ],
+    "frames": 1,
+    "animation": false,
+    "png_info_keys": []
+  },
+  "dimensionsMatch": true,
+  "modeMatch": true,
+  "bytesIdentical": false,
+  "frameCountMatch": true,
+  "comparedBasis": "RGBA8 after per-image mode normalization",
+  "totalPixels": 95000,
+  "differingPixels": 9491,
+  "differingPixelFraction": 0.09990526315789473,
+  "differingSamples": 28114,
+  "maxAbsChannelDelta": 233,
+  "meanAbsChannelDelta": 13.16387105263158,
+  "perChannelMaxDelta": {
+    "R": 233,
+    "G": 127,
+    "B": 195,
+    "A": 0
+  },
+  "perChannelDifferingSamples": {
+    "R": 9343,
+    "G": 9415,
+    "B": 9356,
+    "A": 0
+  },
+  "diffBoundingBox_xywh": [
+    44,
+    108,
+    200,
+    48
+  ],
+  "hasFullyTransparentPixels": false,
+  "differenceIsAlphaOnly": false,
+  "comparable": true,
+  "identicalPixels": false,
+  "verdict": "different",
+  "diffImage": "diff_reference_vs_candidate.png"
+}

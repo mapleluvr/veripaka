@@ -1,0 +1,72 @@
+{
+  "check": "decoded-pixel-equality",
+  "checker": "check_pixels.py",
+  "tolerance": "none (exact per-sample)",
+  "limits": [
+    "Compares decoded pixel samples of the two given files only; it does not re-render any page, DOM, or application.",
+    "Byte-level differences (PNG compression, chunk order, metadata/tEXt/timestamps, EXIF) are deliberately ignored and are NOT rendering diffs.",
+    "A pass means the two files decode to the same pixel matrix. It is not evidence that either image is correct, current, or the intended output.",
+    "A pass does not establish that the real rendering pipeline is deterministic; it only characterizes these two artifacts.",
+    "Decoder-dependent behavior (color profiles, gamma chunks, 16-bit downconversion, palette/alpha normalization) can affect the comparison; HDR/ICC transforms and interlaced edge cases are not covered.",
+    "No tolerance is applied: any single differing channel sample fails the exact check (use the reported delta statistics to judge near-matches)."
+  ],
+  "environment": {
+    "pillow": "10.4.0",
+    "numpy": "2.2.6"
+  },
+  "reference": {
+    "path": "D:\\Projects\\veripaka\\.temp\\s2-start\\r2\\pixel-consumer\\reference.png",
+    "sha256": "6de6d712a67eb2d10091d5e6b19a573070706d3300dd3b84d0313a14ab390409",
+    "format": "PNG",
+    "mode": "RGB",
+    "size": [
+      380,
+      250
+    ],
+    "frames": 1,
+    "animation": false,
+    "png_info_keys": []
+  },
+  "candidate": {
+    "path": "D:\\Projects\\veripaka\\.temp\\s2-start\\r2\\private\\opaque-rgba.png",
+    "sha256": "9f3e44a6085c157785e6c77fbbfef6ffb6b4f3bd8cfdf8f971b962aa5d6d52bc",
+    "format": "PNG",
+    "mode": "RGBA",
+    "size": [
+      380,
+      250
+    ],
+    "frames": 1,
+    "animation": false,
+    "png_info_keys": []
+  },
+  "dimensionsMatch": true,
+  "modeMatch": false,
+  "bytesIdentical": false,
+  "frameCountMatch": true,
+  "comparedBasis": "RGBA8 after per-image mode normalization",
+  "totalPixels": 95000,
+  "differingPixels": 0,
+  "differingPixelFraction": 0.0,
+  "differingSamples": 0,
+  "maxAbsChannelDelta": 0,
+  "meanAbsChannelDelta": 0.0,
+  "perChannelMaxDelta": {
+    "R": 0,
+    "G": 0,
+    "B": 0,
+    "A": 0
+  },
+  "perChannelDifferingSamples": {
+    "R": 0,
+    "G": 0,
+    "B": 0,
+    "A": 0
+  },
+  "diffBoundingBox_xywh": null,
+  "hasFullyTransparentPixels": false,
+  "differenceIsAlphaOnly": false,
+  "comparable": true,
+  "identicalPixels": true,
+  "verdict": "identical"
+}

@@ -1,0 +1,87 @@
+✖ pi harness sends only the required model and records the same invocation (231.6408ms)
+✖ repeating a task label retains both attempts and their original raw events (428.8546ms)
+✖ an explicit exploration task reaches Pi unchanged and is frozen for review (215.7611ms)
+✖ exit zero is not a completed exploration without an intact successful Pi terminal event (222.5637ms)
+ℹ tests 4
+ℹ suites 0
+ℹ pass 0
+ℹ fail 4
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1194.8035
+
+✖ failing tests:
+
+test at dist\tests\pi-smoke.test.js:50:1
+✖ pi harness sends only the required model and records the same invocation (231.6408ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  + actual - expected
+  
+  + 'Mapleluv-ChatCompletions/deepseek-flash:high'
+  - 'Mapleluv-ChatCompletions/deepseek-flash:max'
+  
+      at TestContext.<anonymous> (file:///D:/Projects/veripaka/dist/tests/pi-smoke.test.js:53:12)
+      at async Test.run (node:internal/test_runner/test:1208:7)
+      at async startSubtestAfterBootstrap (node:internal/test_runner/harness:385:3) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 'Mapleluv-ChatCompletions/deepseek-flash:high',
+    expected: 'Mapleluv-ChatCompletions/deepseek-flash:max',
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at dist\tests\pi-smoke.test.js:60:1
+✖ repeating a task label retains both attempts and their original raw events (428.8546ms)
+  AssertionError [ERR_ASSERTION]: Expected "actual" to be strictly unequal to:
+  
+  'D:\\Projects\\veripaka\\.temp\\pi-smoke\\contract-veripaka-pi-contract-gmfewu'
+      at TestContext.<anonymous> (file:///D:/Projects/veripaka/dist/tests/pi-smoke.test.js:66:12)
+      at async Test.run (node:internal/test_runner/test:1208:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:831:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 'D:\\Projects\\veripaka\\.temp\\pi-smoke\\contract-veripaka-pi-contract-gmfewu',
+    expected: 'D:\\Projects\\veripaka\\.temp\\pi-smoke\\contract-veripaka-pi-contract-gmfewu',
+    operator: 'notStrictEqual',
+    diff: 'simple'
+  }
+
+test at dist\tests\pi-smoke.test.js:71:1
+✖ an explicit exploration task reaches Pi unchanged and is frozen for review (215.7611ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  + actual - expected
+  
+  + '请使用已加载的 veripaka Skill，在当前项目验证设置接口的非法输入边界，以及成功保存的设置是否跨服务重启保持。先找到项目验证方法入口并按方法执行，不要重新发明测试。不得修改源码、测试、Recipe、输入、plan 或 result；只允许 CLI 生成本次运行记录。不安装依赖、不操作项目之外的数据。不要复用历史 run 充当本次执行，保留未覆盖目标。最后报告本次 run ID、逐项结果、verdictBasis、证据路径和未覆盖范围。'
+  - 'Explore the supplied object, choose observations, and create a candidate test.'
+  
+      at TestContext.<anonymous> (file:///D:/Projects/veripaka/dist/tests/pi-smoke.test.js:77:12)
+      at async Test.run (node:internal/test_runner/test:1208:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:831:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: '请使用已加载的 veripaka Skill，在当前项目验证设置接口的非法输入边界，以及成功保存的设置是否跨服务重启保持。先找到项目验证方法入口并按方法执行，不要重新发明测试。不得修改源码、测试、Recipe、输入、plan 或 result；只允许 CLI 生成本次运行记录。不安装依赖、不操作项目之外的数据。不要复用历史 run 充当本次执行，保留未覆盖目标。最后报告本次 run ID、逐项结果、verdictBasis、证据路径和未覆盖范围。',
+    expected: 'Explore the supplied object, choose observations, and create a candidate test.',
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at dist\tests\pi-smoke.test.js:87:1
+✖ exit zero is not a completed exploration without an intact successful Pi terminal event (222.5637ms)
+  AssertionError [ERR_ASSERTION]: provider-error
+  + actual - expected
+  
+  + undefined
+  - 'exploration'
+  
+      at TestContext.<anonymous> (file:///D:/Projects/veripaka/dist/tests/pi-smoke.test.js:96:16)
+      at async Test.run (node:internal/test_runner/test:1208:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:831:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: undefined,
+    expected: 'exploration',
+    operator: 'strictEqual',
+    diff: 'simple'
+  }

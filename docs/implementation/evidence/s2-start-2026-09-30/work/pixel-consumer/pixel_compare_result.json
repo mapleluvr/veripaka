@@ -1,0 +1,244 @@
+{
+  "tool": "png_pixel_compare.py",
+  "toolVersion": "1.0.0",
+  "runAtUtc": "2026-09-29T20:18:20+00:00",
+  "command": "python.exe png_pixel_compare.py reference.png candidate.png --json pixel_compare_result.json --diff pixel_compare_diff.png --max-report 5",
+  "inputs": {
+    "reference": {
+      "path": "D:\\Projects\\veripaka\\.temp\\s2-start\\pixel-consumer\\reference.png",
+      "fileBytes": 6323,
+      "fileSha256": "6de6d712a67eb2d10091d5e6b19a573070706d3300dd3b84d0313a14ab390409",
+      "ihdr": {
+        "width": 380,
+        "height": 250,
+        "bitDepth": 8,
+        "colorType": 2,
+        "colorTypeName": "truecolor",
+        "interlace": 0,
+        "interlaceName": "none"
+      },
+      "chunkTypes": [
+        "IHDR",
+        "IDAT",
+        "IDAT",
+        "IDAT",
+        "IEND"
+      ],
+      "ancillaryChunkTypes": [],
+      "allChunkCrc32Valid": true,
+      "idatBytes": 6242
+    },
+    "candidate": {
+      "path": "D:\\Projects\\veripaka\\.temp\\s2-start\\pixel-consumer\\candidate.png",
+      "fileBytes": 4128,
+      "fileSha256": "a8f0e5b63aa072e34c8fc26914b500ccac70dc0ef0c5f2ff5596d3500d964f41",
+      "ihdr": {
+        "width": 380,
+        "height": 250,
+        "bitDepth": 8,
+        "colorType": 2,
+        "colorTypeName": "truecolor",
+        "interlace": 0,
+        "interlaceName": "none"
+      },
+      "chunkTypes": [
+        "IHDR",
+        "IDAT",
+        "IDAT",
+        "IEND"
+      ],
+      "ancillaryChunkTypes": [],
+      "allChunkCrc32Valid": true,
+      "idatBytes": 4059
+    }
+  },
+  "comparisonScope": "decoded pixel samples of the two files only",
+  "dimensionsMatch": true,
+  "identicalDimensionsOrResized": null,
+  "pixelsIdentical": false,
+  "stats": {
+    "totalPixels": 95000,
+    "differingPixels": 9491,
+    "identicalPixels": 85509,
+    "identicalFraction": 0.900094737,
+    "rowsWithDifferences": 48,
+    "maxChannelDelta16": [
+      59881,
+      32639,
+      50115,
+      0
+    ],
+    "sumChannelDelta16": [
+      539416015,
+      294505295,
+      451662337,
+      0
+    ],
+    "boundingBox": {
+      "minX": 44,
+      "minY": 108,
+      "maxX": 243,
+      "maxY": 155,
+      "width": 200,
+      "height": 48
+    },
+    "examples": [
+      {
+        "x": 47,
+        "y": 108,
+        "referenceRGBA16": [
+          38036,
+          50629,
+          42662,
+          65535
+        ],
+        "candidateRGBA16": [
+          65535,
+          65535,
+          65535,
+          65535
+        ],
+        "deltaRGBA16": [
+          27499,
+          14906,
+          22873,
+          0
+        ]
+      },
+      {
+        "x": 48,
+        "y": 108,
+        "referenceRGBA16": [
+          17733,
+          39321,
+          25443,
+          65535
+        ],
+        "candidateRGBA16": [
+          65535,
+          65535,
+          65535,
+          65535
+        ],
+        "deltaRGBA16": [
+          47802,
+          26214,
+          40092,
+          0
+        ]
+      },
+      {
+        "x": 49,
+        "y": 108,
+        "referenceRGBA16": [
+          7196,
+          33667,
+          16705,
+          65535
+        ],
+        "candidateRGBA16": [
+          65535,
+          65535,
+          65535,
+          65535
+        ],
+        "deltaRGBA16": [
+          58339,
+          31868,
+          48830,
+          0
+        ]
+      },
+      {
+        "x": 50,
+        "y": 108,
+        "referenceRGBA16": [
+          5654,
+          32896,
+          15420,
+          65535
+        ],
+        "candidateRGBA16": [
+          65535,
+          65535,
+          65535,
+          65535
+        ],
+        "deltaRGBA16": [
+          59881,
+          32639,
+          50115,
+          0
+        ]
+      },
+      {
+        "x": 51,
+        "y": 108,
+        "referenceRGBA16": [
+          5654,
+          32896,
+          15420,
+          65535
+        ],
+        "candidateRGBA16": [
+          65535,
+          65535,
+          65535,
+          65535
+        ],
+        "deltaRGBA16": [
+          59881,
+          32639,
+          50115,
+          0
+        ]
+      }
+    ]
+  },
+  "structuralNotes": [
+    "IDAT byte streams differ (compression/filters/encoding differ)"
+  ],
+  "crossCheck": {
+    "reference": {
+      "available": true,
+      "agreement": "yes",
+      "decoder": "Pillow 10.4.0",
+      "mismatchedPixels": 0,
+      "firstMismatch": null
+    },
+    "candidate": {
+      "available": true,
+      "agreement": "yes",
+      "decoder": "Pillow 10.4.0",
+      "mismatchedPixels": 0,
+      "firstMismatch": null
+    }
+  },
+  "warnings": [],
+  "limitations": [
+    "Compares only the two supplied PNG files; it does not model browser layout, CSS, fonts, text shaping, antialiasing policy or device pixel ratio.",
+    "No color management: iCCP/gAMA/cHRM/sRGB chunks are recorded but never applied, so identical samples under different color profiles are reported as identical.",
+    "Only the default image of an APNG is compared; later frames are ignored.",
+    "Comparison is exact per sample value; there is no perceptual tolerance.",
+    "Equal pixels do not prove a product is correct or accepted, only that these two rendered files agree pixel-for-pixel."
+  ],
+  "diffImage": "D:\\Projects\\veripaka\\.temp\\s2-start\\pixel-consumer\\pixel_compare_diff.png",
+  "verdict": "PIXELS_DIFFER",
+  "summaryLines": [
+    "verdict: PIXELS_DIFFER",
+    "reference: reference.png (380x250, truecolor, depth 8, none, 6323 bytes)",
+    "candidate: candidate.png (380x250, truecolor, depth 8, none, 4128 bytes)",
+    "file sha256 differ: True",
+    "pixels: total=95000 differing=9491 identical=85509 (0.900094737 identical) rows_with_diffs=48",
+    "max per-channel delta (16-bit units) RGBA = [59881, 32639, 50115, 0]",
+    "difference bounding box = {'minX': 44, 'minY': 108, 'maxX': 243, 'maxY': 155, 'width': 200, 'height': 48}",
+    "  example diff at (47,108): ref=[38036, 50629, 42662, 65535] cand=[65535, 65535, 65535, 65535]",
+    "  example diff at (48,108): ref=[17733, 39321, 25443, 65535] cand=[65535, 65535, 65535, 65535]",
+    "  example diff at (49,108): ref=[7196, 33667, 16705, 65535] cand=[65535, 65535, 65535, 65535]",
+    "  example diff at (50,108): ref=[5654, 32896, 15420, 65535] cand=[65535, 65535, 65535, 65535]",
+    "  example diff at (51,108): ref=[5654, 32896, 15420, 65535] cand=[65535, 65535, 65535, 65535]",
+    "structural note: IDAT byte streams differ (compression/filters/encoding differ)",
+    "cross-check reference: {'available': True, 'agreement': 'yes', 'decoder': 'Pillow 10.4.0', 'mismatchedPixels': 0, 'firstMismatch': None}",
+    "cross-check candidate: {'available': True, 'agreement': 'yes', 'decoder': 'Pillow 10.4.0', 'mismatchedPixels': 0, 'firstMismatch': None}"
+  ]
+}

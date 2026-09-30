@@ -1,0 +1,29 @@
+
+> veripaka@0.1.0-alpha.1 test
+> npm run build && node --test --test-concurrency=1 dist/tests/*.test.js
+
+
+> veripaka@0.1.0-alpha.1 build
+> tsc -p tsconfig.json
+
+✔ explicit cancellation owns cleanup and leaves the other prepared run untouched (4653.5815ms)
+✔ launcher SIGINT handler allows the CLI to finalize cancellation (2103.3817ms)
+✔ create/find/show/lint and real command pass preserve uncovered goals (3566.49ms)
+✔ known-bad boundary object fails its real behavior check (1262.6566ms)
+✔ known-bad persistence object fails its real behavior check (1229.1129ms)
+✔ source change after apply is blocked rather than called a current pass (782.4816ms)
+✔ missing named required check cannot be filled by unrelated passing tests (1373.5057ms)
+✔ plain PASS stdout cannot masquerade as a named test result (1076.7665ms)
+✔ all skipped tests do not form a scoped pass (985.6876ms)
+✔ a prior run report cannot replace this invocation evidence (2554.7183ms)
+✔ deleted managed evidence and imported trust claims cannot produce pass (2395.5507ms)
+✔ empty required sets, unsupported modes and unsafe paths stop before execution (857.8677ms)
+✔ owned process tree times out and a second project invocation is busy (5614.6667ms)
+ℹ tests 13
+ℹ suites 0
+ℹ pass 13
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 29041.7175

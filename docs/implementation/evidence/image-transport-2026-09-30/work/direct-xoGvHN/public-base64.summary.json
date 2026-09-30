@@ -1,0 +1,10 @@
+{
+  "case": "public-base64",
+  "status": 200,
+  "contentType": "text/event-stream",
+  "answer": "I can’t describe the image because it didn’t load in a valid format. As a result, I don’t have any visible details or dominant colors to report.",
+  "responseModels": [
+    "deepseek-v4.1-flash"
+  ],
+  "serverError": false
+}

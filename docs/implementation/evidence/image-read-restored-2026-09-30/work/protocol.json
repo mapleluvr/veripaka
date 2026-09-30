@@ -1,0 +1,8 @@
+{
+  "registeredAt": "2026-09-30T05:10:35.733994+00:00",
+  "model": "Mapleluv-ChatCompletions/deepseek-flash:max",
+  "purpose": "Read-tool recovery verification, fresh PNG + JPEG",
+  "criteria": "Exact two codes and twelve ordered shape/color pairs; actual read image results; no other reads or tool calls; no input mutation",
+  "truthVisibility": "Not included in prompt, outside working directory; not OS sandbox",
+  "retry": "Access failures only; never retry wrong answers until green"
+}

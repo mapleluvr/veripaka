@@ -1,0 +1,1 @@
+{"model":"deepseek-flash","messages":[{"role":"user","content":"Reply exactly: TEXT_CONTROL_OK"}],"stream":true,"store":false,"max_completion_tokens":384000,"thinking":{"type":"enabled"},"reasoning_effort":"max"}

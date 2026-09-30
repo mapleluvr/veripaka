@@ -1,0 +1,14 @@
+{
+  "id": "fa00f450-b9e6-4a0e-ab40-667c3c6b8a8c",
+  "receivedAt": "2026-09-29T17:26:31.195Z",
+  "sourceDigest": "9590e5522da54803d88b633f4d3e15e7c91e3b329497bd8544147550dc904b3a",
+  "producer": "caller-declared",
+  "ingestion": "file-import",
+  "verification": "unknown",
+  "material": {
+    "verdict": "scoped-pass",
+    "ingestion": "managed-command",
+    "verification": "verified",
+    "invocationId": "6781ac5f-a41a-4262-8f40-47f22bb81296"
+  }
+}

@@ -1,0 +1,67 @@
+[
+  {
+    "file": "21804-1.request.json",
+    "model": "deepseek-flash",
+    "thinking": {
+      "type": "enabled"
+    },
+    "reasoning_effort": "max",
+    "keys": [
+      "model",
+      "messages",
+      "stream",
+      "store",
+      "max_completion_tokens",
+      "thinking",
+      "reasoning_effort"
+    ],
+    "messages": [
+      {
+        "role": "system",
+        "content": [
+          {
+            "type": "text",
+            "textLength": 1764,
+            "mentionsInvalid": false
+          }
+        ]
+      },
+      {
+        "role": "user",
+        "content": [
+          {
+            "type": "text",
+            "textLength": 657,
+            "text": "<file name=\"D:\\Projects\\veripaka\\.temp\\s2-start\\capability-consumer\\sample-a.png\"></file>\n<file name=\"D:\\Projects\\veripaka\\.temp\\s2-start\\capability-consumer\\sample-b.png\"></file>\nThis is input capability characterization, not product verification. Two PNG images are attached in order sample-a.png then sample-b.png. Without tools, read the CODE after the label and list six shapes top-to-bottom, left-to-right with shape circle/square/triangle and color red/blue/green/orange. If pixels are not available, say supported:false without guessing. Return JSON {supported:boolean,images:[{file,code,cells:[{shape,color}]}],limitation:string}. No other actions.",
+            "mentionsInvalid": false
+          },
+          {
+            "type": "image_url",
+            "prefix": "data:image/png;base64,iVBORw0KGg",
+            "bytes": 8683,
+            "magic": "89504e470d0a1a0a",
+            "sha256": "48ed0fdb162d954a7352c1c4a20f1414112d6509d869af7d0f82ad1ac59dd89a"
+          },
+          {
+            "type": "image_url",
+            "prefix": "data:image/png;base64,iVBORw0KGg",
+            "bytes": 7954,
+            "magic": "89504e470d0a1a0a",
+            "sha256": "206691bc84e124a1468c6bfa28dd23bab8195ba43242a8d944942cd0d64a9807"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "file": "21804-1.response-meta.json",
+    "id": "21804-1",
+    "at": "2026-09-30T04:09:53.951Z",
+    "method": "POST",
+    "path": "/v1/chat/completions",
+    "bodySha256": "e93f72a88917ca268bfdd06b3b2e17e46c6ba371eb48f1c45df59a4b8124bcd2",
+    "status": 200,
+    "contentType": "text/event-stream",
+    "requestId": null
+  }
+]

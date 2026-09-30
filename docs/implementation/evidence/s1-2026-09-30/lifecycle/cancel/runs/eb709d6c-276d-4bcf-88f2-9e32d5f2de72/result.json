@@ -1,0 +1,74 @@
+{
+  "schema": "veripaka.result/v0",
+  "runId": "eb709d6c-276d-4bcf-88f2-9e32d5f2de72",
+  "kind": "verification",
+  "verdict": "inconclusive",
+  "verdictBasis": "executable",
+  "execution": "interrupted",
+  "reason": "CANCELLED",
+  "subject": {
+    "kind": "checkout",
+    "description": "Local reference HTTP service imported from this declared checkout by its native tests",
+    "entrypoint": "src/server.mjs",
+    "sourceRoots": [
+      "src",
+      "tests",
+      "package.json",
+      "docs/behavior.md"
+    ]
+  },
+  "checks": [
+    {
+      "key": "api-contract/reject-invalid-theme",
+      "required": true,
+      "expected": "Unsupported theme returns HTTP 400 and the stored theme remains light.",
+      "observed": "No complete managed invocation",
+      "status": "inconclusive",
+      "evidence": []
+    },
+    {
+      "key": "settings-persistence/survives-restart",
+      "required": true,
+      "expected": "A successful dark-theme write is returned by GET after restarting the service with the same private data directory.",
+      "observed": "No complete managed invocation",
+      "status": "inconclusive",
+      "evidence": []
+    }
+  ],
+  "goals": [
+    {
+      "id": "boundary",
+      "question": "Does the API reject unsupported themes without changing state?",
+      "claims": [
+        "api-contract/reject-invalid-theme"
+      ]
+    },
+    {
+      "id": "persistence",
+      "question": "Does a successful settings write survive service restart?",
+      "claims": [
+        "settings-persistence/survives-restart"
+      ]
+    },
+    {
+      "id": "sync",
+      "question": "Does the setting synchronize across devices?",
+      "claims": [],
+      "uncovered": "Not promised by the reference service and not verified by these methods."
+    }
+  ],
+  "limits": [
+    "Only the declared local source domain and mapped checks were assessed; coverage sufficiency is not mechanically proved.",
+    "The reference tests establish their local source-to-service relationship; arbitrary existing endpoints are unsupported.",
+    "Digests and managed capture are not protection against a malicious writer with the same OS permissions.",
+    "Trial recipe maturity is not upgraded by this result."
+  ],
+  "provenance": {
+    "producer": "node:test",
+    "ingestion": "managed-command",
+    "verification": "unknown",
+    "judge": "executable",
+    "invocationId": "e5e1ead2-4f4f-48bc-b289-982e78d06d7e"
+  },
+  "finalizedAt": "2026-09-29T17:27:00.799Z"
+}

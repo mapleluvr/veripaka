@@ -1,0 +1,18 @@
+✔ pi harness sends only the required model and records the same invocation (220.0807ms)
+✔ repeating a task label retains both attempts and their original raw events (414.8228ms)
+✔ an explicit exploration task reaches Pi unchanged and is frozen for review (221.3267ms)
+▶ exit zero is not a completed exploration without an intact successful Pi terminal event
+  ✔ provider-error (202.4702ms)
+  ✔ malformed (212.1287ms)
+  ✔ json-null (201.5415ms)
+  ✔ current-unsettled (198.499ms)
+✔ exit zero is not a completed exploration without an intact successful Pi terminal event (839.7117ms)
+✔ current Pi settled completion is recognized without erasing native transport retry errors (417.0722ms)
+ℹ tests 9
+ℹ suites 0
+ℹ pass 9
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 2211.6431

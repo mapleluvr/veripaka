@@ -1,0 +1,12 @@
+✔ pi harness sends only the required model and records the same invocation (221.6571ms)
+✔ repeating a task label retains both attempts and their original raw events (412.8499ms)
+✔ an explicit exploration task reaches Pi unchanged and is frozen for review (227.0568ms)
+✔ exit zero is not a completed exploration without an intact successful Pi terminal event (431.0959ms)
+ℹ tests 4
+ℹ suites 0
+ℹ pass 4
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1386.7086

@@ -1,0 +1,10 @@
+{
+  "case": "png",
+  "status": 200,
+  "contentType": "text/event-stream",
+  "answer": "{\"code\": null, \"cells\": [], \"error\": \"Invalid image format: unable to read the attached image.\"}",
+  "responseModels": [
+    "deepseek-v4.1-flash"
+  ],
+  "serverError": false
+}

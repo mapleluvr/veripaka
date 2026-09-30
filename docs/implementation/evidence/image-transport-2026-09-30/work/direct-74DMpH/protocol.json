@@ -1,0 +1,21 @@
+{
+  "at": "2026-09-30T04:15:16.972Z",
+  "label": "minimal",
+  "provider": "Mapleluv-ChatCompletions",
+  "model": "deepseek-flash",
+  "reasoningEffort": "max",
+  "hypothesis": "Minimal text/image requests remove Pi system prompt, file wrappers and multiple images while retaining standard image_url, configured endpoint, model, reasoning and stream format.",
+  "cases": [
+    {
+      "name": "text-control"
+    },
+    {
+      "name": "png",
+      "imageSha256": "48ed0fdb162d954a7352c1c4a20f1414112d6509d869af7d0f82ad1ac59dd89a"
+    },
+    {
+      "name": "jpeg",
+      "imageSha256": "d24293f48d68e7f2083d54e3c171e99882972e24531a798534519fe9fac0c9f7"
+    }
+  ]
+}

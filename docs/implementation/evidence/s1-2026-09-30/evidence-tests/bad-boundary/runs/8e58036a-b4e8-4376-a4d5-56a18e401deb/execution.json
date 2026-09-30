@@ -1,0 +1,35 @@
+{
+  "schema": "veripaka.execution/v0",
+  "runId": "8e58036a-b4e8-4376-a4d5-56a18e401deb",
+  "attemptId": "820b439c-a3c4-4c57-9b48-1032a10f6f20",
+  "invocationId": "57cc2d49-c133-4f48-b818-a86e315508b5",
+  "planDigest": "4705d101f4fc83ddfabad022462e888fc36f1b2911e9781326bab1bb9b904eb5",
+  "startedAt": "2026-09-29T17:26:24.783Z",
+  "executable": "C:\\Program Files\\nodejs\\node.exe",
+  "argv": [
+    "--test",
+    "--test-concurrency=1",
+    "--test-reporter",
+    "file:///D:/Projects/veripaka/.temp/s1-closure/consumer/node_modules/veripaka/dist/src/execution/node-test-reporter.js",
+    "--test-reporter-destination",
+    "D:\\Projects\\veripaka\\.temp\\evidence-2026-09-29T17-26-22-712Z\\bad-boundary\\.veripaka\\runs\\8e58036a-b4e8-4376-a4d5-56a18e401deb\\attempts\\820b439c-a3c4-4c57-9b48-1032a10f6f20\\events.ndjson",
+    "tests/settings.test.mjs"
+  ],
+  "cwd": "D:\\Projects\\veripaka\\.temp\\evidence-2026-09-29T17-26-22-712Z\\bad-boundary",
+  "exitCode": 1,
+  "signal": null,
+  "status": "completed",
+  "cleanup": "not-needed",
+  "pid": 9448,
+  "endedAt": "2026-09-29T17:26:25.309Z",
+  "artifacts": {
+    "events": "attempts/820b439c-a3c4-4c57-9b48-1032a10f6f20/events.ndjson",
+    "stdout": "attempts/820b439c-a3c4-4c57-9b48-1032a10f6f20/stdout.log",
+    "stderr": "attempts/820b439c-a3c4-4c57-9b48-1032a10f6f20/stderr.log"
+  },
+  "digests": {
+    "events": "a451a463ae887f7cc4dc70194f598491295666e4c056f9addd42841d9cdb1805",
+    "stdout": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  }
+}

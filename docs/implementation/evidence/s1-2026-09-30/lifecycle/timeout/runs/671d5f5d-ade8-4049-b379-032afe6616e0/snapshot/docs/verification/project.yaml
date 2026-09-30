@@ -1,0 +1,15 @@
+schema: veripaka.project/v0
+subjects:
+  local-api:
+    kind: checkout
+    description: Local reference HTTP service imported from this declared checkout by its native tests
+    entrypoint: src/server.mjs
+    sourceRoots: [src, tests, package.json, docs/behavior.md]
+commands:
+  backend-tests:
+    runner: node-test
+    enabled: true
+    subject: local-api
+    testFiles: [tests/settings.test.mjs]
+    timeoutMs: 3500
+    maxOutputBytes: 2097152

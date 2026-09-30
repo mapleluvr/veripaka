@@ -1,0 +1,23 @@
+{
+  "registeredAt": "2026-09-29T20:34:45.597463+00:00",
+  "cases": [
+    {
+      "file": "opaque-rgba.png",
+      "expected": "equal",
+      "sha256": "9f3e44a6085c157785e6c77fbbfef6ffb6b4f3bd8cfdf8f971b962aa5d6d52bc"
+    },
+    {
+      "file": "different-dimensions.png",
+      "expected": "different",
+      "sha256": "cade9a6cc37715af098dbc753b5576fd4f4cfd4ec7006f7320e682f2e3b27fed"
+    },
+    {
+      "file": "missing-iend.png",
+      "expected": "invalid",
+      "sha256": "5d86b3265b778e26580fe5e057ca9aebb4ac8a8cc4e2cbde62a2e5829a77daae"
+    }
+  ],
+  "invalidControlOracle": "OSError: truncated PNG file",
+  "setup": "First guard expected SyntaxError; Pillow returned OSError. Fail-fast prevented model launch. Corrected exception classification before registration/model call.",
+  "limit": "New inputs withheld from method generation; parent authors both guidance and cases. Not a domain-general independence claim."
+}

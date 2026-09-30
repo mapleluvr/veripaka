@@ -1,0 +1,33 @@
+
+> veripaka@0.1.0-alpha.1 test
+> npm run build && node --test --test-concurrency=1 dist/tests/*.test.js
+
+
+> veripaka@0.1.0-alpha.1 build
+> tsc -p tsconfig.json
+
+✔ explicit cancellation owns cleanup and leaves the other prepared run untouched (3148.4431ms)
+✔ launcher SIGINT handler allows the CLI to finalize cancellation (1405.6011ms)
+✔ create/find/show/lint and real command pass preserve uncovered goals (2242.7969ms)
+✔ known-bad boundary object fails its real behavior check (823.9672ms)
+✔ known-bad persistence object fails its real behavior check (804.9722ms)
+✔ source change after apply is blocked rather than called a current pass (509.3976ms)
+✔ missing named required check cannot be filled by unrelated passing tests (789.1675ms)
+✔ plain PASS stdout cannot masquerade as a named test result (707.3554ms)
+✔ all skipped tests do not form a scoped pass (723.6017ms)
+✔ a prior run report cannot replace this invocation evidence (1727.2795ms)
+✔ deleted managed evidence and imported trust claims cannot produce pass (1603.8177ms)
+✔ empty required sets, unsupported modes and unsafe paths stop before execution (556.0374ms)
+✔ owned process tree times out and a second project invocation is busy (5159.8291ms)
+✔ pi harness sends only the required model and records the same invocation (228.9191ms)
+✔ repeating a task label retains both attempts and their original raw events (404.3864ms)
+✔ an explicit exploration task reaches Pi unchanged and is frozen for review (214.0202ms)
+✔ exit zero is not a completed exploration without an intact successful Pi terminal event (423.4066ms)
+ℹ tests 17
+ℹ suites 0
+ℹ pass 17
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 21821.1021

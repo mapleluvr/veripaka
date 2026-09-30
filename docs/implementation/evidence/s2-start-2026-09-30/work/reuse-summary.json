@@ -1,0 +1,184 @@
+{
+  "metadata": {
+    "directory": "D:\\Projects\\veripaka\\.temp\\pi-smoke\\s2-reuse-regression\\attempt-F1CmV1",
+    "startedAt": "2026-09-29T20:43:06.148Z",
+    "requestedModel": "Mapleluv-ChatCompletions/deepseek-flash:max",
+    "purpose": "reuse",
+    "label": "s2-reuse-regression",
+    "project": "D:\\Projects\\veripaka\\.temp\\s2-start\\reuse-consumer",
+    "args": [
+      "C:/Users/mapleland/AppData/Roaming/npm/node_modules/@earendil-works/pi-coding-agent/dist/bundle/cli.js",
+      "--model",
+      "Mapleluv-ChatCompletions/deepseek-flash:max",
+      "--no-extensions",
+      "--no-session",
+      "--no-context-files",
+      "--no-skills",
+      "--skill",
+      "D:\\Projects\\veripaka\\.temp\\s2-start\\reuse-consumer\\node_modules\\veripaka\\skills\\veripaka\\SKILL.md",
+      "--no-prompt-templates",
+      "--no-themes",
+      "--tools",
+      "read,powershell,bash,grep,find,ls",
+      "--mode",
+      "json",
+      "--print",
+      "请使用已加载的 veripaka Skill，在当前项目验证设置接口的非法输入边界，以及成功保存的设置是否跨服务重启保持。先找到项目验证方法入口并按方法执行，不要重新发明测试。不得修改源码、测试、Recipe、输入、plan 或 result；只允许 CLI 生成本次运行记录。不安装依赖、不操作项目之外的数据。不要复用历史 run 充当本次执行，保留未覆盖目标。最后报告本次 run ID、逐项结果、verdictBasis、证据路径和未覆盖范围。"
+    ],
+    "promptDigest": "91f7a18aaad8408bc6826457d67e4b9dbcb01a341c70e02f29072b57c73f7bb1",
+    "skillDigest": "a915a217901d026237f4d6232c1c4da32c00e9067527a7db0ebac6ee5891303b",
+    "timeoutMs": 300000,
+    "extensionsEnabled": false,
+    "status": "candidate-success-review-events",
+    "endedAt": "2026-09-29T20:43:56.701Z",
+    "exitCode": 0,
+    "signal": null,
+    "timedOut": false,
+    "cleanup": "not-requested",
+    "eventParseError": false,
+    "providerErrors": [],
+    "toolCalls": 20,
+    "observedModels": [
+      "Mapleluv-ChatCompletions/deepseek-flash"
+    ],
+    "responseModels": [
+      "deepseek-v4.1-flash"
+    ],
+    "newRuns": [
+      {
+        "runId": "0811c8d0-5ae0-4ac6-8850-5872465cfe36",
+        "verdict": "scoped-pass",
+        "verdictBasis": "executable"
+      }
+    ]
+  },
+  "tools": [
+    {
+      "name": "read",
+      "args": {
+        "path": "D:\\Projects\\veripaka\\.temp\\s2-start\\reuse-consumer\\node_modules\\veripaka\\skills\\veripaka\\SKILL.md"
+      }
+    },
+    {
+      "name": "ls",
+      "args": {
+        "path": "D:/Projects/veripaka/.temp/s2-start/reuse-consumer"
+      }
+    },
+    {
+      "name": "read",
+      "args": {
+        "path": "D:/Projects/veripaka/.temp/s2-start/reuse-consumer/docs/verification/README.md"
+      }
+    },
+    {
+      "name": "read",
+      "args": {
+        "path": "D:/Projects/veripaka/.temp/s2-start/reuse-consumer/verification-input.json"
+      }
+    },
+    {
+      "name": "read",
+      "args": {
+        "path": "D:/Projects/veripaka/.temp/s2-start/reuse-consumer/package.json"
+      }
+    },
+    {
+      "name": "bash",
+      "args": {
+        "command": "find D:/Projects/veripaka/.temp/s2-start/reuse-consumer -maxdepth 2 -not -path '*/node_modules/*' -not -path '*/.git/*' | head -50"
+      }
+    },
+    {
+      "name": "read",
+      "args": {
+        "path": "D:/Projects/veripaka/.temp/s2-start/reuse-consumer/docs/behavior.md"
+      }
+    },
+    {
+      "name": "bash",
+      "args": {
+        "command": "find D:/Projects/veripaka/.temp/s2-start/reuse-consumer -maxdepth 3 -name 'config.json' -path '*veripaka*' -not -path '*node_modules/veripaka/node_modules/*' 2>/dev/null; echo '---'; cat D:/Projects/veripaka/.temp/s2-start/reuse-consumer/.veripaka/config.json 2>/dev/null"
+      }
+    },
+    {
+      "name": "bash",
+      "args": {
+        "command": "ls D:/Projects/veripaka/.temp/s2-start/reuse-consumer/node_modules/veripaka/; echo '--- shared ---'; ls D:/Projects/veripaka/.temp/s2-start/reuse-consumer/node_modules/veripaka/_shared/ 2>/dev/null"
+      }
+    },
+    {
+      "name": "bash",
+      "args": {
+        "command": "find D:/Projects/veripaka/.temp/s2-start/reuse-consumer/node_modules/veripaka -name 'run-veripaka.mjs' 2>/dev/null; echo '--- .veripaka ---'; ls -la D:/Projects/veripaka/.temp/s2-start/reuse-consumer/.veripaka 2>/dev/null; echo '--- corpus search ---'; find D:/Projects/veripaka/.temp/s2-start/reuse-consumer -maxdepth 3 -name 'config.json' -not -path '*/r1/*' 2>/dev/null | head"
+      }
+    },
+    {
+      "name": "bash",
+      "args": {
+        "command": "ls -R D:/Projects/veripaka/.temp/s2-start/reuse-consumer/node_modules/veripaka/dist 2>/dev/null | head -40"
+      }
+    },
+    {
+      "name": "bash",
+      "args": {
+        "command": "cd D:/Projects/veripaka/.temp/s2-start/reuse-consumer && node node_modules/veripaka/skills/_shared/run-veripaka.mjs find settings --json 2>&1"
+      }
+    },
+    {
+      "name": "bash",
+      "args": {
+        "command": "cd D:/Projects/veripaka/.temp/s2-start/reuse-consumer && node node_modules/veripaka/skills/_shared/run-veripaka.mjs recipe show api-contract --json 2>&1; echo '======'; node node_modules/veripaka/skills/_shared/run-veripaka.mjs recipe show settings-persistence --json 2>&1"
+      }
+    },
+    {
+      "name": "bash",
+      "args": {
+        "command": "cd D:/Projects/veripaka/.temp/s2-start/reuse-consumer && node node_modules/veripaka/skills/_shared/run-veripaka.mjs profile show backend --json 2>&1; echo '======'; node node_modules/veripaka/skills/_shared/run-veripaka.mjs config --json 2>&1 | head -20"
+      }
+    },
+    {
+      "name": "bash",
+      "args": {
+        "command": "cd D:/Projects/veripaka/.temp/s2-start/reuse-consumer && node node_modules/veripaka/skills/_shared/run-veripaka.mjs apply backend --input verification-input.json --json 2>&1"
+      }
+    },
+    {
+      "name": "read",
+      "args": {
+        "path": "D:/Projects/veripaka/.temp/s2-start/reuse-consumer/.veripaka/runs/0811c8d0-5ae0-4ac6-8850-5872465cfe36/plan.json"
+      }
+    },
+    {
+      "name": "bash",
+      "args": {
+        "command": "cd D:/Projects/veripaka/.temp/s2-start/reuse-consumer && node node_modules/veripaka/skills/_shared/run-veripaka.mjs run 0811c8d0-5ae0-4ac6-8850-5872465cfe36 --json 2>&1",
+        "timeout": 120
+      }
+    },
+    {
+      "name": "bash",
+      "args": {
+        "command": "cd D:/Projects/veripaka/.temp/s2-start/reuse-consumer && find .veripaka/runs/0811c8d0-5ae0-4ac6-8850-5872465cfe36 -type f | sed 's|^|  |'"
+      }
+    },
+    {
+      "name": "bash",
+      "args": {
+        "command": "cd D:/Projects/veripaka/.temp/s2-start/reuse-consumer && echo '=== result.json ==='; cat .veripaka/runs/0811c8d0-5ae0-4ac6-8850-5872465cfe36/result.json 2>/dev/null | head -60; echo; echo '=== events (summary) ==='; grep -o '\"type\":\"[^\"]*\"' .veripaka/runs/0811c8d0-5ae0-4ac6-8850-5872465cfe36/attempts/*/events.ndjson | sort | uniq -c"
+      }
+    },
+    {
+      "name": "bash",
+      "args": {
+        "command": "cd D:/Projects/veripaka/.temp/s2-start/reuse-consumer/.veripaka/runs/0811c8d0-5ae0-4ac6-8850-5872465cfe36/attempts/e98bdfc8-c608-4de0-9575-8926e07d6639 && grep 'test:pass' events.ndjson; echo '=== stdout ==='; cat stdout.log; echo '=== stderr ==='; cat stderr.log"
+      }
+    }
+  ],
+  "final": [
+    {
+      "type": "text",
+      "text": "Both required tests executed and passed as native runner events with durations, tied to the real test file. The run is complete and finalized. Report follows.\n\n---\n\n## Verdict Report\n\n**Run ID:** `0811c8d0-5ae0-4ac6-8850-5872465cfe36`\n**kind:** `verification` · **execution:** `completed` · **verdict:** `scoped-pass`\n**verdictBasis:** `executable`\n**Subject:** `local-api` — local reference HTTP service imported from this checkout via its native Node tests (`src/server.mjs`), private data dirs + dynamic loopback ports.\n**Provenance:** producer `node:test`, ingestion `managed-command`, verification `verified`, judge `executable`, invocationId `63fc02b9-d360-4ca3-96fa-1285b09d81ac`.\n\n### Method entry (reused, not reinvented)\n- Entry per `docs/verification/README.md`: `find settings` → `recipe show` → `apply backend --input verification-input.json` → `run <id>`.\n- Recipes reused (both `trial`): `api-contract` (claim `reject-invalid-theme`) and `settings-persistence` (claim `survives-restart`), both bound to `backend-tests` / `tests/settings.test.mjs`.\n\n### Per-item results\n| Goal | Claim | Required | Status | Evidence |\n|---|---|---|---|---|\n| boundary — reject unsupported themes without changing state | `api-contract/reject-invalid-theme` | yes | **pass** | `events.ndjson#tests/settings.test.mjs:api rejects unsupported theme without changing stored state` (test:pass, 45.5 ms) |\n| persistence — successful write survives restart | `settings-persistence/survives-restart` | yes | **pass** | `events.ndjson#tests/settings.test.mjs:settings survive service restart` (test:pass, 30.9 ms) |\n\nNo failed or inconclusive checks; stdout/stderr empty (raw NDJSON events are the evidence).\n\n### Evidence paths (under run dir)\n- `.veripaka/runs/0811c8d0-5ae0-4ac6-8850-5872465cfe36/result.json` (+ `.sha256`)\n- `.../plan.json` (+ `.sha256`), `.../execution.json` (+ `.sha256`), `.../guide.md`\n- `.../attempts/e98bdfc8-c608-4de0-9575-8926e07d6639/events.ndjson` (native test events), `stdout.log`, `stderr.log`\n- `.../snapshot/` — frozen subject/method/input digests for this run\n\n### Uncovered scope\n- **Goal `sync`** (\"Does the setting synchronize across devices?\") — intentionally uncovered: no mapped claims; not promised by the reference service and not verified by these methods.\n- Method `excludes` also stand: authentication, arbitrary request fuzzing, production deployment, crash consistency, distributed writes, cross-device synchronization.\n- CLI limits recorded: coverage sufficiency not mechanically proved; digests/managed capture are not protection against a same-permission malicious writer; **trial maturity is not upgraded by this run** (not marked reusable).\n\nNo source, tests, recipes, inputs, plan, or result JSON were modified; no dependencies installed; no data outside the project touched. Only CLI-generated run artifacts were produced."
+    }
+  ]
+}

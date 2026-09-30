@@ -1,0 +1,14 @@
+{
+  "directory": "D:\\Projects\\veripaka\\.temp\\vision-diagnosis\\inline-repro-uNts1u",
+  "code": 0,
+  "timedOut": false,
+  "cleanup": "not-requested",
+  "endedAt": "2026-09-30T03:59:10.091Z",
+  "final": [
+    {
+      "type": "text",
+      "text": "```json\n{\n  \"supported\": false,\n  \"images\": [\n    { \"file\": \"sample-a.png\", \"code\": \"\", \"cells\": [] },\n    { \"file\": \"sample-b.png\", \"code\": \"\", \"cells\": [] }\n  ],\n  \"limitation\": \"No readable pixel data is available for either attached PNG. Both attachments were rejected as an invalid image format, and no image-decoding tools are available in this context. Per instructions, no shapes, colors, or codes are guessed; the 'CODE after the label' is not observable.\"\n}\n```"
+    }
+  ],
+  "terminal": "agent_settled"
+}

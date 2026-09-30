@@ -1,0 +1,11 @@
+{
+  "same-pixels.png": {
+    "equal": true,
+    "changedPixels": 0
+  },
+  "one-pixel.png": {
+    "equal": false,
+    "changedPixels": 1
+  },
+  "purpose": "Capability-method challenge, not independent broad strategy evaluation. Private to evaluator until candidate is frozen."
+}

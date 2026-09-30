@@ -1,0 +1,10 @@
+{
+  "case": "png-detail-high",
+  "status": 200,
+  "contentType": "text/event-stream",
+  "answer": "I'm not able to read the image — the attachment came through in an invalid format, so there's no visual content for me to analyze. I don't want to guess at the code or the shapes/colors, since that would just be made-up data.\n\nCould you try re-uploading it? A few things that usually help:\n\n- **Format:** PNG, JPG/JPEG, or WebP tend to work best.\n- **Size:** Keep it under ~10 MB; if it's large, a screenshot or downscaled copy is fine.\n- **Clarity:** Make sure the six characters and the six shapes are legible and not cropped at the edges.\n\nOnce the image goes through, I'll return exactly this structure:\n\n```json\n{\n  \"code\": \"ABC123\",\n  \"cells\": [\n    { \"shape\": \"circle\", \"color\": \"red\" },\n    { \"shape\": \"square\", \"color\": \"blue\" },\n    { \"shape\": \"triangle\", \"color\": \"green\" },\n    { \"shape\": \"star\", \"color\": \"yellow\" },\n    { \"shape\": \"hexagon\", \"color\": \"purple\" },\n    { \"shape\": \"diamond\", \"color\": \"orange\" }\n  ]\n}\n```\n\n(The values above are placeholders to show the format — not a reading of your image.) If you can also paste the code as text alongside the re-upload, I can cross-check my reading against it.",
+  "responseModels": [
+    "deepseek-v4.1-flash"
+  ],
+  "serverError": false
+}

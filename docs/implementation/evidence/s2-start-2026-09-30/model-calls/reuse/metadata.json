@@ -1,0 +1,52 @@
+{
+  "startedAt": "2026-09-29T20:43:06.148Z",
+  "requestedModel": "Mapleluv-ChatCompletions/deepseek-flash:max",
+  "purpose": "reuse",
+  "label": "s2-reuse-regression",
+  "project": "D:\\Projects\\veripaka\\.temp\\s2-start\\reuse-consumer",
+  "args": [
+    "C:/Users/mapleland/AppData/Roaming/npm/node_modules/@earendil-works/pi-coding-agent/dist/bundle/cli.js",
+    "--model",
+    "Mapleluv-ChatCompletions/deepseek-flash:max",
+    "--no-extensions",
+    "--no-session",
+    "--no-context-files",
+    "--no-skills",
+    "--skill",
+    "D:\\Projects\\veripaka\\.temp\\s2-start\\reuse-consumer\\node_modules\\veripaka\\skills\\veripaka\\SKILL.md",
+    "--no-prompt-templates",
+    "--no-themes",
+    "--tools",
+    "read,powershell,bash,grep,find,ls",
+    "--mode",
+    "json",
+    "--print",
+    "请使用已加载的 veripaka Skill，在当前项目验证设置接口的非法输入边界，以及成功保存的设置是否跨服务重启保持。先找到项目验证方法入口并按方法执行，不要重新发明测试。不得修改源码、测试、Recipe、输入、plan 或 result；只允许 CLI 生成本次运行记录。不安装依赖、不操作项目之外的数据。不要复用历史 run 充当本次执行，保留未覆盖目标。最后报告本次 run ID、逐项结果、verdictBasis、证据路径和未覆盖范围。"
+  ],
+  "promptDigest": "91f7a18aaad8408bc6826457d67e4b9dbcb01a341c70e02f29072b57c73f7bb1",
+  "skillDigest": "a915a217901d026237f4d6232c1c4da32c00e9067527a7db0ebac6ee5891303b",
+  "timeoutMs": 300000,
+  "extensionsEnabled": false,
+  "status": "candidate-success-review-events",
+  "endedAt": "2026-09-29T20:43:56.701Z",
+  "exitCode": 0,
+  "signal": null,
+  "timedOut": false,
+  "cleanup": "not-requested",
+  "eventParseError": false,
+  "providerErrors": [],
+  "toolCalls": 20,
+  "observedModels": [
+    "Mapleluv-ChatCompletions/deepseek-flash"
+  ],
+  "responseModels": [
+    "deepseek-v4.1-flash"
+  ],
+  "newRuns": [
+    {
+      "runId": "0811c8d0-5ae0-4ac6-8850-5872465cfe36",
+      "verdict": "scoped-pass",
+      "verdictBasis": "executable"
+    }
+  ]
+}

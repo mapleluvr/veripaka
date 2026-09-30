@@ -1,0 +1,384 @@
+{
+  "schema": "veripaka.diagnostic-archive/v0",
+  "createdAt": "2026-09-30T04:40:59.918Z",
+  "files": [
+    {
+      "path": "README.md",
+      "bytes": 2697,
+      "sha256": "680f780e139bd40dfe45d7706945eab77cd032b92e846d8376eaec17081a9121",
+      "source": null
+    },
+    {
+      "path": "work/direct-74DMpH/jpeg.request.json",
+      "bytes": 57251,
+      "sha256": "c176af8a285a1f5312dfe2a95962b5491f2271c287119b759f38f5b2ca5e3be9",
+      "source": ".temp/vision-diagnosis/direct-74DMpH/jpeg.request.json"
+    },
+    {
+      "path": "work/direct-74DMpH/jpeg.response.txt",
+      "bytes": 125507,
+      "sha256": "3903824e7d5e04631e722a566fe78e47305049c081b82d89db181ab77f1b921a",
+      "source": ".temp/vision-diagnosis/direct-74DMpH/jpeg.response.txt"
+    },
+    {
+      "path": "work/direct-74DMpH/jpeg.summary.json",
+      "bytes": 286,
+      "sha256": "ef831de21110672b734d38aa3cc8c7ae26c80d55c1da3c03464bc529778e7084",
+      "source": ".temp/vision-diagnosis/direct-74DMpH/jpeg.summary.json"
+    },
+    {
+      "path": "work/direct-74DMpH/png.request.json",
+      "bytes": 11998,
+      "sha256": "7999e4e44ddccdb829195e478658fd3a65bcfdd2257fb01510a89a32a7159d0f",
+      "source": ".temp/vision-diagnosis/direct-74DMpH/png.request.json"
+    },
+    {
+      "path": "work/direct-74DMpH/png.response.txt",
+      "bytes": 104105,
+      "sha256": "ab25e4ab79dcc8a83c38008fc5f929148078745ecaaac658fa64bd4b9023cccd",
+      "source": ".temp/vision-diagnosis/direct-74DMpH/png.response.txt"
+    },
+    {
+      "path": "work/direct-74DMpH/png.summary.json",
+      "bytes": 271,
+      "sha256": "b2de17e747e3d1e439e1fe937ab170e39d37488bbaaa2560a5cc3f713d9e5217",
+      "source": ".temp/vision-diagnosis/direct-74DMpH/png.summary.json"
+    },
+    {
+      "path": "work/direct-74DMpH/protocol.json",
+      "bytes": 662,
+      "sha256": "d4938ce729f854b350978ddf8bf1dbc37afaf370b760becddabc2b0e1f642c10",
+      "source": ".temp/vision-diagnosis/direct-74DMpH/protocol.json"
+    },
+    {
+      "path": "work/direct-74DMpH/text-control.request.json",
+      "bytes": 212,
+      "sha256": "62c030f6942014cfe4311a10228d084fadfebfedcae5a7919552f96b1387994c",
+      "source": ".temp/vision-diagnosis/direct-74DMpH/text-control.request.json"
+    },
+    {
+      "path": "work/direct-74DMpH/text-control.response.txt",
+      "bytes": 8663,
+      "sha256": "44361a04850d9758cb14db74414fc589a139884ecc10e2318e29a8eb93cdeaa5",
+      "source": ".temp/vision-diagnosis/direct-74DMpH/text-control.response.txt"
+    },
+    {
+      "path": "work/direct-74DMpH/text-control.summary.json",
+      "bytes": 191,
+      "sha256": "c1a64cc09cf7947a89154589a60432f1d13870e04fbb52354b36971c394243fd",
+      "source": ".temp/vision-diagnosis/direct-74DMpH/text-control.summary.json"
+    },
+    {
+      "path": "work/direct-KWI8ix/opaque-base64.request.json",
+      "bytes": 69759,
+      "sha256": "c3fc93cf7486921f2ba6cf33ca38c525e4de21cad6281f62b7032bb3f2ec354a",
+      "source": ".temp/vision-diagnosis/direct-KWI8ix/opaque-base64.request.json"
+    },
+    {
+      "path": "work/direct-KWI8ix/opaque-base64.response.txt",
+      "bytes": 55799,
+      "sha256": "1186d82dfe18f76d01f5301bf1a99528e0845205447f6d2000b5d497187090de",
+      "source": ".temp/vision-diagnosis/direct-KWI8ix/opaque-base64.response.txt"
+    },
+    {
+      "path": "work/direct-KWI8ix/opaque-base64.summary.json",
+      "bytes": 709,
+      "sha256": "e73772c6afb4ff8125e38448da2a291ea52758b4825e5e02a480c1a81e0cffe7",
+      "source": ".temp/vision-diagnosis/direct-KWI8ix/opaque-base64.summary.json"
+    },
+    {
+      "path": "work/direct-KWI8ix/opaque-url.request.json",
+      "bytes": 503,
+      "sha256": "9ecb242dbe43f22640ef82e2d86d464b45b1db566d64226731f4427053900a32",
+      "source": ".temp/vision-diagnosis/direct-KWI8ix/opaque-url.request.json"
+    },
+    {
+      "path": "work/direct-KWI8ix/opaque-url.response.txt",
+      "bytes": 81203,
+      "sha256": "e70e0ee31dfab89228a37202e297efbea84905e96ce3c1744c42f0dc2bc318fd",
+      "source": ".temp/vision-diagnosis/direct-KWI8ix/opaque-url.response.txt"
+    },
+    {
+      "path": "work/direct-KWI8ix/opaque-url.summary.json",
+      "bytes": 754,
+      "sha256": "a08e2ea4b1be95d2c09282c8487e4117c34c3ffd55463553926b4d359e800bd5",
+      "source": ".temp/vision-diagnosis/direct-KWI8ix/opaque-url.summary.json"
+    },
+    {
+      "path": "work/direct-KWI8ix/protocol.json",
+      "bytes": 677,
+      "sha256": "6300734c0a0b509ef11f055d517ffdfd0f10db91bb3eee9a8a1b988c070f5d3e",
+      "source": ".temp/vision-diagnosis/direct-KWI8ix/protocol.json"
+    },
+    {
+      "path": "work/direct-probe.mjs",
+      "bytes": 6450,
+      "sha256": "4b8d83934273c3aef1bbb553a6b304dc7e7cf8b7203922c83586e13156621fa1",
+      "source": ".temp/vision-diagnosis/direct-probe.mjs"
+    },
+    {
+      "path": "work/direct-xoGvHN/png-detail-high.request.json",
+      "bytes": 12014,
+      "sha256": "633f11e0e64e41c12faf787b16a007343febe6a9dcc8914f602b06b870895882",
+      "source": ".temp/vision-diagnosis/direct-xoGvHN/png-detail-high.request.json"
+    },
+    {
+      "path": "work/direct-xoGvHN/png-detail-high.response.txt",
+      "bytes": 118424,
+      "sha256": "ce0f0e29fb19a8ba00b49391ed6d5d9288781ddbaedefe9bcbec19ae3659cfe8",
+      "source": ".temp/vision-diagnosis/direct-xoGvHN/png-detail-high.response.txt"
+    },
+    {
+      "path": "work/direct-xoGvHN/png-detail-high.summary.json",
+      "bytes": 1385,
+      "sha256": "296f536ca6df4cb66141ad1cae9ab2bde0565d089329d7a65daaa9e8840398a0",
+      "source": ".temp/vision-diagnosis/direct-xoGvHN/png-detail-high.summary.json"
+    },
+    {
+      "path": "work/direct-xoGvHN/protocol.json",
+      "bytes": 725,
+      "sha256": "b0476b43f6371928c83549834861d4b7853d72420891713785c98bcb40097673",
+      "source": ".temp/vision-diagnosis/direct-xoGvHN/protocol.json"
+    },
+    {
+      "path": "work/direct-xoGvHN/public-base64.request.json",
+      "bytes": 41215,
+      "sha256": "2a2f2b9310e91ce905380d8d796a452d2717fbdca4799e98d02073fda0b0ef15",
+      "source": ".temp/vision-diagnosis/direct-xoGvHN/public-base64.request.json"
+    },
+    {
+      "path": "work/direct-xoGvHN/public-base64.response.txt",
+      "bytes": 52379,
+      "sha256": "3c2f06c237175601602c4d87d2da59e5cddc91eb906d6f95b5fb5636c0c131df",
+      "source": ".temp/vision-diagnosis/direct-xoGvHN/public-base64.response.txt"
+    },
+    {
+      "path": "work/direct-xoGvHN/public-base64.summary.json",
+      "bytes": 327,
+      "sha256": "2b74f53ba0be0b4915eff76d94b557ed1a834886864eb7c73c707405d28e6576",
+      "source": ".temp/vision-diagnosis/direct-xoGvHN/public-base64.summary.json"
+    },
+    {
+      "path": "work/direct-xoGvHN/public-url.request.json",
+      "bytes": 468,
+      "sha256": "305fe888570c1e1ddf638381e994289cfa4942143eb3ee96dae3f6f728b06f92",
+      "source": ".temp/vision-diagnosis/direct-xoGvHN/public-url.request.json"
+    },
+    {
+      "path": "work/direct-xoGvHN/public-url.response.txt",
+      "bytes": 217837,
+      "sha256": "230ae7ae66ef7aa4b4f0cf37804d85184a4d9ceb6d15feda27aa982eae11ef39",
+      "source": ".temp/vision-diagnosis/direct-xoGvHN/public-url.response.txt"
+    },
+    {
+      "path": "work/direct-xoGvHN/public-url.summary.json",
+      "bytes": 574,
+      "sha256": "79b64645ac8bbfa97973f3c4b670be9ebd03dbfc3367c887a85344b92f380a21",
+      "source": ".temp/vision-diagnosis/direct-xoGvHN/public-url.summary.json"
+    },
+    {
+      "path": "work/fetch-tap.mjs",
+      "bytes": 2710,
+      "sha256": "431cca1f3e83de57732723c62cee4f5a76a34272f677104b450d390d75a8dfb7",
+      "source": ".temp/vision-diagnosis/fetch-tap.mjs"
+    },
+    {
+      "path": "work/inline-captured-hwxAhU/21804-1.request.json",
+      "bytes": 25050,
+      "sha256": "e93f72a88917ca268bfdd06b3b2e17e46c6ba371eb48f1c45df59a4b8124bcd2",
+      "source": ".temp/vision-diagnosis/inline-captured-hwxAhU/21804-1.request.json"
+    },
+    {
+      "path": "work/inline-captured-hwxAhU/21804-1.response-meta.json",
+      "bytes": 271,
+      "sha256": "9e1ff95ef3ee297d75685eaa485cb942e7eb3359f84b71cce363e72c8f7f7727",
+      "source": ".temp/vision-diagnosis/inline-captured-hwxAhU/21804-1.response-meta.json"
+    },
+    {
+      "path": "work/inline-captured-hwxAhU/21804-1.response.txt",
+      "bytes": 35256,
+      "sha256": "a5ea1581f54346a4eeb5ab8d799d76186bfa6448ae1f860d3c7ef411a14dc3e8",
+      "source": ".temp/vision-diagnosis/inline-captured-hwxAhU/21804-1.response.txt"
+    },
+    {
+      "path": "work/inline-captured-hwxAhU/events.ndjson",
+      "bytes": 110757,
+      "sha256": "3cffced5a5abf1ff3e4a49e7850e8c7eccfb517766c66e4d3fbde2a69a53bcbc",
+      "source": ".temp/vision-diagnosis/inline-captured-hwxAhU/events.ndjson"
+    },
+    {
+      "path": "work/inline-captured-hwxAhU/fetch-install.ndjson",
+      "bytes": 138,
+      "sha256": "b269058f78d7d0b46b12e2e935e95f8acf3b89ebfdf73b85f9ade1ac741018c4",
+      "source": ".temp/vision-diagnosis/inline-captured-hwxAhU/fetch-install.ndjson"
+    },
+    {
+      "path": "work/inline-captured-hwxAhU/launch.json",
+      "bytes": 1440,
+      "sha256": "04ccd3803d7aa12105aaa6b4908693be3720a155544a2678d60e567c3ae8ee8b",
+      "source": ".temp/vision-diagnosis/inline-captured-hwxAhU/launch.json"
+    },
+    {
+      "path": "work/inline-captured-hwxAhU/stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "source": ".temp/vision-diagnosis/inline-captured-hwxAhU/stderr.log"
+    },
+    {
+      "path": "work/inline-captured-hwxAhU/summary.json",
+      "bytes": 610,
+      "sha256": "804522495057aa3998ffa78b4c8d456c59920f8fd9e53e8c0511f61a60f321b1",
+      "source": ".temp/vision-diagnosis/inline-captured-hwxAhU/summary.json"
+    },
+    {
+      "path": "work/inline-captured-hwxAhU/tap-loaded.ndjson",
+      "bytes": 46,
+      "sha256": "f4104c17742accbcbfbbf606827125d952dfce694805409ce90579245dae248b",
+      "source": ".temp/vision-diagnosis/inline-captured-hwxAhU/tap-loaded.ndjson"
+    },
+    {
+      "path": "work/inline-captured-hwxAhU/wire-1-1.png",
+      "bytes": 8683,
+      "sha256": "48ed0fdb162d954a7352c1c4a20f1414112d6509d869af7d0f82ad1ac59dd89a",
+      "source": ".temp/vision-diagnosis/inline-captured-hwxAhU/wire-1-1.png"
+    },
+    {
+      "path": "work/inline-captured-hwxAhU/wire-1-2.png",
+      "bytes": 7954,
+      "sha256": "206691bc84e124a1468c6bfa28dd23bab8195ba43242a8d944942cd0d64a9807",
+      "source": ".temp/vision-diagnosis/inline-captured-hwxAhU/wire-1-2.png"
+    },
+    {
+      "path": "work/inline-captured-hwxAhU/wire-summary.json",
+      "bytes": 2307,
+      "sha256": "66ee5f195590c1c05e06b4ec6f6b92ced087c933b60a706c13725d6c207fad25",
+      "source": ".temp/vision-diagnosis/inline-captured-hwxAhU/wire-summary.json"
+    },
+    {
+      "path": "work/inline-repro-0WqabO/events.ndjson",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "source": ".temp/vision-diagnosis/inline-repro-0WqabO/events.ndjson"
+    },
+    {
+      "path": "work/inline-repro-0WqabO/exit.json",
+      "bytes": 77,
+      "sha256": "7a5b412d102fd8a8f1dc41a6ecfc990df38325137fc275431c1b99d5ea76673c",
+      "source": ".temp/vision-diagnosis/inline-repro-0WqabO/exit.json"
+    },
+    {
+      "path": "work/inline-repro-0WqabO/launch.json",
+      "bytes": 1353,
+      "sha256": "06a09f3bb2a290f908ccfdd68e501df0ea9734c14105324496090b31e20ccd3b",
+      "source": ".temp/vision-diagnosis/inline-repro-0WqabO/launch.json"
+    },
+    {
+      "path": "work/inline-repro-0WqabO/stderr.log",
+      "bytes": 1100,
+      "sha256": "bb4b2b08e76ad80f72439e07c3d64a493b4dfd838b6b4c4b13af792eb72d6139",
+      "source": ".temp/vision-diagnosis/inline-repro-0WqabO/stderr.log"
+    },
+    {
+      "path": "work/inline-repro-uNts1u/events.ndjson",
+      "bytes": 132917,
+      "sha256": "c890792827bfda94690638b79fbbabc9ae00cd2922dda3b49ea4d2c11da49455",
+      "source": ".temp/vision-diagnosis/inline-repro-uNts1u/events.ndjson"
+    },
+    {
+      "path": "work/inline-repro-uNts1u/launch.json",
+      "bytes": 1440,
+      "sha256": "76958d425ae070c84b0f40a1592d016b7cfa17ad4aa05e0922f5e7aa4a800f6a",
+      "source": ".temp/vision-diagnosis/inline-repro-uNts1u/launch.json"
+    },
+    {
+      "path": "work/inline-repro-uNts1u/stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "source": ".temp/vision-diagnosis/inline-repro-uNts1u/stderr.log"
+    },
+    {
+      "path": "work/inline-repro-uNts1u/summary.json",
+      "bytes": 802,
+      "sha256": "c7d7417b2af50260532fbcf3f3a65730342f77498608f62dbb98452875fd7324",
+      "source": ".temp/vision-diagnosis/inline-repro-uNts1u/summary.json"
+    },
+    {
+      "path": "work/inline-repro-uNts1u/tap-loaded.ndjson",
+      "bytes": 46,
+      "sha256": "858cfeece8230e0d4e0dcd05def53cb485bd9069920a1087dd6fd61d01d4e4aa",
+      "source": ".temp/vision-diagnosis/inline-repro-uNts1u/tap-loaded.ndjson"
+    },
+    {
+      "path": "work/opaque-control/expected.json",
+      "bytes": 444,
+      "sha256": "f0648df2c43123ec735b045fa2d81018c14b0aa85d31cddaaacb6137888c505a",
+      "source": ".temp/vision-diagnosis/opaque-control/expected.json"
+    },
+    {
+      "path": "work/opaque-control/image.jpg",
+      "bytes": 51978,
+      "sha256": "a1c4490cf788fa4baf22e922b642453c987464510a1a92a797afe21211cea507",
+      "source": ".temp/vision-diagnosis/opaque-control/image.jpg"
+    },
+    {
+      "path": "work/opaque-control/source.json",
+      "bytes": 339,
+      "sha256": "37850cbbf05ac3304822dbc9a7ecf612f58b4d7aa0c10b8eb7d2f34d3dea6ea7",
+      "source": ".temp/vision-diagnosis/opaque-control/source.json"
+    },
+    {
+      "path": "work/pair-check.json",
+      "bytes": 395,
+      "sha256": "7773337376d5aa5ff18bf9d542d175cc0cab5b7fc14de16f3dfeff3073d096f7",
+      "source": ".temp/vision-diagnosis/pair-check.json"
+    },
+    {
+      "path": "work/public-control/image.png",
+      "bytes": 30605,
+      "sha256": "dbdcb9a9f8ec2c54ff99e99636059bbd57194ed84e2cca5e53853aef293faf42",
+      "source": ".temp/vision-diagnosis/public-control/image.png"
+    },
+    {
+      "path": "work/public-control/source.json",
+      "bytes": 163,
+      "sha256": "6b12780c2cd1db9b51cd30d4ea94f59d496820ac33e9e2563c17003189a11496",
+      "source": ".temp/vision-diagnosis/public-control/source.json"
+    },
+    {
+      "path": "work/run-observed.mjs",
+      "bytes": 2478,
+      "sha256": "0e3071cb87d56984e5cda1ee6077af5892263ef59fa79ae3841330d38884fec1",
+      "source": ".temp/vision-diagnosis/run-observed.mjs"
+    },
+    {
+      "path": "work/tap-contract-B0bGVR/33952-1.request.json",
+      "bytes": 40,
+      "sha256": "d98c4024570d55943d2dc84bac7fc8ff4ce8a326cc073fa258e63b3dc6eec562",
+      "source": ".temp/vision-diagnosis/tap-contract-B0bGVR/33952-1.request.json"
+    },
+    {
+      "path": "work/tap-contract-B0bGVR/33952-1.response-meta.json",
+      "bytes": 271,
+      "sha256": "17d6f7a2eaed9e6aa960c8245c5cc6ee7d8136d28adf4d30c1c3789650e63f2d",
+      "source": ".temp/vision-diagnosis/tap-contract-B0bGVR/33952-1.response-meta.json"
+    },
+    {
+      "path": "work/tap-contract-B0bGVR/33952-1.response.txt",
+      "bytes": 14,
+      "sha256": "d8d37da081f11203f2af42092a92cb35508f27db75eba643058a0a580454517d",
+      "source": ".temp/vision-diagnosis/tap-contract-B0bGVR/33952-1.response.txt"
+    },
+    {
+      "path": "work/tap-contract-B0bGVR/fetch-install.ndjson",
+      "bytes": 46,
+      "sha256": "45ce9654c0ce530997ec4b04419586816ffd3df9b5bf680c8d39d721a4a9497d",
+      "source": ".temp/vision-diagnosis/tap-contract-B0bGVR/fetch-install.ndjson"
+    },
+    {
+      "path": "work/tap-contract-B0bGVR/tap-loaded.ndjson",
+      "bytes": 46,
+      "sha256": "908755b5ff60310b835fc99cf4caf69bed37f05834154cc2a6cd7a6bc4f3803e",
+      "source": ".temp/vision-diagnosis/tap-contract-B0bGVR/tap-loaded.ndjson"
+    }
+  ]
+}

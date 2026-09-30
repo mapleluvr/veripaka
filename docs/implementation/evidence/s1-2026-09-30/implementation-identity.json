@@ -1,0 +1,162 @@
+{
+  "recordedAt": "2026-09-29T17:29:50.107Z",
+  "node": "v24.15.0",
+  "packageVersion": "0.1.0-alpha.1",
+  "tarball": {
+    "path": ".temp/s1-closure/veripaka-0.1.0-alpha.1.tgz",
+    "sha256": "a2b4a0b4c86632444fdab78367cfdec32ff9d67e9206d6c1e4d56073215a9ff7",
+    "bytes": 23106
+  },
+  "files": [
+    {
+      "path": "src/catalog/index.ts",
+      "sha256": "84a36ec6cd7b0648a7c47d1d0f4822b49ee7e9f895f498976f838df177f30f2c",
+      "bytes": 6163
+    },
+    {
+      "path": "src/cli/main.ts",
+      "sha256": "2e848f56f7f34c81f79df62c9b9c7a36e0ffcf34a5617a86ddd308d23faddb09",
+      "bytes": 5176
+    },
+    {
+      "path": "src/contracts.ts",
+      "sha256": "e0d6538d39e2ec5dd3f5ca3d225cff30ae3eb427dbe2befdb2eb1a398f72c90b",
+      "bytes": 4679
+    },
+    {
+      "path": "src/evidence/index.ts",
+      "sha256": "fcc802f8f8f0dea1819bb8b40c06062d0784b92fff4d5712b2cfcae2f1e712f9",
+      "bytes": 5263
+    },
+    {
+      "path": "src/evidence/node-test.ts",
+      "sha256": "23d8a094470d31ef3542c593573e02d2e5536f092f28f2eccac427621d582e3a",
+      "bytes": 6741
+    },
+    {
+      "path": "src/execution/index.ts",
+      "sha256": "dc587beb8c27a7860d2164ff9f8242d0711d87df5653c6a27364dcacb09de260",
+      "bytes": 8760
+    },
+    {
+      "path": "src/execution/lock.ts",
+      "sha256": "5e277d01c75b9bd3fdff26261f67d0bb27e44b52a17179f9d128461559e88a0e",
+      "bytes": 1251
+    },
+    {
+      "path": "src/execution/node-test-reporter.ts",
+      "sha256": "7c1217ced38fc2a54a54b01b1f1387456f7e54233113cca7b1ff53e445be7c2d",
+      "bytes": 1335
+    },
+    {
+      "path": "src/files.ts",
+      "sha256": "f235259983f4749f8ea26c3954f74e55e79c27df0b7b49e2b3a8e03cd4d05585",
+      "bytes": 3568
+    },
+    {
+      "path": "src/planning/index.ts",
+      "sha256": "2622471ddc54b743d8bbef8cf384709dc87234ce08dcb31c76b4d515fa3eea8d",
+      "bytes": 7645
+    },
+    {
+      "path": "tests/cancellation.test.ts",
+      "sha256": "27666beac913f00e91a485e8d9c53bce4bfa3d086de2b6591ef18372ba7431d9",
+      "bytes": 8410
+    },
+    {
+      "path": "tests/cli.test.ts",
+      "sha256": "14afe563fa4a6a0517a3c852bb7b4a0c24235c7a550e738357f0eb67a9875ac2",
+      "bytes": 9018
+    },
+    {
+      "path": "tests/lifecycle.test.ts",
+      "sha256": "7f177ac4ba587c0e2d4ac06b83e914ebc4c38c1d2947af06be48f8612f5b9684",
+      "bytes": 3982
+    },
+    {
+      "path": "scripts/evidence-checkpoint.mjs",
+      "sha256": "640cdd75f81977856ae848af6b02264497eb8ba3b108f1b06bec0f1df50f7b62",
+      "bytes": 4919
+    },
+    {
+      "path": "scripts/pi-smoke.mjs",
+      "sha256": "fe465957915ba858c6f2aeda191b00f44aef24af065af22c0076861050ef993f",
+      "bytes": 3682
+    },
+    {
+      "path": "skills/_shared/run-veripaka.mjs",
+      "sha256": "2366f4bd57a9f73f8431312022241ffceb1e55cd975e80b298fc1bcdb064635e",
+      "bytes": 247
+    },
+    {
+      "path": "skills/veripaka/SKILL.md",
+      "sha256": "46ee6aa268b928c10377f09ee0dca930cf00d7fb44d89cd81bc47cd58ac00826",
+      "bytes": 2818
+    },
+    {
+      "path": "examples/backend/docs/behavior.md",
+      "sha256": "60af7f813e7e48541d6eecd17adf078ecbe9fc66cffd09f551446a2f35cecb6a",
+      "bytes": 678
+    },
+    {
+      "path": "examples/backend/docs/verification/profiles/backend.yaml",
+      "sha256": "a479b1a978b4f10bb3fcfe3db020fbf9d4d42a98fd1d1a5179bfce98d9bc4883",
+      "bytes": 145
+    },
+    {
+      "path": "examples/backend/docs/verification/project.yaml",
+      "sha256": "cfdcd54da87618872c72e0c9506d5062c724d53755c1837304ef5832251ca196",
+      "bytes": 446
+    },
+    {
+      "path": "examples/backend/docs/verification/README.md",
+      "sha256": "ce219aa4e7acb20cd6fd36346e571aa70406e7728dbe57c130b1d3729e78028d",
+      "bytes": 735
+    },
+    {
+      "path": "examples/backend/docs/verification/recipes/api-contract/RECIPE.md",
+      "sha256": "57a591a2b2e22a5f55c783a837fc17eacd1c67a61e073bc3b2e6a1341df0340a",
+      "bytes": 2044
+    },
+    {
+      "path": "examples/backend/docs/verification/recipes/settings-persistence/RECIPE.md",
+      "sha256": "e331cf9a05ebf05a5692a64daa7a769308e76b57a4a0ea20d29ec7bdb180b09f",
+      "bytes": 1896
+    },
+    {
+      "path": "examples/backend/package.json",
+      "sha256": "ec47a93c7147ef81cc350acd3ec13ebbf96939f9345e3d4403ed174fd8e66ef7",
+      "bytes": 146
+    },
+    {
+      "path": "examples/backend/src/server.mjs",
+      "sha256": "3d104917b8224c7712511594e6225d5a8e0fa2bec0665853c1ba9ccb67f38307",
+      "bytes": 2237
+    },
+    {
+      "path": "examples/backend/tests/settings.test.mjs",
+      "sha256": "f1fc464e606177ad8a6b77480741da90c2e4010c29b283c1217e27f4c233835b",
+      "bytes": 1323
+    },
+    {
+      "path": "examples/backend/verification-input.json",
+      "sha256": "ad87b1acfa493731547979f65670fee7290e0d683c53f40768b1dbf958e70d86",
+      "bytes": 539
+    },
+    {
+      "path": "package.json",
+      "sha256": "cd08e7b76b1d33cc14f5a7dfdf9dd545b4c75962ef848f54578dc9a0e667f2de",
+      "bytes": 867
+    },
+    {
+      "path": "package-lock.json",
+      "sha256": "dd54940514c08195d096f2030788cc96887c000998b60c44303efff42855cf12",
+      "bytes": 2462
+    },
+    {
+      "path": "tsconfig.json",
+      "sha256": "dc2ac94278eb51be9c36918452bf4aa174c93ca69a6ddc28b1d7fff625322989",
+      "bytes": 389
+    }
+  ]
+}

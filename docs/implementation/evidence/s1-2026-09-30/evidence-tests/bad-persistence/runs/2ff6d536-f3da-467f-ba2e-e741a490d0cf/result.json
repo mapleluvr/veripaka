@@ -1,0 +1,77 @@
+{
+  "schema": "veripaka.result/v0",
+  "runId": "2ff6d536-f3da-467f-ba2e-e741a490d0cf",
+  "kind": "verification",
+  "verdict": "fail",
+  "verdictBasis": "executable",
+  "execution": "completed",
+  "subject": {
+    "kind": "checkout",
+    "description": "Local reference HTTP service imported from this declared checkout by its native tests",
+    "entrypoint": "src/server.mjs",
+    "sourceRoots": [
+      "src",
+      "tests",
+      "package.json",
+      "docs/behavior.md"
+    ]
+  },
+  "checks": [
+    {
+      "key": "api-contract/reject-invalid-theme",
+      "required": true,
+      "expected": "Unsupported theme returns HTTP 400 and the stored theme remains light.",
+      "observed": "Native runner executed this named test and reported pass; the overall runner did not finish successfully",
+      "status": "inconclusive",
+      "evidence": [
+        "attempts/fe28a472-b667-4377-ac32-5907319d3e31/events.ndjson#tests/settings.test.mjs:api rejects unsupported theme without changing stored state"
+      ]
+    },
+    {
+      "key": "settings-persistence/survives-restart",
+      "required": true,
+      "expected": "A successful dark-theme write is returned by GET after restarting the service with the same private data directory.",
+      "observed": "{\"code\":\"ERR_TEST_FAILURE\",\"failureType\":\"testCodeFailure\",\"cause\":{\"generatedMessage\":true,\"code\":\"ERR_ASSERTION\",\"actual\":{\"theme\":\"light\"},\"expected\":{\"theme\":\"dark\"},\"operator\":\"deepStrictEqual\",\"diff\":\"simple\",\"name\":\"AssertionError\",\"message\":\"Expected values to be strictly deep-equal:\\n+ actual - expected\\n\\n  {\\n+   theme: 'light'\\n-   theme: 'dark'\\n  }\\n\",\"stack\":\"AssertionError [ERR_ASSERTION]: Expected values to be strictly deep-equal:\\n+ actual - expected\\n\\n  {\\n+   theme: 'light'\\n-   theme: 'dark'\\n  }\\n\\n    at TestContext.<anonymous> (file:///D:/Projects/veripaka/.temp/evidence-2026-09-29T17-26-22-712Z/bad-persistence/tests/settings.test.mjs:25:12)\\n    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)\\n    at async Test.run (node:internal/test_runner/test:1208:7)\\n    at async Test.processPendingSubtests (node:internal/test_runner/test:831:7)\"},\"name\":\"Error\",\"message\":\"Expected values to be strictly deep-equal:\\n+ actual - expected\\n\\n  {\\n+   theme: 'light'\\n-   theme: 'dark'\\n  }\\n\",\"stack\":\"Error [ERR_TEST_FAILURE]: Expected values to be strictly deep-equal:\\n+ actual - expected\\n\\n  {\\n+   theme: 'light'\\n-   theme: 'dark'\\n  }\\n\"}",
+      "status": "fail",
+      "evidence": [
+        "attempts/fe28a472-b667-4377-ac32-5907319d3e31/events.ndjson#tests/settings.test.mjs:settings survive service restart"
+      ]
+    }
+  ],
+  "goals": [
+    {
+      "id": "boundary",
+      "question": "Does the API reject unsupported themes without changing state?",
+      "claims": [
+        "api-contract/reject-invalid-theme"
+      ]
+    },
+    {
+      "id": "persistence",
+      "question": "Does a successful settings write survive service restart?",
+      "claims": [
+        "settings-persistence/survives-restart"
+      ]
+    },
+    {
+      "id": "sync",
+      "question": "Does the setting synchronize across devices?",
+      "claims": [],
+      "uncovered": "Not promised by the reference service and not verified by these methods."
+    }
+  ],
+  "limits": [
+    "Only the declared local source domain and mapped checks were assessed; coverage sufficiency is not mechanically proved.",
+    "The reference tests establish their local source-to-service relationship; arbitrary existing endpoints are unsupported.",
+    "Digests and managed capture are not protection against a malicious writer with the same OS permissions.",
+    "Trial recipe maturity is not upgraded by this result."
+  ],
+  "provenance": {
+    "producer": "node:test",
+    "ingestion": "managed-command",
+    "verification": "verified",
+    "judge": "executable",
+    "invocationId": "404851fd-f5b4-426f-b325-609fe86d9670"
+  },
+  "finalizedAt": "2026-09-29T17:26:26.956Z"
+}

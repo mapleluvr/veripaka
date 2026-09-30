@@ -1,0 +1,146 @@
+✖ explicit cancellation owns cleanup and leaves the other prepared run untouched (735.4878ms)
+✖ launcher SIGINT handler allows the CLI to finalize cancellation (1640.4852ms)
+✖ owned process tree times out and a second project invocation is busy (5291.2472ms)
+ℹ tests 3
+ℹ suites 0
+ℹ pass 0
+ℹ fail 3
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 7872.293
+
+✖ failing tests:
+
+test at dist\tests\cancellation.test.js:127:1
+✖ explicit cancellation owns cleanup and leaves the other prepared run untouched (735.4878ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  + actual - expected
+  
+  + 'INVALID_COMMAND'
+  - 'RUN_NOT_RUNNING'
+  
+      at TestContext.<anonymous> (file:///D:/Projects/veripaka/dist/tests/cancellation.test.js:132:12)
+      at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+      at async Test.run (node:internal/test_runner/test:1208:7)
+      at async startSubtestAfterBootstrap (node:internal/test_runner/harness:385:3) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 'INVALID_COMMAND',
+    expected: 'RUN_NOT_RUNNING',
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at dist\tests\cancellation.test.js:157:1
+✖ launcher SIGINT handler allows the CLI to finalize cancellation (1640.4852ms)
+  AssertionError [ERR_ASSERTION]: Launcher lost the terminal result: 
+  + actual - expected
+  
+  + undefined
+  - 'CANCELLED'
+  
+      at TestContext.<anonymous> (file:///D:/Projects/veripaka/dist/tests/cancellation.test.js:171:12)
+      at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+      at async Test.run (node:internal/test_runner/test:1208:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:831:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: undefined,
+    expected: 'CANCELLED',
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at dist\tests\lifecycle.test.js:35:1
+✖ owned process tree times out and a second project invocation is busy (5291.2472ms)
+  AssertionError [ERR_ASSERTION]: An intact interrupted terminal result must remain readable
+  + actual - expected
+  
+  + undefined
+  - {
+  -   checks: [
+  -     {
+  -       evidence: [],
+  -       expected: 'Unsupported theme returns HTTP 400 and the stored theme remains light.',
+  -       key: 'api-contract/reject-invalid-theme',
+  -       observed: 'No complete managed invocation',
+  -       required: true,
+  -       status: 'inconclusive'
+  -     },
+  -     {
+  -       evidence: [],
+  -       expected: 'A successful dark-theme write is returned by GET after restarting the service with the same private data directory.',
+  -       key: 'settings-persistence/survives-restart',
+  -       observed: 'No complete managed invocation',
+  -       required: true,
+  -       status: 'inconclusive'
+  -     }
+  -   ],
+  -   execution: 'interrupted',
+  -   finalizedAt: '2026-09-29T17:07:40.975Z',
+  -   goals: [
+  -     {
+  -       claims: [
+  -         'api-contract/reject-invalid-theme'
+  -       ],
+  -       id: 'boundary',
+  -       question: 'Does the API reject unsupported themes without changing state?'
+  -     },
+  -     {
+  -       claims: [
+  -         'settings-persistence/survives-restart'
+  -       ],
+  -       id: 'persistence',
+  -       question: 'Does a successful settings write survive service restart?'
+  -     },
+  -     {
+  -       claims: [],
+  -       id: 'sync',
+  -       question: 'Does the setting synchronize across devices?',
+  -       uncovered: 'Not promised by the reference service and not verified by these methods.'
+  -     }
+  -   ],
+  -   kind: 'verification',
+  -   limits: [
+  -     'Only the declared local source domain and mapped checks were assessed; coverage sufficiency is not mechanically proved.',
+  -     'The reference tests establish their local source-to-service relationship; arbitrary existing endpoints are unsupported.',
+  -     'Digests and managed capture are not protection against a malicious writer with the same OS permissions.',
+  -     'Trial recipe maturity is not upgraded by this result.'
+  -   ],
+  -   provenance: {
+  -     ingestion: 'managed-command',
+  -     invocationId: '8550d1e5-0c35-4dc9-ab4b-83b8aa2afd19',
+  -     judge: 'executable',
+  -     producer: 'node:test',
+  -     verification: 'unknown'
+  -   },
+  -   reason: 'TIMEOUT',
+  -   runId: 'bdcb25cf-eaa8-4c5d-81bf-a0947c813761',
+  -   schema: 'veripaka.result/v0',
+  -   subject: {
+  -     description: 'Local reference HTTP service imported from this declared checkout by its native tests',
+  -     entrypoint: 'src/server.mjs',
+  -     kind: 'checkout',
+  -     sourceRoots: [
+  -       'src',
+  -       'tests',
+  -       'package.json',
+  -       'docs/behavior.md'
+  -     ]
+  -   },
+  -   verdict: 'inconclusive',
+  -   verdictBasis: 'executable'
+  - }
+  
+      at TestContext.<anonymous> (file:///D:/Projects/veripaka/dist/tests/lifecycle.test.js:87:12)
+      at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+      at async Test.run (node:internal/test_runner/test:1208:7)
+      at async startSubtestAfterBootstrap (node:internal/test_runner/harness:385:3) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: undefined,
+    expected: { schema: 'veripaka.result/v0', runId: 'bdcb25cf-eaa8-4c5d-81bf-a0947c813761', kind: 'verification', verdict: 'inconclusive', verdictBasis: 'executable', execution: 'interrupted', reason: 'TIMEOUT', subject: { kind: 'checkout', description: 'Local reference HTTP service imported from this declared checkout by its native tests', entrypoint: 'src/server.mjs', sourceRoots: [Array] }, checks: [ [Object], [Object] ], goals: [ [Object], [Object], [Object] ], limits: [ 'Only the declared local source domain and mapped checks were assessed; coverage sufficiency is not mechanically proved.', 'The reference tests establish their local source-to-service relationship; arbitrary existing endpoints are unsupported.', 'Digests and managed capture are not protection against a malicious writer with the same OS permissions.', 'Trial recipe maturity is not upgraded by this result.' ], provenance: { producer: 'node:test', ingestion: 'managed-command', verification: 'unknown', judge: 'executable', invocationId: '8550d1e5-0c35-4dc9-ab4b-83b8aa2afd19' }, finalizedAt: '2026-09-29T17:07:40.975Z' },
+    operator: 'deepStrictEqual',
+    diff: 'simple'
+  }

@@ -1,0 +1,35 @@
+{
+  "schema": "veripaka.execution/v0",
+  "runId": "e86ccc38-5780-4750-9181-7af9af99c590",
+  "attemptId": "e1041eaa-967e-4bca-8d58-d2158a60fc4c",
+  "invocationId": "5f3bfa99-3a9e-4201-833b-77b2f3f9e5c4",
+  "planDigest": "d7eef19b4ddbd7bcee7f9d0c56a264b26894e882ecf202a8fa4d9b15daed8373",
+  "startedAt": "2026-09-29T17:19:11.222Z",
+  "executable": "C:\\Program Files\\nodejs\\node.exe",
+  "argv": [
+    "--test",
+    "--test-concurrency=1",
+    "--test-reporter",
+    "file:///D:/Projects/veripaka/.temp/s1-closure/consumer/node_modules/veripaka/dist/src/execution/node-test-reporter.js",
+    "--test-reporter-destination",
+    "D:\\Projects\\veripaka\\.temp\\s1-closure\\consumer\\.veripaka\\runs\\e86ccc38-5780-4750-9181-7af9af99c590\\attempts\\e1041eaa-967e-4bca-8d58-d2158a60fc4c\\events.ndjson",
+    "tests/settings.test.mjs"
+  ],
+  "cwd": "D:\\Projects\\veripaka\\.temp\\s1-closure\\consumer",
+  "exitCode": 0,
+  "signal": null,
+  "status": "completed",
+  "cleanup": "not-needed",
+  "pid": 39200,
+  "endedAt": "2026-09-29T17:19:11.662Z",
+  "artifacts": {
+    "events": "attempts/e1041eaa-967e-4bca-8d58-d2158a60fc4c/events.ndjson",
+    "stdout": "attempts/e1041eaa-967e-4bca-8d58-d2158a60fc4c/stdout.log",
+    "stderr": "attempts/e1041eaa-967e-4bca-8d58-d2158a60fc4c/stderr.log"
+  },
+  "digests": {
+    "events": "3b451e0f41333a6390c24458f3f9aac99ce35e7bbcfc42080d5831fe7c94b91c",
+    "stdout": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  }
+}

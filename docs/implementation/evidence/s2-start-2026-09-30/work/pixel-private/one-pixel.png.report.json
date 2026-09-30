@@ -1,0 +1,151 @@
+{
+  "tool": "png_pixel_compare.py",
+  "toolVersion": "1.0.0",
+  "runAtUtc": "2026-09-29T20:22:29+00:00",
+  "command": "python.exe D:\\Projects\\veripaka\\.temp\\s2-start\\pixel-consumer\\png_pixel_compare.py D:\\Projects\\veripaka\\.temp\\s2-start\\pixel-consumer\\reference.png D:\\Projects\\veripaka\\.temp\\s2-start\\pixel-private\\one-pixel.png --json D:\\Projects\\veripaka\\.temp\\s2-start\\pixel-private\\one-pixel.png.report.json",
+  "inputs": {
+    "reference": {
+      "path": "D:\\Projects\\veripaka\\.temp\\s2-start\\pixel-consumer\\reference.png",
+      "fileBytes": 6323,
+      "fileSha256": "6de6d712a67eb2d10091d5e6b19a573070706d3300dd3b84d0313a14ab390409",
+      "ihdr": {
+        "width": 380,
+        "height": 250,
+        "bitDepth": 8,
+        "colorType": 2,
+        "colorTypeName": "truecolor",
+        "interlace": 0,
+        "interlaceName": "none"
+      },
+      "chunkTypes": [
+        "IHDR",
+        "IDAT",
+        "IDAT",
+        "IDAT",
+        "IEND"
+      ],
+      "ancillaryChunkTypes": [],
+      "allChunkCrc32Valid": true,
+      "idatBytes": 6242
+    },
+    "candidate": {
+      "path": "D:\\Projects\\veripaka\\.temp\\s2-start\\pixel-private\\one-pixel.png",
+      "fileBytes": 6123,
+      "fileSha256": "115c82b4e24691c2a927d0946e06afb34e87b56b2cb0edf338b1c47cbfe566c1",
+      "ihdr": {
+        "width": 380,
+        "height": 250,
+        "bitDepth": 8,
+        "colorType": 2,
+        "colorTypeName": "truecolor",
+        "interlace": 0,
+        "interlaceName": "none"
+      },
+      "chunkTypes": [
+        "IHDR",
+        "IDAT",
+        "IEND"
+      ],
+      "ancillaryChunkTypes": [],
+      "allChunkCrc32Valid": true,
+      "idatBytes": 6066
+    }
+  },
+  "comparisonScope": "decoded pixel samples of the two files only",
+  "dimensionsMatch": true,
+  "identicalDimensionsOrResized": null,
+  "pixelsIdentical": false,
+  "stats": {
+    "totalPixels": 95000,
+    "differingPixels": 1,
+    "identicalPixels": 94999,
+    "identicalFraction": 0.999989474,
+    "rowsWithDifferences": 1,
+    "maxChannelDelta16": [
+      65278,
+      65021,
+      64764,
+      0
+    ],
+    "sumChannelDelta16": [
+      65278,
+      65021,
+      64764,
+      0
+    ],
+    "boundingBox": {
+      "minX": 300,
+      "minY": 220,
+      "maxX": 300,
+      "maxY": 220,
+      "width": 1,
+      "height": 1
+    },
+    "examples": [
+      {
+        "x": 300,
+        "y": 220,
+        "referenceRGBA16": [
+          65535,
+          65535,
+          65535,
+          65535
+        ],
+        "candidateRGBA16": [
+          257,
+          514,
+          771,
+          65535
+        ],
+        "deltaRGBA16": [
+          65278,
+          65021,
+          64764,
+          0
+        ]
+      }
+    ]
+  },
+  "structuralNotes": [
+    "IDAT byte streams differ (compression/filters/encoding differ)"
+  ],
+  "crossCheck": {
+    "reference": {
+      "available": true,
+      "agreement": "yes",
+      "decoder": "Pillow 10.4.0",
+      "mismatchedPixels": 0,
+      "firstMismatch": null
+    },
+    "candidate": {
+      "available": true,
+      "agreement": "yes",
+      "decoder": "Pillow 10.4.0",
+      "mismatchedPixels": 0,
+      "firstMismatch": null
+    }
+  },
+  "warnings": [],
+  "limitations": [
+    "Compares only the two supplied PNG files; it does not model browser layout, CSS, fonts, text shaping, antialiasing policy or device pixel ratio.",
+    "No color management: iCCP/gAMA/cHRM/sRGB chunks are recorded but never applied, so identical samples under different color profiles are reported as identical.",
+    "Only the default image of an APNG is compared; later frames are ignored.",
+    "Comparison is exact per sample value; there is no perceptual tolerance.",
+    "Equal pixels do not prove a product is correct or accepted, only that these two rendered files agree pixel-for-pixel."
+  ],
+  "diffImage": null,
+  "verdict": "PIXELS_DIFFER",
+  "summaryLines": [
+    "verdict: PIXELS_DIFFER",
+    "reference: reference.png (380x250, truecolor, depth 8, none, 6323 bytes)",
+    "candidate: one-pixel.png (380x250, truecolor, depth 8, none, 6123 bytes)",
+    "file sha256 differ: True",
+    "pixels: total=95000 differing=1 identical=94999 (0.999989474 identical) rows_with_diffs=1",
+    "max per-channel delta (16-bit units) RGBA = [65278, 65021, 64764, 0]",
+    "difference bounding box = {'minX': 300, 'minY': 220, 'maxX': 300, 'maxY': 220, 'width': 1, 'height': 1}",
+    "  example diff at (300,220): ref=[65535, 65535, 65535, 65535] cand=[257, 514, 771, 65535]",
+    "structural note: IDAT byte streams differ (compression/filters/encoding differ)",
+    "cross-check reference: {'available': True, 'agreement': 'yes', 'decoder': 'Pillow 10.4.0', 'mismatchedPixels': 0, 'firstMismatch': None}",
+    "cross-check candidate: {'available': True, 'agreement': 'yes', 'decoder': 'Pillow 10.4.0', 'mismatchedPixels': 0, 'firstMismatch': None}"
+  ]
+}

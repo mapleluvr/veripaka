@@ -1,0 +1,56 @@
+{
+  "status": "passed",
+  "verifiedAt": "2026-09-29T17:24:19.757Z",
+  "project": "D:\\Projects\\veripaka\\.temp\\s1-closure\\consumer",
+  "protectedFiles": 1126,
+  "mutation": "none outside .veripaka",
+  "records": [
+    {
+      "sessionId": "01a0ee2c-edd8-7795-9a09-e65fed04053b",
+      "runId": "e86ccc38-5780-4750-9181-7af9af99c590",
+      "invocationId": "5f3bfa99-3a9e-4201-833b-77b2f3f9e5c4",
+      "startedAt": "2026-09-29T17:18:36.695Z",
+      "endedAt": "2026-09-29T17:19:20.840Z",
+      "elapsedSeconds": 44.145,
+      "toolCalls": 18,
+      "toolErrorEvents": 1,
+      "responseModels": [
+        "deepseek-v4.1-flash"
+      ],
+      "providerReportedUsage": {
+        "input": 8403,
+        "output": 2434,
+        "cacheRead": 44800,
+        "cacheWrite": 0,
+        "totalTokens": 55637
+      },
+      "verdict": "scoped-pass",
+      "integrity": "verified",
+      "independentRefinalizeExit": 0
+    },
+    {
+      "sessionId": "01a0ee2e-f264-71b3-8cb2-356c994ee5ef",
+      "runId": "de3ffc35-2f08-4207-a742-b8038ae03634",
+      "invocationId": "99cdc758-ffc5-4771-835a-431cbdd12794",
+      "startedAt": "2026-09-29T17:20:48.988Z",
+      "endedAt": "2026-09-29T17:21:47.495Z",
+      "elapsedSeconds": 58.507,
+      "toolCalls": 16,
+      "toolErrorEvents": 0,
+      "responseModels": [
+        "deepseek-v4.1-flash"
+      ],
+      "providerReportedUsage": {
+        "input": 8181,
+        "output": 2984,
+        "cacheRead": 80128,
+        "cacheWrite": 0,
+        "totalTokens": 91293
+      },
+      "verdict": "scoped-pass",
+      "integrity": "verified",
+      "independentRefinalizeExit": 0
+    }
+  ],
+  "limits": "Two bounded cold sessions, explicit installed Skill, existing provider credentials; not a general weak-model success-rate or cost experiment. Manual tool/final-report review is recorded in the checkpoint."
+}

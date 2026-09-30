@@ -1,0 +1,4 @@
+schema: veripaka.profile/v0
+id: backend
+title: Reference API boundary and persistence verification
+recipes: [api-contract, settings-persistence]

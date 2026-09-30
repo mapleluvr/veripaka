@@ -1,0 +1,10 @@
+{
+  "case": "public-url",
+  "status": 200,
+  "contentType": "text/event-stream",
+  "answer": "Three visible details: a dark peaked cap with a gold emblem and black visor; thin-rimmed eyeglasses; and a dark uniform-style jacket worn with a white shirt, black tie, and chest insignia/ribbons. An American flag is also partially visible on the left.\n\nDominant colors: dark navy/black and white, with blue in the background and red, white, and gold accents from the flag, cap emblem, and ribbons.",
+  "responseModels": [
+    "deepseek-v4.1-flash"
+  ],
+  "serverError": false
+}

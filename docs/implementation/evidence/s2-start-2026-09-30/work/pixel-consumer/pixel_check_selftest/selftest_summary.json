@@ -1,0 +1,38 @@
+{
+  "dir": "D:\\Projects\\veripaka\\.temp\\s2-start\\pixel-consumer\\pixel_check_selftest",
+  "cases": [
+    {
+      "case": "base_vs_recompressed_meta",
+      "reference": "D:\\Projects\\veripaka\\.temp\\s2-start\\pixel-consumer\\pixel_check_selftest\\base.png",
+      "candidate": "D:\\Projects\\veripaka\\.temp\\s2-start\\pixel-consumer\\pixel_check_selftest\\recompressed_meta.png",
+      "expectedExit": 0,
+      "actualExit": 0,
+      "passed": true
+    },
+    {
+      "case": "base_vs_adam7",
+      "reference": "D:\\Projects\\veripaka\\.temp\\s2-start\\pixel-consumer\\pixel_check_selftest\\base.png",
+      "candidate": "D:\\Projects\\veripaka\\.temp\\s2-start\\pixel-consumer\\pixel_check_selftest\\adam7.png",
+      "expectedExit": 0,
+      "actualExit": 0,
+      "passed": true
+    },
+    {
+      "case": "base_vs_palette",
+      "reference": "D:\\Projects\\veripaka\\.temp\\s2-start\\pixel-consumer\\pixel_check_selftest\\base.png",
+      "candidate": "D:\\Projects\\veripaka\\.temp\\s2-start\\pixel-consumer\\pixel_check_selftest\\palette.png",
+      "expectedExit": 0,
+      "actualExit": 0,
+      "passed": true
+    },
+    {
+      "case": "base_vs_changed",
+      "reference": "D:\\Projects\\veripaka\\.temp\\s2-start\\pixel-consumer\\pixel_check_selftest\\base.png",
+      "candidate": "D:\\Projects\\veripaka\\.temp\\s2-start\\pixel-consumer\\pixel_check_selftest\\changed.png",
+      "expectedExit": 1,
+      "actualExit": 1,
+      "passed": true
+    }
+  ],
+  "allPassed": true
+}

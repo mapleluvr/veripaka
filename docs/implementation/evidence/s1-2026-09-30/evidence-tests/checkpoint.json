@@ -1,0 +1,17 @@
+{
+  "completedAt": "2026-09-29T17:26:31.548Z",
+  "cli": "D:\\Projects\\veripaka\\.temp\\s1-closure\\consumer\\node_modules\\veripaka\\dist\\src\\cli\\main.js",
+  "node": "v24.15.0",
+  "platform": "win32",
+  "scenarios": [
+    "normal",
+    "bad-boundary",
+    "bad-persistence",
+    "missing-evidence",
+    "old-report-substitution",
+    "imported-claim"
+  ],
+  "status": "passed",
+  "callsFile": "calls.json",
+  "limits": "Local same-permission integrity checks, not tamper-proof attestation or proof of coverage sufficiency."
+}

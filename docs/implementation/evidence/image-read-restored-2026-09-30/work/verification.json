@@ -1,0 +1,112 @@
+{
+  "checkedAt": "2026-09-30T05:12:21.581Z",
+  "cases": [
+    {
+      "name": "original-regression",
+      "passed": true,
+      "toolCalls": [
+        {
+          "name": "read",
+          "args": {
+            "path": "sample-a.png"
+          }
+        },
+        {
+          "name": "read",
+          "args": {
+            "path": "sample-b.png"
+          }
+        }
+      ],
+      "perImage": [
+        {
+          "file": "sample-a.png",
+          "code": "WYW5ND",
+          "orderedPairsCorrect": 6
+        },
+        {
+          "file": "sample-b.png",
+          "code": "LGE2GY",
+          "orderedPairsCorrect": 6
+        }
+      ],
+      "wire": [
+        {
+          "request": "17556-1.request.json",
+          "status": 200,
+          "images": []
+        },
+        {
+          "request": "17556-2.request.json",
+          "status": 200,
+          "images": [
+            {
+              "format": "image/png",
+              "sha256": "48ed0fdb162d954a7352c1c4a20f1414112d6509d869af7d0f82ad1ac59dd89a"
+            },
+            {
+              "format": "image/png",
+              "sha256": "206691bc84e124a1468c6bfa28dd23bab8195ba43242a8d944942cd0d64a9807"
+            }
+          ]
+        }
+      ],
+      "responseModel": "cb/deepseek-v4.1-flash",
+      "providerErrors": 0
+    },
+    {
+      "name": "fresh-png-jpeg",
+      "passed": true,
+      "toolCalls": [
+        {
+          "name": "read",
+          "args": {
+            "path": "fresh-a.png"
+          }
+        },
+        {
+          "name": "read",
+          "args": {
+            "path": "fresh-b.jpg"
+          }
+        }
+      ],
+      "perImage": [
+        {
+          "file": "fresh-a.png",
+          "code": "R3M66Y",
+          "orderedPairsCorrect": 6
+        },
+        {
+          "file": "fresh-b.jpg",
+          "code": "UCQLJT",
+          "orderedPairsCorrect": 6
+        }
+      ],
+      "wire": [
+        {
+          "request": "17172-1.request.json",
+          "status": 200,
+          "images": []
+        },
+        {
+          "request": "17172-2.request.json",
+          "status": 200,
+          "images": [
+            {
+              "format": "image/png",
+              "sha256": "a9af54284935a32b6dbf285823a88fb74318af683f5b6a78363e2c82c305e101"
+            },
+            {
+              "format": "image/jpeg",
+              "sha256": "b04f069e631f1f074a2cff3019fea75f6d41a8c2280af5076900726c07f7ac56"
+            }
+          ]
+        }
+      ],
+      "responseModel": "cb/deepseek-v4.1-flash",
+      "providerErrors": 0
+    }
+  ],
+  "conclusion": "Pi read PNG/JPEG -> base64 data URI -> same max model -> exact visual answers works in these two independent sessions."
+}

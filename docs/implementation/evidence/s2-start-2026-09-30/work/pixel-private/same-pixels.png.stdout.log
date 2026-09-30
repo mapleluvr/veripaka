@@ -1,0 +1,11 @@
+verdict: PIXELS_IDENTICAL
+reference: reference.png (380x250, truecolor, depth 8, none, 6323 bytes)
+candidate: same-pixels.png (380x250, truecolor, depth 8, none, 285406 bytes)
+file sha256 differ: True
+pixels: total=95000 differing=0 identical=95000 (1.000000000 identical) rows_with_diffs=0
+max per-channel delta (16-bit units) RGBA = [0, 0, 0, 0]
+difference bounding box = None
+structural note: IDAT byte streams differ (compression/filters/encoding differ)
+cross-check reference: {'available': True, 'agreement': 'yes', 'decoder': 'Pillow 10.4.0', 'mismatchedPixels': 0, 'firstMismatch': None}
+cross-check candidate: {'available': True, 'agreement': 'yes', 'decoder': 'Pillow 10.4.0', 'mismatchedPixels': 0, 'firstMismatch': None}
+json: D:\Projects\veripaka\.temp\s2-start\pixel-private\same-pixels.png.report.json

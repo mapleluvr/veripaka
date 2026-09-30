@@ -1,0 +1,23 @@
+{
+  "checkedAt": "2026-09-29T20:53:54.812Z",
+  "s1FilesVerified": 265,
+  "frozenInputs": [
+    {
+      "manifest": ".temp/s2-start/capability-inputs.json",
+      "entries": 7
+    },
+    {
+      "manifest": ".temp/s2-start/pixel-inputs.json",
+      "entries": 5
+    },
+    {
+      "manifest": ".temp/s2-start/r1/inputs.json",
+      "entries": 6
+    },
+    {
+      "manifest": ".temp/s2-start/r2/inputs.json",
+      "entries": 5
+    }
+  ],
+  "sampledSkillMatchesCurrent": true
+}

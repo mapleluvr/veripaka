@@ -1,0 +1,20 @@
+{
+  "name": "veripaka",
+  "version": "0.1.0-alpha.1",
+  "private": true,
+  "description": "Project-local verification recipes with bounded execution and scoped evidence",
+  "type": "module",
+  "engines": { "node": ">=24 <25" },
+  "bin": { "veripaka": "dist/src/cli/main.js" },
+  "files": ["dist/src", "skills", "examples/backend", "README.md", "!examples/backend/.veripaka", "!examples/backend/.pi"],
+  "keywords": ["pi-package", "verification"],
+  "pi": { "skills": ["./skills/veripaka"], "extensions": [] },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "test": "npm run build && node --test --test-concurrency=1 dist/tests/*.test.js",
+    "prepack": "npm run build"
+  },
+  "dependencies": { "yaml": "^2.9.0", "zod": "^4.0.0" },
+  "devDependencies": { "@types/node": "^24.0.0", "typescript": "^5.9.3" }
+}

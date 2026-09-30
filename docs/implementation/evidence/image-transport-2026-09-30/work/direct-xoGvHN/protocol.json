@@ -1,0 +1,21 @@
+{
+  "at": "2026-09-30T04:24:59.005Z",
+  "label": "transport",
+  "provider": "Mapleluv-ChatCompletions",
+  "model": "deepseek-flash",
+  "reasoningEffort": "max",
+  "hypothesis": "Compare the same public PNG as base64 data URI and HTTPS URL; separately change only detail=high on the prior synthetic PNG request. Public URL answers may be inferred from its name and are not standalone proof of vision.",
+  "cases": [
+    {
+      "name": "public-base64",
+      "imageSha256": "dbdcb9a9f8ec2c54ff99e99636059bbd57194ed84e2cca5e53853aef293faf42"
+    },
+    {
+      "name": "public-url",
+      "imageSha256": "dbdcb9a9f8ec2c54ff99e99636059bbd57194ed84e2cca5e53853aef293faf42"
+    },
+    {
+      "name": "png-detail-high"
+    }
+  ]
+}

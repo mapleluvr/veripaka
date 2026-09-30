@@ -1,0 +1,37 @@
+import { spawn } from 'node:child_process';
+import { openSync, closeSync } from 'node:fs';
+import { readFile, mkdtemp, writeFile, mkdir } from 'node:fs/promises';
+import path from 'node:path';
+import { pathToFileURL } from 'node:url';
+const label = process.argv[2] ?? 'inline';
+const source = process.argv[3] ?? 'docs/implementation/evidence/s2-start-2026-09-30/work/inline-image-YStp1L/metadata.json';
+const original = JSON.parse(await readFile(source, 'utf8'));
+const root = path.resolve('.temp/vision-diagnosis');
+await mkdir(root, { recursive: true });
+const dir = await mkdtemp(path.join(root, `${label}-`));
+const args = ['--import', pathToFileURL(path.join(root, 'fetch-tap.mjs')).href, ...original.args];
+const meta = { startedAt: new Date().toISOString(), purpose: 'Prior task plus fetch observation; no model/format/config change', source, args, cwd: original.project };
+await writeFile(path.join(dir, 'launch.json'), JSON.stringify(meta, null, 2));
+const out = openSync(path.join(dir, 'events.ndjson'), 'wx');
+const err = openSync(path.join(dir, 'stderr.log'), 'wx');
+const child = spawn(process.execPath, args, { cwd: original.project, env: { ...process.env, PI_OFFLINE: '1', VISION_TAP_DIR: dir }, stdio: ['ignore', out, err], windowsHide: true });
+let timedOut = false;
+let cleanup;
+const timeout = setTimeout(() => {
+  timedOut = true;
+  cleanup = new Promise(resolve => {
+    const killer = spawn('taskkill.exe', ['/PID', String(child.pid), '/T', '/F'], { stdio: 'ignore', windowsHide: true });
+    killer.once('error', () => resolve('unknown'));
+    killer.once('close', code => resolve(`taskkill-exit-${code}`));
+  });
+}, 180000);
+const code = await new Promise((resolve, reject) => { child.once('error', reject); child.once('close', resolve); });
+clearTimeout(timeout);
+const cleanupStatus = cleanup ? await cleanup : 'not-requested';
+closeSync(out); closeSync(err);
+const events = (await readFile(path.join(dir, 'events.ndjson'), 'utf8')).split('\n').filter(s => s.trim()).map(JSON.parse);
+const final = events.filter(e => e.type === 'message_end' && e.message?.role === 'assistant').at(-1)?.message;
+const summary = { directory: dir, code, timedOut, cleanup: cleanupStatus, endedAt: new Date().toISOString(), final: final?.content?.filter(c => c.type === 'text'), terminal: events.at(-1)?.type };
+await writeFile(path.join(dir, 'summary.json'), JSON.stringify(summary, null, 2));
+console.log(JSON.stringify(summary, null, 2));
+process.exitCode = code ?? 1;

@@ -1,0 +1,12 @@
+verdict: PIXELS_DIFFER
+reference: reference.png (380x250, truecolor, depth 8, none, 6323 bytes)
+candidate: one-pixel.png (380x250, truecolor, depth 8, none, 6123 bytes)
+file sha256 differ: True
+pixels: total=95000 differing=1 identical=94999 (0.999989474 identical) rows_with_diffs=1
+max per-channel delta (16-bit units) RGBA = [65278, 65021, 64764, 0]
+difference bounding box = {'minX': 300, 'minY': 220, 'maxX': 300, 'maxY': 220, 'width': 1, 'height': 1}
+  example diff at (300,220): ref=[65535, 65535, 65535, 65535] cand=[257, 514, 771, 65535]
+structural note: IDAT byte streams differ (compression/filters/encoding differ)
+cross-check reference: {'available': True, 'agreement': 'yes', 'decoder': 'Pillow 10.4.0', 'mismatchedPixels': 0, 'firstMismatch': None}
+cross-check candidate: {'available': True, 'agreement': 'yes', 'decoder': 'Pillow 10.4.0', 'mismatchedPixels': 0, 'firstMismatch': None}
+json: D:\Projects\veripaka\.temp\s2-start\pixel-private\one-pixel.png.report.json

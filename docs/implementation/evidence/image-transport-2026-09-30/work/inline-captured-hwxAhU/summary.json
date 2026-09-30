@@ -1,0 +1,14 @@
+{
+  "directory": "D:\\Projects\\veripaka\\.temp\\vision-diagnosis\\inline-captured-hwxAhU",
+  "code": 0,
+  "timedOut": false,
+  "cleanup": "not-requested",
+  "endedAt": "2026-09-30T04:10:05.355Z",
+  "final": [
+    {
+      "type": "text",
+      "text": "```json\n{\n  \"supported\": false,\n  \"images\": [],\n  \"limitation\": \"The attached images could not be decoded (reported as invalid image format), so no pixel data was available. Per instructions, no shape/color codes are guessed. Both sample-a.png and sample-b.png are unreadable in this context.\"\n}\n```"
+    }
+  ],
+  "terminal": "agent_settled"
+}

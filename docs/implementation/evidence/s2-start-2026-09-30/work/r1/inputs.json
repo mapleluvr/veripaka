@@ -1,0 +1,31 @@
+{
+  "frozenAt": "2026-09-29T20:26:56.317Z",
+  "revision": "R1 - strategy guidance after R0 calibration",
+  "policy": "Same public task, model and permissions; fresh consumer/session. Prior failures are calibration. One sample per revision is not causal proof.",
+  "files": [
+    {
+      "path": ".temp/s2-start/pixel-task.txt",
+      "sha256": "4da7d9814204d103223c8e57dabb55b83b0eb0651b306969072249ce0eb9504b"
+    },
+    {
+      "path": ".temp/s2-start/r1/veripaka-0.1.0-alpha.1.tgz",
+      "sha256": "d48913411b399e81170387ebacf0143926689d559acf8e2b36ddc35c63d32e83"
+    },
+    {
+      "path": ".temp/s2-start/r1/pixel-consumer/reference.png",
+      "sha256": "6de6d712a67eb2d10091d5e6b19a573070706d3300dd3b84d0313a14ab390409"
+    },
+    {
+      "path": ".temp/s2-start/r1/pixel-consumer/candidate.png",
+      "sha256": "a8f0e5b63aa072e34c8fc26914b500ccac70dc0ef0c5f2ff5596d3500d964f41"
+    },
+    {
+      "path": ".temp/s2-start/r1/pixel-consumer/node_modules/veripaka/skills/veripaka/SKILL.md",
+      "sha256": "a915a217901d026237f4d6232c1c4da32c00e9067527a7db0ebac6ee5891303b"
+    },
+    {
+      "path": ".temp/s2-start/r1/pixel-consumer/node_modules/veripaka/skills/veripaka/references/strategy-discovery.md",
+      "sha256": "6b9331844ba3e90c8a4e667e02f80e0ae58c59f0394fda26167bf3f86abf7c71"
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+verdict: PIXELS_DIFFER
+reference: reference.png (380x250, truecolor, depth 8, none, 6323 bytes)
+candidate: candidate.png (380x250, truecolor, depth 8, none, 4128 bytes)
+file sha256 differ: True
+pixels: total=95000 differing=9491 identical=85509 (0.900094737 identical) rows_with_diffs=48
+max per-channel delta (16-bit units) RGBA = [59881, 32639, 50115, 0]
+difference bounding box = {'minX': 44, 'minY': 108, 'maxX': 243, 'maxY': 155, 'width': 200, 'height': 48}
+  example diff at (47,108): ref=[38036, 50629, 42662, 65535] cand=[65535, 65535, 65535, 65535]
+  example diff at (48,108): ref=[17733, 39321, 25443, 65535] cand=[65535, 65535, 65535, 65535]
+  example diff at (49,108): ref=[7196, 33667, 16705, 65535] cand=[65535, 65535, 65535, 65535]
+  example diff at (50,108): ref=[5654, 32896, 15420, 65535] cand=[65535, 65535, 65535, 65535]
+  example diff at (51,108): ref=[5654, 32896, 15420, 65535] cand=[65535, 65535, 65535, 65535]
+structural note: IDAT byte streams differ (compression/filters/encoding differ)
+cross-check reference: {'available': True, 'agreement': 'yes', 'decoder': 'Pillow 10.4.0', 'mismatchedPixels': 0, 'firstMismatch': None}
+cross-check candidate: {'available': True, 'agreement': 'yes', 'decoder': 'Pillow 10.4.0', 'mismatchedPixels': 0, 'firstMismatch': None}
+json: D:\Projects\veripaka\.temp\s2-start\pixel-consumer\pixel_compare_result.json

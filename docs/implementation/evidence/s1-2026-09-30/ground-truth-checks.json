@@ -1,0 +1,193 @@
+{
+  "checkedAt": "2026-09-29T17:31:21.941Z",
+  "evidenceCases": [
+    {
+      "scenario": "normal",
+      "args": [
+        "run",
+        "c25fbb00-ee44-4060-944c-63a82c81eda5"
+      ],
+      "exitCode": 0,
+      "verdict": "scoped-pass",
+      "checks": [
+        {
+          "key": "api-contract/reject-invalid-theme",
+          "status": "pass"
+        },
+        {
+          "key": "settings-persistence/survives-restart",
+          "status": "pass"
+        }
+      ]
+    },
+    {
+      "scenario": "bad-boundary",
+      "args": [
+        "run",
+        "8e58036a-b4e8-4376-a4d5-56a18e401deb"
+      ],
+      "exitCode": 1,
+      "verdict": "fail",
+      "checks": [
+        {
+          "key": "api-contract/reject-invalid-theme",
+          "status": "fail"
+        },
+        {
+          "key": "settings-persistence/survives-restart",
+          "status": "inconclusive"
+        }
+      ]
+    },
+    {
+      "scenario": "bad-persistence",
+      "args": [
+        "run",
+        "2ff6d536-f3da-467f-ba2e-e741a490d0cf"
+      ],
+      "exitCode": 1,
+      "verdict": "fail",
+      "checks": [
+        {
+          "key": "api-contract/reject-invalid-theme",
+          "status": "inconclusive"
+        },
+        {
+          "key": "settings-persistence/survives-restart",
+          "status": "fail"
+        }
+      ]
+    },
+    {
+      "scenario": "missing-evidence",
+      "args": [
+        "run",
+        "2298ad0f-f9f4-4892-b0c9-e3feb36c8f8e",
+        "--capture-only"
+      ],
+      "exitCode": 3
+    },
+    {
+      "scenario": "missing-evidence",
+      "args": [
+        "run",
+        "finalize",
+        "2298ad0f-f9f4-4892-b0c9-e3feb36c8f8e"
+      ],
+      "exitCode": 3,
+      "verdict": "inconclusive",
+      "reason": "INVALID_OR_MISSING_EVIDENCE",
+      "checks": [
+        {
+          "key": "api-contract/reject-invalid-theme",
+          "status": "inconclusive"
+        },
+        {
+          "key": "settings-persistence/survives-restart",
+          "status": "inconclusive"
+        }
+      ]
+    },
+    {
+      "scenario": "normal",
+      "args": [
+        "run",
+        "2765cf5d-68ad-4f2f-a310-6f6509ec2d45",
+        "--capture-only"
+      ],
+      "exitCode": 3
+    },
+    {
+      "scenario": "normal",
+      "args": [
+        "run",
+        "finalize",
+        "2765cf5d-68ad-4f2f-a310-6f6509ec2d45"
+      ],
+      "exitCode": 3,
+      "verdict": "inconclusive",
+      "reason": "EVIDENCE_DIGEST_MISMATCH",
+      "checks": [
+        {
+          "key": "api-contract/reject-invalid-theme",
+          "status": "inconclusive"
+        },
+        {
+          "key": "settings-persistence/survives-restart",
+          "status": "inconclusive"
+        }
+      ]
+    },
+    {
+      "scenario": "imported-claim",
+      "args": [
+        "run",
+        "collect",
+        "9d911cb1-50c9-499b-8260-73d8f8feb96b",
+        "--input",
+        "claimed-result.json"
+      ],
+      "exitCode": 0,
+      "acceptedAsExecutableEvidence": false
+    },
+    {
+      "scenario": "imported-claim",
+      "args": [
+        "run",
+        "finalize",
+        "9d911cb1-50c9-499b-8260-73d8f8feb96b"
+      ],
+      "exitCode": 3,
+      "verdict": "inconclusive",
+      "reason": "NOT_STARTED",
+      "checks": [
+        {
+          "key": "api-contract/reject-invalid-theme",
+          "status": "inconclusive"
+        },
+        {
+          "key": "settings-persistence/survives-restart",
+          "status": "inconclusive"
+        }
+      ]
+    }
+  ],
+  "lifecycle": [
+    {
+      "category": "cancel",
+      "runId": "eb709d6c-276d-4bcf-88f2-9e32d5f2de72",
+      "runnerPid": 26084,
+      "grandchildPid": 36924,
+      "runnerAlive": false,
+      "grandchildAlive": false,
+      "cleanup": "terminated",
+      "reason": "CANCELLED",
+      "verdict": "inconclusive",
+      "lockExists": false
+    },
+    {
+      "category": "launcher-signal",
+      "runId": "2b9bc007-03f3-4430-97dd-c05c69e22f08",
+      "runnerPid": 34144,
+      "grandchildPid": 12876,
+      "runnerAlive": false,
+      "grandchildAlive": false,
+      "cleanup": "terminated",
+      "reason": "CANCELLED",
+      "verdict": "inconclusive",
+      "lockExists": false
+    },
+    {
+      "category": "timeout",
+      "runId": "ebf9f992-0e7e-41df-96cc-38d4df839870",
+      "runnerPid": 35960,
+      "grandchildPid": 28916,
+      "runnerAlive": false,
+      "grandchildAlive": false,
+      "cleanup": "terminated",
+      "reason": "TIMEOUT",
+      "verdict": "inconclusive",
+      "lockExists": false
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "space": "pixel",
+  "origin": "top-left",
+  "boxOrder": "left-top-right-bottom",
+  "box": [
+    44,
+    108,
+    244,
+    156
+  ],
+  "changedPixels": 9491,
+  "totalPixels": 9600,
+  "normalVsItself": 0,
+  "interpretation": "The fixed-region image check distinguishes this opaque occluder; not a universal visual oracle."
+}

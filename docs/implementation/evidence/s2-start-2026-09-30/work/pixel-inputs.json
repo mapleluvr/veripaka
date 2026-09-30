@@ -1,0 +1,26 @@
+{
+  "registeredAt": "2026-09-29T20:16:04.051Z",
+  "retryPolicy": "CAPABILITY_PROTOCOL.md; no quality reruns",
+  "files": [
+    {
+      "path": ".temp/s2-start/pixel-task.txt",
+      "sha256": "4da7d9814204d103223c8e57dabb55b83b0eb0651b306969072249ce0eb9504b"
+    },
+    {
+      "path": ".temp/s2-start/pixel-consumer/reference.png",
+      "sha256": "6de6d712a67eb2d10091d5e6b19a573070706d3300dd3b84d0313a14ab390409"
+    },
+    {
+      "path": ".temp/s2-start/pixel-consumer/candidate.png",
+      "sha256": "a8f0e5b63aa072e34c8fc26914b500ccac70dc0ef0c5f2ff5596d3500d964f41"
+    },
+    {
+      "path": ".temp/s2-start/pixel-private/same-pixels.png",
+      "sha256": "c7511ec0da3aeccbf3430bf6a3e08734d99ea0e6695f6af3a8dedf3bedb1d667"
+    },
+    {
+      "path": ".temp/s2-start/pixel-private/one-pixel.png",
+      "sha256": "115c82b4e24691c2a927d0946e06afb34e87b56b2cb0edf338b1c47cbfe566c1"
+    }
+  ]
+}

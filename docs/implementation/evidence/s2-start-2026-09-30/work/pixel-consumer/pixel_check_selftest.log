@@ -1,0 +1,56 @@
+verdict: PIXELS_IDENTICAL
+reference: base.png (37x23, truecolor, depth 8, none, 147 bytes)
+candidate: recompressed_meta.png (37x23, truecolor, depth 8, none, 175 bytes)
+file sha256 differ: True
+pixels: total=851 differing=0 identical=851 (1.000000000 identical) rows_with_diffs=0
+max per-channel delta (16-bit units) RGBA = [0, 0, 0, 0]
+difference bounding box = None
+structural note: ancillary metadata chunks differ: reference=[] candidate=['tEXt', 'pHYs']
+structural note: IDAT byte streams differ (compression/filters/encoding differ)
+cross-check reference: {'available': True, 'agreement': 'yes', 'decoder': 'Pillow 10.4.0', 'mismatchedPixels': 0, 'firstMismatch': None}
+cross-check candidate: {'available': True, 'agreement': 'yes', 'decoder': 'Pillow 10.4.0', 'mismatchedPixels': 0, 'firstMismatch': None}
+json: D:\Projects\veripaka\.temp\s2-start\pixel-consumer\pixel_check_selftest\base_vs_recompressed_meta.json
+selftest case base_vs_recompressed_meta    expected exit 0 got 0 -> PASS
+verdict: PIXELS_IDENTICAL
+reference: base.png (37x23, truecolor, depth 8, none, 147 bytes)
+candidate: adam7.png (37x23, truecolor, depth 8, Adam7, 133 bytes)
+file sha256 differ: True
+pixels: total=851 differing=0 identical=851 (1.000000000 identical) rows_with_diffs=0
+max per-channel delta (16-bit units) RGBA = [0, 0, 0, 0]
+difference bounding box = None
+structural note: encoded form differs: interlace reference=0 candidate=1 (comparison uses decoded RGBA16 samples, so this alone is not a rendering difference)
+structural note: IDAT byte streams differ (compression/filters/encoding differ)
+cross-check reference: {'available': True, 'agreement': 'yes', 'decoder': 'Pillow 10.4.0', 'mismatchedPixels': 0, 'firstMismatch': None}
+cross-check candidate: {'available': True, 'agreement': 'yes', 'decoder': 'Pillow 10.4.0', 'mismatchedPixels': 0, 'firstMismatch': None}
+json: D:\Projects\veripaka\.temp\s2-start\pixel-consumer\pixel_check_selftest\base_vs_adam7.json
+selftest case base_vs_adam7                expected exit 0 got 0 -> PASS
+verdict: PIXELS_IDENTICAL
+reference: base.png (37x23, truecolor, depth 8, none, 147 bytes)
+candidate: palette.png (37x23, indexed, depth 8, none, 160 bytes)
+file sha256 differ: True
+pixels: total=851 differing=0 identical=851 (1.000000000 identical) rows_with_diffs=0
+max per-channel delta (16-bit units) RGBA = [0, 0, 0, 0]
+difference bounding box = None
+structural note: encoded form differs: colorType reference=2 candidate=3 (comparison uses decoded RGBA16 samples, so this alone is not a rendering difference)
+structural note: IDAT byte streams differ (compression/filters/encoding differ)
+cross-check reference: {'available': True, 'agreement': 'yes', 'decoder': 'Pillow 10.4.0', 'mismatchedPixels': 0, 'firstMismatch': None}
+cross-check candidate: {'available': True, 'agreement': 'yes', 'decoder': 'Pillow 10.4.0', 'mismatchedPixels': 0, 'firstMismatch': None}
+json: D:\Projects\veripaka\.temp\s2-start\pixel-consumer\pixel_check_selftest\base_vs_palette.json
+selftest case base_vs_palette              expected exit 0 got 0 -> PASS
+verdict: PIXELS_DIFFER
+reference: base.png (37x23, truecolor, depth 8, none, 147 bytes)
+candidate: changed.png (37x23, truecolor, depth 8, none, 144 bytes)
+file sha256 differ: True
+pixels: total=851 differing=3 identical=848 (0.996474736 identical) rows_with_diffs=2
+max per-channel delta (16-bit units) RGBA = [42662, 21331, 63993, 0]
+difference bounding box = {'minX': 9, 'minY': 5, 'maxX': 36, 'maxY': 20, 'width': 28, 'height': 16}
+  example diff at (9,5): ref=[21845, 21845, 43690, 65535] cand=[257, 514, 771, 65535]
+  example diff at (10,5): ref=[43690, 21845, 65535, 65535] cand=[1028, 1285, 1542, 65535]
+  example diff at (36,20): ref=[0, 0, 0, 65535] cand=[1799, 2056, 2313, 65535]
+structural note: IDAT byte streams differ (compression/filters/encoding differ)
+cross-check reference: {'available': True, 'agreement': 'yes', 'decoder': 'Pillow 10.4.0', 'mismatchedPixels': 0, 'firstMismatch': None}
+cross-check candidate: {'available': True, 'agreement': 'yes', 'decoder': 'Pillow 10.4.0', 'mismatchedPixels': 0, 'firstMismatch': None}
+json: D:\Projects\veripaka\.temp\s2-start\pixel-consumer\pixel_check_selftest\base_vs_changed.json
+selftest case base_vs_changed              expected exit 1 got 1 -> PASS
+selftest allPassed: True
+selftest artifacts: D:\Projects\veripaka\.temp\s2-start\pixel-consumer\pixel_check_selftest

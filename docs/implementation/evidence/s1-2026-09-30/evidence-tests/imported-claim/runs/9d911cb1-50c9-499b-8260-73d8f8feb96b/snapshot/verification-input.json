@@ -1,0 +1,8 @@
+{
+  "subject": "local-api",
+  "goals": [
+    { "id": "boundary", "question": "Does the API reject unsupported themes without changing state?", "claims": ["api-contract/reject-invalid-theme"] },
+    { "id": "persistence", "question": "Does a successful settings write survive service restart?", "claims": ["settings-persistence/survives-restart"] },
+    { "id": "sync", "question": "Does the setting synchronize across devices?", "claims": [], "uncovered": "Not promised by the reference service and not verified by these methods." }
+  ]
+}

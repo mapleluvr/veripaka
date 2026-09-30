@@ -1,0 +1,737 @@
+[
+  {
+    "root": "D:\\Projects\\veripaka\\.temp\\evidence-2026-09-29T17-26-22-712Z\\normal",
+    "args": [
+      "apply",
+      "backend",
+      "--input",
+      "verification-input.json"
+    ],
+    "exitCode": 0,
+    "stderr": "",
+    "response": {
+      "schema": "veripaka.cli/v0",
+      "ok": true,
+      "command": "apply",
+      "data": {
+        "runId": "c25fbb00-ee44-4060-944c-63a82c81eda5",
+        "status": "prepared",
+        "plan": ".veripaka/runs/c25fbb00-ee44-4060-944c-63a82c81eda5/plan.json",
+        "nextAction": "run c25fbb00-ee44-4060-944c-63a82c81eda5"
+      }
+    }
+  },
+  {
+    "root": "D:\\Projects\\veripaka\\.temp\\evidence-2026-09-29T17-26-22-712Z\\normal",
+    "args": [
+      "run",
+      "c25fbb00-ee44-4060-944c-63a82c81eda5"
+    ],
+    "exitCode": 0,
+    "stderr": "",
+    "response": {
+      "schema": "veripaka.cli/v0",
+      "ok": true,
+      "command": "run",
+      "data": {
+        "schema": "veripaka.result/v0",
+        "runId": "c25fbb00-ee44-4060-944c-63a82c81eda5",
+        "kind": "verification",
+        "verdict": "scoped-pass",
+        "verdictBasis": "executable",
+        "execution": "completed",
+        "subject": {
+          "kind": "checkout",
+          "description": "Local reference HTTP service imported from this declared checkout by its native tests",
+          "entrypoint": "src/server.mjs",
+          "sourceRoots": [
+            "src",
+            "tests",
+            "package.json",
+            "docs/behavior.md"
+          ]
+        },
+        "checks": [
+          {
+            "key": "api-contract/reject-invalid-theme",
+            "required": true,
+            "expected": "Unsupported theme returns HTTP 400 and the stored theme remains light.",
+            "observed": "Native runner executed this named test and reported pass",
+            "status": "pass",
+            "evidence": [
+              "attempts/195d7522-1538-4879-b389-8912c50db134/events.ndjson#tests/settings.test.mjs:api rejects unsupported theme without changing stored state"
+            ]
+          },
+          {
+            "key": "settings-persistence/survives-restart",
+            "required": true,
+            "expected": "A successful dark-theme write is returned by GET after restarting the service with the same private data directory.",
+            "observed": "Native runner executed this named test and reported pass",
+            "status": "pass",
+            "evidence": [
+              "attempts/195d7522-1538-4879-b389-8912c50db134/events.ndjson#tests/settings.test.mjs:settings survive service restart"
+            ]
+          }
+        ],
+        "goals": [
+          {
+            "id": "boundary",
+            "question": "Does the API reject unsupported themes without changing state?",
+            "claims": [
+              "api-contract/reject-invalid-theme"
+            ]
+          },
+          {
+            "id": "persistence",
+            "question": "Does a successful settings write survive service restart?",
+            "claims": [
+              "settings-persistence/survives-restart"
+            ]
+          },
+          {
+            "id": "sync",
+            "question": "Does the setting synchronize across devices?",
+            "claims": [],
+            "uncovered": "Not promised by the reference service and not verified by these methods."
+          }
+        ],
+        "limits": [
+          "Only the declared local source domain and mapped checks were assessed; coverage sufficiency is not mechanically proved.",
+          "The reference tests establish their local source-to-service relationship; arbitrary existing endpoints are unsupported.",
+          "Digests and managed capture are not protection against a malicious writer with the same OS permissions.",
+          "Trial recipe maturity is not upgraded by this result."
+        ],
+        "provenance": {
+          "producer": "node:test",
+          "ingestion": "managed-command",
+          "verification": "verified",
+          "judge": "executable",
+          "invocationId": "6781ac5f-a41a-4262-8f40-47f22bb81296"
+        },
+        "finalizedAt": "2026-09-29T17:26:24.008Z"
+      }
+    }
+  },
+  {
+    "root": "D:\\Projects\\veripaka\\.temp\\evidence-2026-09-29T17-26-22-712Z\\bad-boundary",
+    "args": [
+      "apply",
+      "backend",
+      "--input",
+      "verification-input.json"
+    ],
+    "exitCode": 0,
+    "stderr": "",
+    "response": {
+      "schema": "veripaka.cli/v0",
+      "ok": true,
+      "command": "apply",
+      "data": {
+        "runId": "8e58036a-b4e8-4376-a4d5-56a18e401deb",
+        "status": "prepared",
+        "plan": ".veripaka/runs/8e58036a-b4e8-4376-a4d5-56a18e401deb/plan.json",
+        "nextAction": "run 8e58036a-b4e8-4376-a4d5-56a18e401deb"
+      }
+    }
+  },
+  {
+    "root": "D:\\Projects\\veripaka\\.temp\\evidence-2026-09-29T17-26-22-712Z\\bad-boundary",
+    "args": [
+      "run",
+      "8e58036a-b4e8-4376-a4d5-56a18e401deb"
+    ],
+    "exitCode": 1,
+    "stderr": "",
+    "response": {
+      "schema": "veripaka.cli/v0",
+      "ok": false,
+      "command": "run",
+      "data": {
+        "schema": "veripaka.result/v0",
+        "runId": "8e58036a-b4e8-4376-a4d5-56a18e401deb",
+        "kind": "verification",
+        "verdict": "fail",
+        "verdictBasis": "executable",
+        "execution": "completed",
+        "subject": {
+          "kind": "checkout",
+          "description": "Local reference HTTP service imported from this declared checkout by its native tests",
+          "entrypoint": "src/server.mjs",
+          "sourceRoots": [
+            "src",
+            "tests",
+            "package.json",
+            "docs/behavior.md"
+          ]
+        },
+        "checks": [
+          {
+            "key": "api-contract/reject-invalid-theme",
+            "required": true,
+            "expected": "Unsupported theme returns HTTP 400 and the stored theme remains light.",
+            "observed": "{\"code\":\"ERR_TEST_FAILURE\",\"failureType\":\"testCodeFailure\",\"cause\":{\"generatedMessage\":true,\"code\":\"ERR_ASSERTION\",\"actual\":200,\"expected\":400,\"operator\":\"strictEqual\",\"diff\":\"simple\",\"name\":\"AssertionError\",\"message\":\"Expected values to be strictly equal:\\n\\n200 !== 400\\n\",\"stack\":\"AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:\\n\\n200 !== 400\\n\\n    at TestContext.<anonymous> (file:///D:/Projects/veripaka/.temp/evidence-2026-09-29T17-26-22-712Z/bad-boundary/tests/settings.test.mjs:13:12)\\n    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)\\n    at async Test.run (node:internal/test_runner/test:1208:7)\\n    at async startSubtestAfterBootstrap (node:internal/test_runner/harness:385:3)\"},\"name\":\"Error\",\"message\":\"Expected values to be strictly equal:\\n\\n200 !== 400\\n\",\"stack\":\"Error [ERR_TEST_FAILURE]: Expected values to be strictly equal:\\n\\n200 !== 400\\n\"}",
+            "status": "fail",
+            "evidence": [
+              "attempts/820b439c-a3c4-4c57-9b48-1032a10f6f20/events.ndjson#tests/settings.test.mjs:api rejects unsupported theme without changing stored state"
+            ]
+          },
+          {
+            "key": "settings-persistence/survives-restart",
+            "required": true,
+            "expected": "A successful dark-theme write is returned by GET after restarting the service with the same private data directory.",
+            "observed": "Native runner executed this named test and reported pass; the overall runner did not finish successfully",
+            "status": "inconclusive",
+            "evidence": [
+              "attempts/820b439c-a3c4-4c57-9b48-1032a10f6f20/events.ndjson#tests/settings.test.mjs:settings survive service restart"
+            ]
+          }
+        ],
+        "goals": [
+          {
+            "id": "boundary",
+            "question": "Does the API reject unsupported themes without changing state?",
+            "claims": [
+              "api-contract/reject-invalid-theme"
+            ]
+          },
+          {
+            "id": "persistence",
+            "question": "Does a successful settings write survive service restart?",
+            "claims": [
+              "settings-persistence/survives-restart"
+            ]
+          },
+          {
+            "id": "sync",
+            "question": "Does the setting synchronize across devices?",
+            "claims": [],
+            "uncovered": "Not promised by the reference service and not verified by these methods."
+          }
+        ],
+        "limits": [
+          "Only the declared local source domain and mapped checks were assessed; coverage sufficiency is not mechanically proved.",
+          "The reference tests establish their local source-to-service relationship; arbitrary existing endpoints are unsupported.",
+          "Digests and managed capture are not protection against a malicious writer with the same OS permissions.",
+          "Trial recipe maturity is not upgraded by this result."
+        ],
+        "provenance": {
+          "producer": "node:test",
+          "ingestion": "managed-command",
+          "verification": "verified",
+          "judge": "executable",
+          "invocationId": "57cc2d49-c133-4f48-b818-a86e315508b5"
+        },
+        "finalizedAt": "2026-09-29T17:26:25.354Z"
+      }
+    }
+  },
+  {
+    "root": "D:\\Projects\\veripaka\\.temp\\evidence-2026-09-29T17-26-22-712Z\\bad-persistence",
+    "args": [
+      "apply",
+      "backend",
+      "--input",
+      "verification-input.json"
+    ],
+    "exitCode": 0,
+    "stderr": "",
+    "response": {
+      "schema": "veripaka.cli/v0",
+      "ok": true,
+      "command": "apply",
+      "data": {
+        "runId": "2ff6d536-f3da-467f-ba2e-e741a490d0cf",
+        "status": "prepared",
+        "plan": ".veripaka/runs/2ff6d536-f3da-467f-ba2e-e741a490d0cf/plan.json",
+        "nextAction": "run 2ff6d536-f3da-467f-ba2e-e741a490d0cf"
+      }
+    }
+  },
+  {
+    "root": "D:\\Projects\\veripaka\\.temp\\evidence-2026-09-29T17-26-22-712Z\\bad-persistence",
+    "args": [
+      "run",
+      "2ff6d536-f3da-467f-ba2e-e741a490d0cf"
+    ],
+    "exitCode": 1,
+    "stderr": "",
+    "response": {
+      "schema": "veripaka.cli/v0",
+      "ok": false,
+      "command": "run",
+      "data": {
+        "schema": "veripaka.result/v0",
+        "runId": "2ff6d536-f3da-467f-ba2e-e741a490d0cf",
+        "kind": "verification",
+        "verdict": "fail",
+        "verdictBasis": "executable",
+        "execution": "completed",
+        "subject": {
+          "kind": "checkout",
+          "description": "Local reference HTTP service imported from this declared checkout by its native tests",
+          "entrypoint": "src/server.mjs",
+          "sourceRoots": [
+            "src",
+            "tests",
+            "package.json",
+            "docs/behavior.md"
+          ]
+        },
+        "checks": [
+          {
+            "key": "api-contract/reject-invalid-theme",
+            "required": true,
+            "expected": "Unsupported theme returns HTTP 400 and the stored theme remains light.",
+            "observed": "Native runner executed this named test and reported pass; the overall runner did not finish successfully",
+            "status": "inconclusive",
+            "evidence": [
+              "attempts/fe28a472-b667-4377-ac32-5907319d3e31/events.ndjson#tests/settings.test.mjs:api rejects unsupported theme without changing stored state"
+            ]
+          },
+          {
+            "key": "settings-persistence/survives-restart",
+            "required": true,
+            "expected": "A successful dark-theme write is returned by GET after restarting the service with the same private data directory.",
+            "observed": "{\"code\":\"ERR_TEST_FAILURE\",\"failureType\":\"testCodeFailure\",\"cause\":{\"generatedMessage\":true,\"code\":\"ERR_ASSERTION\",\"actual\":{\"theme\":\"light\"},\"expected\":{\"theme\":\"dark\"},\"operator\":\"deepStrictEqual\",\"diff\":\"simple\",\"name\":\"AssertionError\",\"message\":\"Expected values to be strictly deep-equal:\\n+ actual - expected\\n\\n  {\\n+   theme: 'light'\\n-   theme: 'dark'\\n  }\\n\",\"stack\":\"AssertionError [ERR_ASSERTION]: Expected values to be strictly deep-equal:\\n+ actual - expected\\n\\n  {\\n+   theme: 'light'\\n-   theme: 'dark'\\n  }\\n\\n    at TestContext.<anonymous> (file:///D:/Projects/veripaka/.temp/evidence-2026-09-29T17-26-22-712Z/bad-persistence/tests/settings.test.mjs:25:12)\\n    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)\\n    at async Test.run (node:internal/test_runner/test:1208:7)\\n    at async Test.processPendingSubtests (node:internal/test_runner/test:831:7)\"},\"name\":\"Error\",\"message\":\"Expected values to be strictly deep-equal:\\n+ actual - expected\\n\\n  {\\n+   theme: 'light'\\n-   theme: 'dark'\\n  }\\n\",\"stack\":\"Error [ERR_TEST_FAILURE]: Expected values to be strictly deep-equal:\\n+ actual - expected\\n\\n  {\\n+   theme: 'light'\\n-   theme: 'dark'\\n  }\\n\"}",
+            "status": "fail",
+            "evidence": [
+              "attempts/fe28a472-b667-4377-ac32-5907319d3e31/events.ndjson#tests/settings.test.mjs:settings survive service restart"
+            ]
+          }
+        ],
+        "goals": [
+          {
+            "id": "boundary",
+            "question": "Does the API reject unsupported themes without changing state?",
+            "claims": [
+              "api-contract/reject-invalid-theme"
+            ]
+          },
+          {
+            "id": "persistence",
+            "question": "Does a successful settings write survive service restart?",
+            "claims": [
+              "settings-persistence/survives-restart"
+            ]
+          },
+          {
+            "id": "sync",
+            "question": "Does the setting synchronize across devices?",
+            "claims": [],
+            "uncovered": "Not promised by the reference service and not verified by these methods."
+          }
+        ],
+        "limits": [
+          "Only the declared local source domain and mapped checks were assessed; coverage sufficiency is not mechanically proved.",
+          "The reference tests establish their local source-to-service relationship; arbitrary existing endpoints are unsupported.",
+          "Digests and managed capture are not protection against a malicious writer with the same OS permissions.",
+          "Trial recipe maturity is not upgraded by this result."
+        ],
+        "provenance": {
+          "producer": "node:test",
+          "ingestion": "managed-command",
+          "verification": "verified",
+          "judge": "executable",
+          "invocationId": "404851fd-f5b4-426f-b325-609fe86d9670"
+        },
+        "finalizedAt": "2026-09-29T17:26:26.956Z"
+      }
+    }
+  },
+  {
+    "root": "D:\\Projects\\veripaka\\.temp\\evidence-2026-09-29T17-26-22-712Z\\missing-evidence",
+    "args": [
+      "apply",
+      "backend",
+      "--input",
+      "verification-input.json"
+    ],
+    "exitCode": 0,
+    "stderr": "",
+    "response": {
+      "schema": "veripaka.cli/v0",
+      "ok": true,
+      "command": "apply",
+      "data": {
+        "runId": "2298ad0f-f9f4-4892-b0c9-e3feb36c8f8e",
+        "status": "prepared",
+        "plan": ".veripaka/runs/2298ad0f-f9f4-4892-b0c9-e3feb36c8f8e/plan.json",
+        "nextAction": "run 2298ad0f-f9f4-4892-b0c9-e3feb36c8f8e"
+      }
+    }
+  },
+  {
+    "root": "D:\\Projects\\veripaka\\.temp\\evidence-2026-09-29T17-26-22-712Z\\missing-evidence",
+    "args": [
+      "run",
+      "2298ad0f-f9f4-4892-b0c9-e3feb36c8f8e",
+      "--capture-only"
+    ],
+    "exitCode": 3,
+    "stderr": "",
+    "response": {
+      "schema": "veripaka.cli/v0",
+      "ok": false,
+      "command": "run",
+      "data": {
+        "runId": "2298ad0f-f9f4-4892-b0c9-e3feb36c8f8e",
+        "status": "captured-not-finalized",
+        "nextAction": "run finalize 2298ad0f-f9f4-4892-b0c9-e3feb36c8f8e"
+      }
+    }
+  },
+  {
+    "root": "D:\\Projects\\veripaka\\.temp\\evidence-2026-09-29T17-26-22-712Z\\missing-evidence",
+    "args": [
+      "run",
+      "finalize",
+      "2298ad0f-f9f4-4892-b0c9-e3feb36c8f8e"
+    ],
+    "exitCode": 3,
+    "stderr": "",
+    "response": {
+      "schema": "veripaka.cli/v0",
+      "ok": false,
+      "command": "run",
+      "data": {
+        "schema": "veripaka.result/v0",
+        "runId": "2298ad0f-f9f4-4892-b0c9-e3feb36c8f8e",
+        "kind": "verification",
+        "verdict": "inconclusive",
+        "verdictBasis": "executable",
+        "execution": "completed",
+        "reason": "INVALID_OR_MISSING_EVIDENCE",
+        "subject": {
+          "kind": "checkout",
+          "description": "Local reference HTTP service imported from this declared checkout by its native tests",
+          "entrypoint": "src/server.mjs",
+          "sourceRoots": [
+            "src",
+            "tests",
+            "package.json",
+            "docs/behavior.md"
+          ]
+        },
+        "checks": [
+          {
+            "key": "api-contract/reject-invalid-theme",
+            "required": true,
+            "expected": "Unsupported theme returns HTTP 400 and the stored theme remains light.",
+            "observed": "No complete managed invocation",
+            "status": "inconclusive",
+            "evidence": []
+          },
+          {
+            "key": "settings-persistence/survives-restart",
+            "required": true,
+            "expected": "A successful dark-theme write is returned by GET after restarting the service with the same private data directory.",
+            "observed": "No complete managed invocation",
+            "status": "inconclusive",
+            "evidence": []
+          }
+        ],
+        "goals": [
+          {
+            "id": "boundary",
+            "question": "Does the API reject unsupported themes without changing state?",
+            "claims": [
+              "api-contract/reject-invalid-theme"
+            ]
+          },
+          {
+            "id": "persistence",
+            "question": "Does a successful settings write survive service restart?",
+            "claims": [
+              "settings-persistence/survives-restart"
+            ]
+          },
+          {
+            "id": "sync",
+            "question": "Does the setting synchronize across devices?",
+            "claims": [],
+            "uncovered": "Not promised by the reference service and not verified by these methods."
+          }
+        ],
+        "limits": [
+          "Only the declared local source domain and mapped checks were assessed; coverage sufficiency is not mechanically proved.",
+          "The reference tests establish their local source-to-service relationship; arbitrary existing endpoints are unsupported.",
+          "Digests and managed capture are not protection against a malicious writer with the same OS permissions.",
+          "Trial recipe maturity is not upgraded by this result."
+        ],
+        "provenance": {
+          "producer": "node:test",
+          "ingestion": "managed-command",
+          "verification": "mismatch",
+          "judge": "executable",
+          "invocationId": "9a368c52-3d93-41fa-8512-aadf5461ab75"
+        },
+        "finalizedAt": "2026-09-29T17:26:28.601Z"
+      }
+    }
+  },
+  {
+    "root": "D:\\Projects\\veripaka\\.temp\\evidence-2026-09-29T17-26-22-712Z\\normal",
+    "args": [
+      "apply",
+      "backend",
+      "--input",
+      "verification-input.json"
+    ],
+    "exitCode": 0,
+    "stderr": "",
+    "response": {
+      "schema": "veripaka.cli/v0",
+      "ok": true,
+      "command": "apply",
+      "data": {
+        "runId": "2765cf5d-68ad-4f2f-a310-6f6509ec2d45",
+        "status": "prepared",
+        "plan": ".veripaka/runs/2765cf5d-68ad-4f2f-a310-6f6509ec2d45/plan.json",
+        "nextAction": "run 2765cf5d-68ad-4f2f-a310-6f6509ec2d45"
+      }
+    }
+  },
+  {
+    "root": "D:\\Projects\\veripaka\\.temp\\evidence-2026-09-29T17-26-22-712Z\\normal",
+    "args": [
+      "run",
+      "2765cf5d-68ad-4f2f-a310-6f6509ec2d45",
+      "--capture-only"
+    ],
+    "exitCode": 3,
+    "stderr": "",
+    "response": {
+      "schema": "veripaka.cli/v0",
+      "ok": false,
+      "command": "run",
+      "data": {
+        "runId": "2765cf5d-68ad-4f2f-a310-6f6509ec2d45",
+        "status": "captured-not-finalized",
+        "nextAction": "run finalize 2765cf5d-68ad-4f2f-a310-6f6509ec2d45"
+      }
+    }
+  },
+  {
+    "root": "D:\\Projects\\veripaka\\.temp\\evidence-2026-09-29T17-26-22-712Z\\normal",
+    "args": [
+      "run",
+      "finalize",
+      "2765cf5d-68ad-4f2f-a310-6f6509ec2d45"
+    ],
+    "exitCode": 3,
+    "stderr": "",
+    "response": {
+      "schema": "veripaka.cli/v0",
+      "ok": false,
+      "command": "run",
+      "data": {
+        "schema": "veripaka.result/v0",
+        "runId": "2765cf5d-68ad-4f2f-a310-6f6509ec2d45",
+        "kind": "verification",
+        "verdict": "inconclusive",
+        "verdictBasis": "executable",
+        "execution": "completed",
+        "reason": "EVIDENCE_DIGEST_MISMATCH",
+        "subject": {
+          "kind": "checkout",
+          "description": "Local reference HTTP service imported from this declared checkout by its native tests",
+          "entrypoint": "src/server.mjs",
+          "sourceRoots": [
+            "src",
+            "tests",
+            "package.json",
+            "docs/behavior.md"
+          ]
+        },
+        "checks": [
+          {
+            "key": "api-contract/reject-invalid-theme",
+            "required": true,
+            "expected": "Unsupported theme returns HTTP 400 and the stored theme remains light.",
+            "observed": "No complete managed invocation",
+            "status": "inconclusive",
+            "evidence": []
+          },
+          {
+            "key": "settings-persistence/survives-restart",
+            "required": true,
+            "expected": "A successful dark-theme write is returned by GET after restarting the service with the same private data directory.",
+            "observed": "No complete managed invocation",
+            "status": "inconclusive",
+            "evidence": []
+          }
+        ],
+        "goals": [
+          {
+            "id": "boundary",
+            "question": "Does the API reject unsupported themes without changing state?",
+            "claims": [
+              "api-contract/reject-invalid-theme"
+            ]
+          },
+          {
+            "id": "persistence",
+            "question": "Does a successful settings write survive service restart?",
+            "claims": [
+              "settings-persistence/survives-restart"
+            ]
+          },
+          {
+            "id": "sync",
+            "question": "Does the setting synchronize across devices?",
+            "claims": [],
+            "uncovered": "Not promised by the reference service and not verified by these methods."
+          }
+        ],
+        "limits": [
+          "Only the declared local source domain and mapped checks were assessed; coverage sufficiency is not mechanically proved.",
+          "The reference tests establish their local source-to-service relationship; arbitrary existing endpoints are unsupported.",
+          "Digests and managed capture are not protection against a malicious writer with the same OS permissions.",
+          "Trial recipe maturity is not upgraded by this result."
+        ],
+        "provenance": {
+          "producer": "node:test",
+          "ingestion": "managed-command",
+          "verification": "mismatch",
+          "judge": "executable",
+          "invocationId": "586a58c6-a3d1-4a0e-9901-d42b332a4725"
+        },
+        "finalizedAt": "2026-09-29T17:26:30.204Z"
+      }
+    }
+  },
+  {
+    "root": "D:\\Projects\\veripaka\\.temp\\evidence-2026-09-29T17-26-22-712Z\\imported-claim",
+    "args": [
+      "apply",
+      "backend",
+      "--input",
+      "verification-input.json"
+    ],
+    "exitCode": 0,
+    "stderr": "",
+    "response": {
+      "schema": "veripaka.cli/v0",
+      "ok": true,
+      "command": "apply",
+      "data": {
+        "runId": "9d911cb1-50c9-499b-8260-73d8f8feb96b",
+        "status": "prepared",
+        "plan": ".veripaka/runs/9d911cb1-50c9-499b-8260-73d8f8feb96b/plan.json",
+        "nextAction": "run 9d911cb1-50c9-499b-8260-73d8f8feb96b"
+      }
+    }
+  },
+  {
+    "root": "D:\\Projects\\veripaka\\.temp\\evidence-2026-09-29T17-26-22-712Z\\imported-claim",
+    "args": [
+      "run",
+      "collect",
+      "9d911cb1-50c9-499b-8260-73d8f8feb96b",
+      "--input",
+      "claimed-result.json"
+    ],
+    "exitCode": 0,
+    "stderr": "",
+    "response": {
+      "schema": "veripaka.cli/v0",
+      "ok": true,
+      "command": "run",
+      "data": {
+        "id": "fa00f450-b9e6-4a0e-ab40-667c3c6b8a8c",
+        "ingestion": "file-import",
+        "verification": "unknown",
+        "acceptedAsExecutableEvidence": false,
+        "nextAction": "Run the managed command. Imported claims do not satisfy required executable evidence."
+      }
+    }
+  },
+  {
+    "root": "D:\\Projects\\veripaka\\.temp\\evidence-2026-09-29T17-26-22-712Z\\imported-claim",
+    "args": [
+      "run",
+      "finalize",
+      "9d911cb1-50c9-499b-8260-73d8f8feb96b"
+    ],
+    "exitCode": 3,
+    "stderr": "",
+    "response": {
+      "schema": "veripaka.cli/v0",
+      "ok": false,
+      "command": "run",
+      "data": {
+        "schema": "veripaka.result/v0",
+        "runId": "9d911cb1-50c9-499b-8260-73d8f8feb96b",
+        "kind": "verification",
+        "verdict": "inconclusive",
+        "verdictBasis": "executable",
+        "execution": "not-started",
+        "reason": "NOT_STARTED",
+        "subject": {
+          "kind": "checkout",
+          "description": "Local reference HTTP service imported from this declared checkout by its native tests",
+          "entrypoint": "src/server.mjs",
+          "sourceRoots": [
+            "src",
+            "tests",
+            "package.json",
+            "docs/behavior.md"
+          ]
+        },
+        "checks": [
+          {
+            "key": "api-contract/reject-invalid-theme",
+            "required": true,
+            "expected": "Unsupported theme returns HTTP 400 and the stored theme remains light.",
+            "observed": "No complete managed invocation",
+            "status": "inconclusive",
+            "evidence": []
+          },
+          {
+            "key": "settings-persistence/survives-restart",
+            "required": true,
+            "expected": "A successful dark-theme write is returned by GET after restarting the service with the same private data directory.",
+            "observed": "No complete managed invocation",
+            "status": "inconclusive",
+            "evidence": []
+          }
+        ],
+        "goals": [
+          {
+            "id": "boundary",
+            "question": "Does the API reject unsupported themes without changing state?",
+            "claims": [
+              "api-contract/reject-invalid-theme"
+            ]
+          },
+          {
+            "id": "persistence",
+            "question": "Does a successful settings write survive service restart?",
+            "claims": [
+              "settings-persistence/survives-restart"
+            ]
+          },
+          {
+            "id": "sync",
+            "question": "Does the setting synchronize across devices?",
+            "claims": [],
+            "uncovered": "Not promised by the reference service and not verified by these methods."
+          }
+        ],
+        "limits": [
+          "Only the declared local source domain and mapped checks were assessed; coverage sufficiency is not mechanically proved.",
+          "The reference tests establish their local source-to-service relationship; arbitrary existing endpoints are unsupported.",
+          "Digests and managed capture are not protection against a malicious writer with the same OS permissions.",
+          "Trial recipe maturity is not upgraded by this result."
+        ],
+        "provenance": {
+          "producer": "none",
+          "ingestion": "none",
+          "verification": "unknown",
+          "judge": "executable"
+        },
+        "finalizedAt": "2026-09-29T17:26:31.516Z"
+      }
+    }
+  }
+]

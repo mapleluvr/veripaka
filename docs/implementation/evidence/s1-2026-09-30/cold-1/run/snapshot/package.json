@@ -1,0 +1,11 @@
+{
+  "name": "veripaka-backend-reference",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "node --test tests/settings.test.mjs"
+  },
+  "dependencies": {
+    "veripaka": "file:../veripaka-0.1.0-alpha.1.tgz"
+  }
+}

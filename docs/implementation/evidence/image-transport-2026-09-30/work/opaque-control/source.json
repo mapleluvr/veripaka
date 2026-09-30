@@ -1,0 +1,8 @@
+{
+  "url": "https://picsum.photos/seed/a2a6cf23-76cc-4c0d-8d8f-4ae29b114697/640/400",
+  "finalUrl": "https://fastly.picsum.photos/id/155/640/400.jpg?hmac=Gop3KfsxmMacadVgx961vbhl2DjoB4WTS_aihrApEZY",
+  "status": 200,
+  "mime": "image/jpeg",
+  "bytes": 51978,
+  "sha256": "a1c4490cf788fa4baf22e922b642453c987464510a1a92a797afe21211cea507"
+}
