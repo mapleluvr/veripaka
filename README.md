@@ -2,9 +2,7 @@
 
 <div align="center">
 
-**帮你的 coding agent 想清楚怎么测，而不只是运行测试。**
-
-*Help your coding agent figure out how to test—not just what to run.*
+*a.k.a. pi rev(iew)*
 
 <img src="https://img.shields.io/badge/version-0.1.0--alpha.1-6891dc" alt="version: 0.1.0-alpha.1">
 <img src="https://img.shields.io/badge/Node.js-24-c9e3f9?logo=nodedotjs&logoColor=6891dc" alt="Node.js 24">
