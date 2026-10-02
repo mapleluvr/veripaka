@@ -29,7 +29,7 @@ Agent 写代码很快，但“怎样知道它真的做对了”往往仍由你�
 veripaka 希望让 Agent 承担更多这类判断，并把学到的方法留在项目里。它不替代现有测试框架，也不把“跑出绿色结果”当作工作的终点。
 
 > [!IMPORTANT]
-> 当前为 **未发布的内部 alpha**，`package.json` 仍标记为 `private`。已实现的是 Recipe 管理、受限执行和结果复用基础；方法探索指导仍在实验中，尚未证明通用自主测试能力或成本收益。请从本地源码体验，不要使用 `npm install veripaka`。
+> 当前为 **alpha**. 请从本地源码体验，不要使用 `npm install veripaka`。
 
 ## ✨ 为什么是 veripaka
 
